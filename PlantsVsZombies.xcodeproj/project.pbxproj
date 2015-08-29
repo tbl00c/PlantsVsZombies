@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D2A69241B9160A30021F8BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69231B9160A30021F8BF /* main.m */; };
+		2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69261B9160A30021F8BF /* AppDelegate.m */; };
+		2D2A69321B9160A30021F8BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69301B9160A30021F8BF /* Main.storyboard */; };
+		2D2A69341B9160A30021F8BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69331B9160A30021F8BF /* Images.xcassets */; };
+		2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69351B9160A30021F8BF /* LaunchScreen.xib */; };
+		2D2A69431B9160A30021F8BF /* PlantsVsZombiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69421B9160A30021F8BF /* PlantsVsZombiesTests.m */; };
+		2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A694E1B9168490021F8BF /* GameViewController.m */; };
+		2D2A69561B9168510021F8BF /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69531B9168510021F8BF /* GameScene.m */; };
+		2D2A695C1B916AD70021F8BF /* BaseGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A695B1B916AD70021F8BF /* BaseGameScene.m */; };
+		2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */; };
+		2D2A69671B916F170021F8BF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69661B916F170021F8BF /* GameScene.sks */; };
+		2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A696A1B9170620021F8BF /* UIView+PVZ.m */; };
+		2D2A696E1B9172890021F8BF /* UIDevice+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */; };
+		2D2A69721B9173E90021F8BF /* PVZConfigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69711B9173E90021F8BF /* PVZConfigration.m */; };
+		8C3A3B1442EF16FEA707A710 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FE1119049BE4B8FD0A51C /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D2A693D1B9160A30021F8BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D2A69161B9160A30021F8BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D2A691D1B9160A30021F8BF;
+			remoteInfo = PlantsVsZombies;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D2A691E1B9160A30021F8BF /* PlantsVsZombies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantsVsZombies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2A69221B9160A30021F8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D2A69231B9160A30021F8BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D2A69251B9160A30021F8BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D2A69261B9160A30021F8BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D2A69311B9160A30021F8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D2A69331B9160A30021F8BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2D2A69361B9160A30021F8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2D2A693C1B9160A30021F8BF /* PlantsVsZombiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantsVsZombiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2A69411B9160A30021F8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D2A69421B9160A30021F8BF /* PlantsVsZombiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlantsVsZombiesTests.m; sourceTree = "<group>"; };
+		2D2A694D1B9168490021F8BF /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		2D2A694E1B9168490021F8BF /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		2D2A69521B9168510021F8BF /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		2D2A69531B9168510021F8BF /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		2D2A695A1B916AD70021F8BF /* BaseGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGameScene.h; sourceTree = "<group>"; };
+		2D2A695B1B916AD70021F8BF /* BaseGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGameScene.m; sourceTree = "<group>"; };
+		2D2A69631B916EA30021F8BF /* SKScene+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKScene+PVZ.h"; sourceTree = "<group>"; };
+		2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKScene+PVZ.m"; sourceTree = "<group>"; };
+		2D2A69661B916F170021F8BF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		2D2A69691B9170620021F8BF /* UIView+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PVZ.h"; sourceTree = "<group>"; };
+		2D2A696A1B9170620021F8BF /* UIView+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PVZ.m"; sourceTree = "<group>"; };
+		2D2A696C1B9172890021F8BF /* UIDevice+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+PVZ.h"; sourceTree = "<group>"; };
+		2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+PVZ.m"; sourceTree = "<group>"; };
+		2D2A69701B9173E90021F8BF /* PVZConfigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZConfigration.h; sourceTree = "<group>"; };
+		2D2A69711B9173E90021F8BF /* PVZConfigration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZConfigration.m; sourceTree = "<group>"; };
+		2D2A69731B91747D0021F8BF /* PVZPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PVZPrefixHeader.pch; sourceTree = "<group>"; };
+		767FE1119049BE4B8FD0A51C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A6E791A3557A5F02B588EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FE891B4ACEE7B9BCCFD5CFDD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D2A691B1B9160A30021F8BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3A3B1442EF16FEA707A710 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D2A69391B9160A30021F8BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D17E459492975815744919D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5A6E791A3557A5F02B588EA /* Pods.debug.xcconfig */,
+				FE891B4ACEE7B9BCCFD5CFDD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D2A69151B9160A30021F8BF = {
+			isa = PBXGroup;
+			children = (
+				2D2A69201B9160A30021F8BF /* PlantsVsZombies */,
+				2D2A693F1B9160A30021F8BF /* PlantsVsZombiesTests */,
+				2D2A691F1B9160A30021F8BF /* Products */,
+				0D17E459492975815744919D /* Pods */,
+				E5557F1EB7B89DC35394BF5C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D2A691F1B9160A30021F8BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A691E1B9160A30021F8BF /* PlantsVsZombies.app */,
+				2D2A693C1B9160A30021F8BF /* PlantsVsZombiesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D2A69201B9160A30021F8BF /* PlantsVsZombies */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69251B9160A30021F8BF /* AppDelegate.h */,
+				2D2A69261B9160A30021F8BF /* AppDelegate.m */,
+				2D2A69581B91691A0021F8BF /* Helper */,
+				2D2A69501B9168510021F8BF /* Model */,
+				2D2A694C1B9168490021F8BF /* Controller */,
+				2D2A69511B9168510021F8BF /* Scene */,
+				2D2A69551B9168510021F8BF /* Sprite */,
+				2D2A69591B916A140021F8BF /* Extension */,
+				2D2A695D1B916CAA0021F8BF /* Resource */,
+				2D2A69211B9160A30021F8BF /* Supporting Files */,
+			);
+			path = PlantsVsZombies;
+			sourceTree = "<group>";
+		};
+		2D2A69211B9160A30021F8BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69301B9160A30021F8BF /* Main.storyboard */,
+				2D2A69331B9160A30021F8BF /* Images.xcassets */,
+				2D2A69351B9160A30021F8BF /* LaunchScreen.xib */,
+				2D2A69221B9160A30021F8BF /* Info.plist */,
+				2D2A69231B9160A30021F8BF /* main.m */,
+				2D2A69731B91747D0021F8BF /* PVZPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D2A693F1B9160A30021F8BF /* PlantsVsZombiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69421B9160A30021F8BF /* PlantsVsZombiesTests.m */,
+				2D2A69401B9160A30021F8BF /* Supporting Files */,
+			);
+			path = PlantsVsZombiesTests;
+			sourceTree = "<group>";
+		};
+		2D2A69401B9160A30021F8BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69411B9160A30021F8BF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D2A694C1B9168490021F8BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A694D1B9168490021F8BF /* GameViewController.h */,
+				2D2A694E1B9168490021F8BF /* GameViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D2A69501B9168510021F8BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D2A69511B9168510021F8BF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A695A1B916AD70021F8BF /* BaseGameScene.h */,
+				2D2A695B1B916AD70021F8BF /* BaseGameScene.m */,
+				2D2A69521B9168510021F8BF /* GameScene.h */,
+				2D2A69531B9168510021F8BF /* GameScene.m */,
+				2D2A69661B916F170021F8BF /* GameScene.sks */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		2D2A69551B9168510021F8BF /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sprite;
+			sourceTree = "<group>";
+		};
+		2D2A69581B91691A0021F8BF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A696F1B9173CC0021F8BF /* Configration */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2D2A69591B916A140021F8BF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69621B916E930021F8BF /* Category */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2D2A695D1B916CAA0021F8BF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2D2A69621B916E930021F8BF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69631B916EA30021F8BF /* SKScene+PVZ.h */,
+				2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */,
+				2D2A69691B9170620021F8BF /* UIView+PVZ.h */,
+				2D2A696A1B9170620021F8BF /* UIView+PVZ.m */,
+				2D2A696C1B9172890021F8BF /* UIDevice+PVZ.h */,
+				2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2D2A696F1B9173CC0021F8BF /* Configration */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69701B9173E90021F8BF /* PVZConfigration.h */,
+				2D2A69711B9173E90021F8BF /* PVZConfigration.m */,
+			);
+			path = Configration;
+			sourceTree = "<group>";
+		};
+		E5557F1EB7B89DC35394BF5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				767FE1119049BE4B8FD0A51C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D2A691D1B9160A30021F8BF /* PlantsVsZombies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D2A69461B9160A30021F8BF /* Build configuration list for PBXNativeTarget "PlantsVsZombies" */;
+			buildPhases = (
+				1CCCD1543D92329F0CB38181 /* Check Pods Manifest.lock */,
+				2D2A691A1B9160A30021F8BF /* Sources */,
+				2D2A691B1B9160A30021F8BF /* Frameworks */,
+				2D2A691C1B9160A30021F8BF /* Resources */,
+				655D3CEEFF79E2833C93910F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlantsVsZombies;
+			productName = PlantsVsZombies;
+			productReference = 2D2A691E1B9160A30021F8BF /* PlantsVsZombies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D2A693B1B9160A30021F8BF /* PlantsVsZombiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D2A69491B9160A30021F8BF /* Build configuration list for PBXNativeTarget "PlantsVsZombiesTests" */;
+			buildPhases = (
+				2D2A69381B9160A30021F8BF /* Sources */,
+				2D2A69391B9160A30021F8BF /* Frameworks */,
+				2D2A693A1B9160A30021F8BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D2A693E1B9160A30021F8BF /* PBXTargetDependency */,
+			);
+			name = PlantsVsZombiesTests;
+			productName = PlantsVsZombiesTests;
+			productReference = 2D2A693C1B9160A30021F8BF /* PlantsVsZombiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D2A69161B9160A30021F8BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = lbk;
+				TargetAttributes = {
+					2D2A691D1B9160A30021F8BF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2D2A693B1B9160A30021F8BF = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 2D2A691D1B9160A30021F8BF;
+					};
+				};
+			};
+			buildConfigurationList = 2D2A69191B9160A30021F8BF /* Build configuration list for PBXProject "PlantsVsZombies" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D2A69151B9160A30021F8BF;
+			productRefGroup = 2D2A691F1B9160A30021F8BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D2A691D1B9160A30021F8BF /* PlantsVsZombies */,
+				2D2A693B1B9160A30021F8BF /* PlantsVsZombiesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D2A691C1B9160A30021F8BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2A69671B916F170021F8BF /* GameScene.sks in Resources */,
+				2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */,
+				2D2A69341B9160A30021F8BF /* Images.xcassets in Resources */,
+				2D2A69321B9160A30021F8BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D2A693A1B9160A30021F8BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CCCD1543D92329F0CB38181 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		655D3CEEFF79E2833C93910F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D2A691A1B9160A30021F8BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */,
+				2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */,
+				2D2A696E1B9172890021F8BF /* UIDevice+PVZ.m in Sources */,
+				2D2A69721B9173E90021F8BF /* PVZConfigration.m in Sources */,
+				2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */,
+				2D2A69561B9168510021F8BF /* GameScene.m in Sources */,
+				2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */,
+				2D2A69241B9160A30021F8BF /* main.m in Sources */,
+				2D2A695C1B916AD70021F8BF /* BaseGameScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D2A69381B9160A30021F8BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2A69431B9160A30021F8BF /* PlantsVsZombiesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D2A693E1B9160A30021F8BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D2A691D1B9160A30021F8BF /* PlantsVsZombies */;
+			targetProxy = 2D2A693D1B9160A30021F8BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D2A69301B9160A30021F8BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D2A69311B9160A30021F8BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D2A69351B9160A30021F8BF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D2A69361B9160A30021F8BF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D2A69441B9160A30021F8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2D2A69451B9160A30021F8BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D2A69471B9160A30021F8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5A6E791A3557A5F02B588EA /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PlantsVsZombies/PVZPrefixHeader.pch";
+				INFOPLIST_FILE = PlantsVsZombies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D2A69481B9160A30021F8BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE891B4ACEE7B9BCCFD5CFDD /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PlantsVsZombies/PVZPrefixHeader.pch";
+				INFOPLIST_FILE = PlantsVsZombies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2D2A694A1B9160A30021F8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PlantsVsZombiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantsVsZombies.app/PlantsVsZombies";
+			};
+			name = Debug;
+		};
+		2D2A694B1B9160A30021F8BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PlantsVsZombiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantsVsZombies.app/PlantsVsZombies";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D2A69191B9160A30021F8BF /* Build configuration list for PBXProject "PlantsVsZombies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D2A69441B9160A30021F8BF /* Debug */,
+				2D2A69451B9160A30021F8BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D2A69461B9160A30021F8BF /* Build configuration list for PBXNativeTarget "PlantsVsZombies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D2A69471B9160A30021F8BF /* Debug */,
+				2D2A69481B9160A30021F8BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D2A69491B9160A30021F8BF /* Build configuration list for PBXNativeTarget "PlantsVsZombiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D2A694A1B9160A30021F8BF /* Debug */,
+				2D2A694B1B9160A30021F8BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D2A69161B9160A30021F8BF /* Project object */;
+}

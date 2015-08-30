@@ -7,7 +7,8 @@
 //
 
 #import "GameViewController.h"
-#import "GameScene.h"
+#import "PVZAudioPlayer.h"
+#import "FirstScene.h"
 
 @implementation GameViewController
 
@@ -20,9 +21,16 @@
     skView.showsNodeCount = YES;
     skView.ignoresSiblingOrder = YES;
     
-    GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
+    GameScene *scene = [GameScene unarchiveFromFile:@"FirstScene"];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     [skView presentScene:scene];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[PVZAudioPlayer sharedAudioPlayer] playMusicByName:@"game2.mp3" loop:YES];
 }
 
 - (BOOL)shouldAutorotate
@@ -42,7 +50,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 - (BOOL)prefersStatusBarHidden {

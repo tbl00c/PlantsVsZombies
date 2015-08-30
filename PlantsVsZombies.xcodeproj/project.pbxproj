@@ -14,13 +14,113 @@
 		2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69351B9160A30021F8BF /* LaunchScreen.xib */; };
 		2D2A69431B9160A30021F8BF /* PlantsVsZombiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69421B9160A30021F8BF /* PlantsVsZombiesTests.m */; };
 		2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A694E1B9168490021F8BF /* GameViewController.m */; };
-		2D2A69561B9168510021F8BF /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69531B9168510021F8BF /* GameScene.m */; };
+		2D2A69561B9168510021F8BF /* FirstScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69531B9168510021F8BF /* FirstScene.m */; };
 		2D2A695C1B916AD70021F8BF /* BaseGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A695B1B916AD70021F8BF /* BaseGameScene.m */; };
 		2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */; };
-		2D2A69671B916F170021F8BF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69661B916F170021F8BF /* GameScene.sks */; };
+		2D2A69671B916F170021F8BF /* FirstScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69661B916F170021F8BF /* FirstScene.sks */; };
 		2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A696A1B9170620021F8BF /* UIView+PVZ.m */; };
 		2D2A696E1B9172890021F8BF /* UIDevice+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */; };
-		2D2A69721B9173E90021F8BF /* PVZConfigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69711B9173E90021F8BF /* PVZConfigration.m */; };
+		2D653A761B92CA0E00420E18 /* firstpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A0D1B92CA0E00420E18 /* firstpage.jpg */; };
+		2D653A771B92CA0E00420E18 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A0E1B92CA0E00420E18 /* background1.jpg */; };
+		2D653A781B92CA0E00420E18 /* background1unsodded.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A0F1B92CA0E00420E18 /* background1unsodded.jpg */; };
+		2D653A791B92CA0E00420E18 /* background1unsodded2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A101B92CA0E00420E18 /* background1unsodded2.jpg */; };
+		2D653A7A1B92CA0E00420E18 /* background1unsodded_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A111B92CA0E00420E18 /* background1unsodded_1.jpg */; };
+		2D653A7B1B92CA0E00420E18 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A121B92CA0E00420E18 /* background2.jpg */; };
+		2D653A7C1B92CA0E00420E18 /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A131B92CA0E00420E18 /* background3.jpg */; };
+		2D653A7D1B92CA0E00420E18 /* background4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A141B92CA0E00420E18 /* background4.jpg */; };
+		2D653A7E1B92CA0E00420E18 /* background5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A151B92CA0E00420E18 /* background5.jpg */; };
+		2D653A7F1B92CA0E00420E18 /* background6boss.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A161B92CA0E00420E18 /* background6boss.jpg */; };
+		2D653A801B92CA0E00420E18 /* PB_ICE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A181B92CA0E00420E18 /* PB_ICE.atlas */; };
+		2D653A811B92CA0E00420E18 /* PB_Normal.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A191B92CA0E00420E18 /* PB_Normal.atlas */; };
+		2D653A821B92CA0E00420E18 /* Blover.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1B1B92CA0E00420E18 /* Blover.png */; };
+		2D653A831B92CA0E00420E18 /* Cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1C1B92CA0E00420E18 /* Cactus.png */; };
+		2D653A841B92CA0E00420E18 /* CherryBomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1D1B92CA0E00420E18 /* CherryBomb.png */; };
+		2D653A851B92CA0E00420E18 /* Chomper.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1E1B92CA0E00420E18 /* Chomper.png */; };
+		2D653A861B92CA0E00420E18 /* CoffeeBean.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1F1B92CA0E00420E18 /* CoffeeBean.png */; };
+		2D653A871B92CA0E00420E18 /* DoomShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A201B92CA0E00420E18 /* DoomShroom.png */; };
+		2D653A881B92CA0E00420E18 /* FlowerPot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A211B92CA0E00420E18 /* FlowerPot.png */; };
+		2D653A891B92CA0E00420E18 /* FumeShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A221B92CA0E00420E18 /* FumeShroom.png */; };
+		2D653A8A1B92CA0E00420E18 /* Garlic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A231B92CA0E00420E18 /* Garlic.png */; };
+		2D653A8B1B92CA0E00420E18 /* GatlingPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A241B92CA0E00420E18 /* GatlingPea.png */; };
+		2D653A8C1B92CA0E00420E18 /* GloomShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A251B92CA0E00420E18 /* GloomShroom.png */; };
+		2D653A8D1B92CA0E00420E18 /* Gralic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A261B92CA0E00420E18 /* Gralic.png */; };
+		2D653A8E1B92CA0E00420E18 /* HypnoShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A271B92CA0E00420E18 /* HypnoShroom.png */; };
+		2D653A8F1B92CA0E00420E18 /* IceShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A281B92CA0E00420E18 /* IceShroom.png */; };
+		2D653A901B92CA0E00420E18 /* Jalapeno.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A291B92CA0E00420E18 /* Jalapeno.png */; };
+		2D653A911B92CA0E00420E18 /* LilyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2A1B92CA0E00420E18 /* LilyPad.png */; };
+		2D653A921B92CA0E00420E18 /* Peashooter.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2B1B92CA0E00420E18 /* Peashooter.gif */; };
+		2D653A931B92CA0E00420E18 /* Peashooter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2C1B92CA0E00420E18 /* Peashooter.png */; };
+		2D653A941B92CA0E00420E18 /* Plantern.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2D1B92CA0E00420E18 /* Plantern.png */; };
+		2D653A951B92CA0E00420E18 /* PotatoMine.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2E1B92CA0E00420E18 /* PotatoMine.gif */; };
+		2D653A961B92CA0E00420E18 /* PotatoMine.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2F1B92CA0E00420E18 /* PotatoMine.png */; };
+		2D653A971B92CA0E00420E18 /* PuffShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A301B92CA0E00420E18 /* PuffShroom.png */; };
+		2D653A981B92CA0E00420E18 /* PumpkinHead.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A311B92CA0E00420E18 /* PumpkinHead.gif */; };
+		2D653A991B92CA0E00420E18 /* PumpkinHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A321B92CA0E00420E18 /* PumpkinHead.png */; };
+		2D653A9A1B92CA0E00420E18 /* Repeater.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A331B92CA0E00420E18 /* Repeater.png */; };
+		2D653A9B1B92CA0E00420E18 /* ScaredyShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A341B92CA0E00420E18 /* ScaredyShroom.png */; };
+		2D653A9C1B92CA0E00420E18 /* SeaShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A351B92CA0E00420E18 /* SeaShroom.png */; };
+		2D653A9D1B92CA0E00420E18 /* SnowPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A361B92CA0E00420E18 /* SnowPea.png */; };
+		2D653A9E1B92CA0E00420E18 /* Spikerock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A371B92CA0E00420E18 /* Spikerock.png */; };
+		2D653A9F1B92CA0E00420E18 /* Spikeweed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A381B92CA0E00420E18 /* Spikeweed.png */; };
+		2D653AA01B92CA0E00420E18 /* SplitPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A391B92CA0E00420E18 /* SplitPea.png */; };
+		2D653AA11B92CA0E00420E18 /* Squash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3A1B92CA0E00420E18 /* Squash.png */; };
+		2D653AA21B92CA0E00420E18 /* Starfruit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3B1B92CA0E00420E18 /* Starfruit.png */; };
+		2D653AA31B92CA0E00420E18 /* SunFlower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3C1B92CA0E00420E18 /* SunFlower.png */; };
+		2D653AA41B92CA0E00420E18 /* SunShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3D1B92CA0E00420E18 /* SunShroom.png */; };
+		2D653AA51B92CA0E00420E18 /* TallNut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3E1B92CA0E00420E18 /* TallNut.png */; };
+		2D653AA61B92CA0E00420E18 /* Threepeater.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3F1B92CA0E00420E18 /* Threepeater.png */; };
+		2D653AA71B92CA0E00420E18 /* Torchwood.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A401B92CA0E00420E18 /* Torchwood.png */; };
+		2D653AA81B92CA0E00420E18 /* TwinSunflower.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A411B92CA0E00420E18 /* TwinSunflower.gif */; };
+		2D653AA91B92CA0E00420E18 /* TwinSunflower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A421B92CA0E00420E18 /* TwinSunflower.png */; };
+		2D653AAA1B92CA0E00420E18 /* WallNut.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A431B92CA0E00420E18 /* WallNut.gif */; };
+		2D653AAB1B92CA0E00420E18 /* WallNut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A441B92CA0E00420E18 /* WallNut.png */; };
+		2D653AAC1B92CA0E00420E18 /* MainMenu.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A461B92CA0E00420E18 /* MainMenu.atlas */; };
+		2D653AAD1B92CA0E00420E18 /* Menu.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A471B92CA0E00420E18 /* Menu.atlas */; };
+		2D653AAE1B92CA0E00420E18 /* sod1row.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A481B92CA0E00420E18 /* sod1row.png */; };
+		2D653AAF1B92CA0E00420E18 /* sod3row.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A491B92CA0E00420E18 /* sod3row.png */; };
+		2D653AB01B92CA0E00420E18 /* Welcome.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4A1B92CA0E00420E18 /* Welcome.atlas */; };
+		2D653AB11B92CA0E00420E18 /* CherryBomb.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4C1B92CA0E00420E18 /* CherryBomb.atlas */; };
+		2D653AB21B92CA0E00420E18 /* Peashooter.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4D1B92CA0E00420E18 /* Peashooter.atlas */; };
+		2D653AB31B92CA0E00420E18 /* SnowPea.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4E1B92CA0E00420E18 /* SnowPea.atlas */; };
+		2D653AB41B92CA0E00420E18 /* SunFlower.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4F1B92CA0E00420E18 /* SunFlower.atlas */; };
+		2D653AB51B92CA0E00420E18 /* Threepeater.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A501B92CA0E00420E18 /* Threepeater.atlas */; };
+		2D653AB61B92CA0E00420E18 /* WallNut.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A511B92CA0E00420E18 /* WallNut.atlas */; };
+		2D653AB71B92CA0E00420E18 /* Sun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A531B92CA0E00420E18 /* Sun.atlas */; };
+		2D653AB81B92CA0E00420E18 /* BoomDie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A551B92CA0E00420E18 /* BoomDie.atlas */; };
+		2D653AB91B92CA0E00420E18 /* BucketheadZombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A561B92CA0E00420E18 /* BucketheadZombie.atlas */; };
+		2D653ABA1B92CA0E00420E18 /* BucketheadZombieAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A571B92CA0E00420E18 /* BucketheadZombieAttack.atlas */; };
+		2D653ABB1B92CA0E00420E18 /* ConeheadZombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A581B92CA0E00420E18 /* ConeheadZombie.atlas */; };
+		2D653ABC1B92CA0E00420E18 /* ConeheadZombieAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A591B92CA0E00420E18 /* ConeheadZombieAttack.atlas */; };
+		2D653ABD1B92CA0E00420E18 /* FlagZombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A5A1B92CA0E00420E18 /* FlagZombie.atlas */; };
+		2D653ABE1B92CA0E00420E18 /* FlagZombieAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A5B1B92CA0E00420E18 /* FlagZombieAttack.atlas */; };
+		2D653ABF1B92CA0E00420E18 /* FlagZombieLostHead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A5C1B92CA0E00420E18 /* FlagZombieLostHead.atlas */; };
+		2D653AC01B92CA0E00420E18 /* FlagZombieLostHeadAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A5D1B92CA0E00420E18 /* FlagZombieLostHeadAttack.atlas */; };
+		2D653AC11B92CA0E00420E18 /* PoleVaultingZombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A5E1B92CA0E00420E18 /* PoleVaultingZombie.atlas */; };
+		2D653AC21B92CA0E00420E18 /* PoleVaultingZombieAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A5F1B92CA0E00420E18 /* PoleVaultingZombieAttack.atlas */; };
+		2D653AC31B92CA0E00420E18 /* PoleVaultingZombieDie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A601B92CA0E00420E18 /* PoleVaultingZombieDie.atlas */; };
+		2D653AC41B92CA0E00420E18 /* PoleVaultingZombieHead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A611B92CA0E00420E18 /* PoleVaultingZombieHead.atlas */; };
+		2D653AC51B92CA0E00420E18 /* PoleVaultingZombieJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A621B92CA0E00420E18 /* PoleVaultingZombieJump.atlas */; };
+		2D653AC61B92CA0E00420E18 /* PoleVaultingZombieJump2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A631B92CA0E00420E18 /* PoleVaultingZombieJump2.atlas */; };
+		2D653AC71B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A641B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas */; };
+		2D653AC81B92CA0E00420E18 /* PoleVaultingZombieLostHeadAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A651B92CA0E00420E18 /* PoleVaultingZombieLostHeadAttack.atlas */; };
+		2D653AC91B92CA0E00420E18 /* PoleVaultingZombieLostHeadWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A661B92CA0E00420E18 /* PoleVaultingZombieLostHeadWalk.atlas */; };
+		2D653ACA1B92CA0E00420E18 /* PoleVaultingZombieWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A671B92CA0E00420E18 /* PoleVaultingZombieWalk.atlas */; };
+		2D653ACB1B92CA0E00420E18 /* PrepareGrowPlants.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A681B92CA0E00420E18 /* PrepareGrowPlants.atlas */; };
+		2D653ACC1B92CA0E00420E18 /* Zombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A691B92CA0E00420E18 /* Zombie.atlas */; };
+		2D653ACD1B92CA0E00420E18 /* Zombie3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A6A1B92CA0E00420E18 /* Zombie3.atlas */; };
+		2D653ACE1B92CA0E00420E18 /* ZombieAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A6B1B92CA0E00420E18 /* ZombieAttack.atlas */; };
+		2D653ACF1B92CA0E00420E18 /* ZombieDie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A6C1B92CA0E00420E18 /* ZombieDie.atlas */; };
+		2D653AD01B92CA0E00420E18 /* ZombieHead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A6D1B92CA0E00420E18 /* ZombieHead.atlas */; };
+		2D653AD11B92CA0E00420E18 /* ZombieLostHead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A6E1B92CA0E00420E18 /* ZombieLostHead.atlas */; };
+		2D653AD21B92CA0E00420E18 /* ZombieLostHeadAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A6F1B92CA0E00420E18 /* ZombieLostHeadAttack.atlas */; };
+		2D653AD31B92CA0E00420E18 /* game1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A711B92CA0E00420E18 /* game1.mp3 */; };
+		2D653AD41B92CA0E00420E18 /* game2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A721B92CA0E00420E18 /* game2.mp3 */; };
+		2D653AD51B92CA0E00420E18 /* game3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A731B92CA0E00420E18 /* game3.mp3 */; };
+		2D653AD61B92CA0E00420E18 /* gameScene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A741B92CA0E00420E18 /* gameScene.mp3 */; };
+		2D653AD71B92CA0E00420E18 /* rootScene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A751B92CA0E00420E18 /* rootScene.mp3 */; };
+		2D653ADC1B92D25300420E18 /* PVZConfigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D653ADB1B92D25300420E18 /* PVZConfigration.m */; };
+		2D653ADF1B92D28B00420E18 /* PVZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D653ADE1B92D28B00420E18 /* PVZAudioPlayer.m */; };
+		2D653AE61B92DBD200420E18 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D653AE51B92DBD200420E18 /* common.m */; };
 		8C3A3B1442EF16FEA707A710 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FE1119049BE4B8FD0A51C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -48,20 +148,123 @@
 		2D2A69421B9160A30021F8BF /* PlantsVsZombiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlantsVsZombiesTests.m; sourceTree = "<group>"; };
 		2D2A694D1B9168490021F8BF /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2D2A694E1B9168490021F8BF /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		2D2A69521B9168510021F8BF /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		2D2A69531B9168510021F8BF /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		2D2A69521B9168510021F8BF /* FirstScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScene.h; sourceTree = "<group>"; };
+		2D2A69531B9168510021F8BF /* FirstScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstScene.m; sourceTree = "<group>"; };
 		2D2A695A1B916AD70021F8BF /* BaseGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGameScene.h; sourceTree = "<group>"; };
 		2D2A695B1B916AD70021F8BF /* BaseGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGameScene.m; sourceTree = "<group>"; };
 		2D2A69631B916EA30021F8BF /* SKScene+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKScene+PVZ.h"; sourceTree = "<group>"; };
 		2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKScene+PVZ.m"; sourceTree = "<group>"; };
-		2D2A69661B916F170021F8BF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		2D2A69661B916F170021F8BF /* FirstScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirstScene.sks; sourceTree = "<group>"; };
 		2D2A69691B9170620021F8BF /* UIView+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PVZ.h"; sourceTree = "<group>"; };
 		2D2A696A1B9170620021F8BF /* UIView+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PVZ.m"; sourceTree = "<group>"; };
 		2D2A696C1B9172890021F8BF /* UIDevice+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+PVZ.h"; sourceTree = "<group>"; };
 		2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+PVZ.m"; sourceTree = "<group>"; };
-		2D2A69701B9173E90021F8BF /* PVZConfigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZConfigration.h; sourceTree = "<group>"; };
-		2D2A69711B9173E90021F8BF /* PVZConfigration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZConfigration.m; sourceTree = "<group>"; };
 		2D2A69731B91747D0021F8BF /* PVZPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PVZPrefixHeader.pch; sourceTree = "<group>"; };
+		2D653A0D1B92CA0E00420E18 /* firstpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = firstpage.jpg; sourceTree = "<group>"; };
+		2D653A0E1B92CA0E00420E18 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		2D653A0F1B92CA0E00420E18 /* background1unsodded.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1unsodded.jpg; sourceTree = "<group>"; };
+		2D653A101B92CA0E00420E18 /* background1unsodded2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1unsodded2.jpg; sourceTree = "<group>"; };
+		2D653A111B92CA0E00420E18 /* background1unsodded_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1unsodded_1.jpg; sourceTree = "<group>"; };
+		2D653A121B92CA0E00420E18 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
+		2D653A131B92CA0E00420E18 /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background3.jpg; sourceTree = "<group>"; };
+		2D653A141B92CA0E00420E18 /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background4.jpg; sourceTree = "<group>"; };
+		2D653A151B92CA0E00420E18 /* background5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background5.jpg; sourceTree = "<group>"; };
+		2D653A161B92CA0E00420E18 /* background6boss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background6boss.jpg; sourceTree = "<group>"; };
+		2D653A181B92CA0E00420E18 /* PB_ICE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PB_ICE.atlas; sourceTree = "<group>"; };
+		2D653A191B92CA0E00420E18 /* PB_Normal.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PB_Normal.atlas; sourceTree = "<group>"; };
+		2D653A1B1B92CA0E00420E18 /* Blover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blover.png; sourceTree = "<group>"; };
+		2D653A1C1B92CA0E00420E18 /* Cactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cactus.png; sourceTree = "<group>"; };
+		2D653A1D1B92CA0E00420E18 /* CherryBomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CherryBomb.png; sourceTree = "<group>"; };
+		2D653A1E1B92CA0E00420E18 /* Chomper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chomper.png; sourceTree = "<group>"; };
+		2D653A1F1B92CA0E00420E18 /* CoffeeBean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoffeeBean.png; sourceTree = "<group>"; };
+		2D653A201B92CA0E00420E18 /* DoomShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoomShroom.png; sourceTree = "<group>"; };
+		2D653A211B92CA0E00420E18 /* FlowerPot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlowerPot.png; sourceTree = "<group>"; };
+		2D653A221B92CA0E00420E18 /* FumeShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FumeShroom.png; sourceTree = "<group>"; };
+		2D653A231B92CA0E00420E18 /* Garlic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Garlic.png; sourceTree = "<group>"; };
+		2D653A241B92CA0E00420E18 /* GatlingPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GatlingPea.png; sourceTree = "<group>"; };
+		2D653A251B92CA0E00420E18 /* GloomShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GloomShroom.png; sourceTree = "<group>"; };
+		2D653A261B92CA0E00420E18 /* Gralic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gralic.png; sourceTree = "<group>"; };
+		2D653A271B92CA0E00420E18 /* HypnoShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HypnoShroom.png; sourceTree = "<group>"; };
+		2D653A281B92CA0E00420E18 /* IceShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IceShroom.png; sourceTree = "<group>"; };
+		2D653A291B92CA0E00420E18 /* Jalapeno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jalapeno.png; sourceTree = "<group>"; };
+		2D653A2A1B92CA0E00420E18 /* LilyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LilyPad.png; sourceTree = "<group>"; };
+		2D653A2B1B92CA0E00420E18 /* Peashooter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Peashooter.gif; sourceTree = "<group>"; };
+		2D653A2C1B92CA0E00420E18 /* Peashooter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Peashooter.png; sourceTree = "<group>"; };
+		2D653A2D1B92CA0E00420E18 /* Plantern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plantern.png; sourceTree = "<group>"; };
+		2D653A2E1B92CA0E00420E18 /* PotatoMine.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PotatoMine.gif; sourceTree = "<group>"; };
+		2D653A2F1B92CA0E00420E18 /* PotatoMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PotatoMine.png; sourceTree = "<group>"; };
+		2D653A301B92CA0E00420E18 /* PuffShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PuffShroom.png; sourceTree = "<group>"; };
+		2D653A311B92CA0E00420E18 /* PumpkinHead.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PumpkinHead.gif; sourceTree = "<group>"; };
+		2D653A321B92CA0E00420E18 /* PumpkinHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PumpkinHead.png; sourceTree = "<group>"; };
+		2D653A331B92CA0E00420E18 /* Repeater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Repeater.png; sourceTree = "<group>"; };
+		2D653A341B92CA0E00420E18 /* ScaredyShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScaredyShroom.png; sourceTree = "<group>"; };
+		2D653A351B92CA0E00420E18 /* SeaShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeaShroom.png; sourceTree = "<group>"; };
+		2D653A361B92CA0E00420E18 /* SnowPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnowPea.png; sourceTree = "<group>"; };
+		2D653A371B92CA0E00420E18 /* Spikerock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spikerock.png; sourceTree = "<group>"; };
+		2D653A381B92CA0E00420E18 /* Spikeweed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spikeweed.png; sourceTree = "<group>"; };
+		2D653A391B92CA0E00420E18 /* SplitPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplitPea.png; sourceTree = "<group>"; };
+		2D653A3A1B92CA0E00420E18 /* Squash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squash.png; sourceTree = "<group>"; };
+		2D653A3B1B92CA0E00420E18 /* Starfruit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Starfruit.png; sourceTree = "<group>"; };
+		2D653A3C1B92CA0E00420E18 /* SunFlower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SunFlower.png; sourceTree = "<group>"; };
+		2D653A3D1B92CA0E00420E18 /* SunShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SunShroom.png; sourceTree = "<group>"; };
+		2D653A3E1B92CA0E00420E18 /* TallNut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TallNut.png; sourceTree = "<group>"; };
+		2D653A3F1B92CA0E00420E18 /* Threepeater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Threepeater.png; sourceTree = "<group>"; };
+		2D653A401B92CA0E00420E18 /* Torchwood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Torchwood.png; sourceTree = "<group>"; };
+		2D653A411B92CA0E00420E18 /* TwinSunflower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TwinSunflower.gif; sourceTree = "<group>"; };
+		2D653A421B92CA0E00420E18 /* TwinSunflower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinSunflower.png; sourceTree = "<group>"; };
+		2D653A431B92CA0E00420E18 /* WallNut.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = WallNut.gif; sourceTree = "<group>"; };
+		2D653A441B92CA0E00420E18 /* WallNut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WallNut.png; sourceTree = "<group>"; };
+		2D653A461B92CA0E00420E18 /* MainMenu.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MainMenu.atlas; sourceTree = "<group>"; };
+		2D653A471B92CA0E00420E18 /* Menu.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Menu.atlas; sourceTree = "<group>"; };
+		2D653A481B92CA0E00420E18 /* sod1row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sod1row.png; sourceTree = "<group>"; };
+		2D653A491B92CA0E00420E18 /* sod3row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sod3row.png; sourceTree = "<group>"; };
+		2D653A4A1B92CA0E00420E18 /* Welcome.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Welcome.atlas; sourceTree = "<group>"; };
+		2D653A4C1B92CA0E00420E18 /* CherryBomb.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = CherryBomb.atlas; sourceTree = "<group>"; };
+		2D653A4D1B92CA0E00420E18 /* Peashooter.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Peashooter.atlas; sourceTree = "<group>"; };
+		2D653A4E1B92CA0E00420E18 /* SnowPea.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SnowPea.atlas; sourceTree = "<group>"; };
+		2D653A4F1B92CA0E00420E18 /* SunFlower.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SunFlower.atlas; sourceTree = "<group>"; };
+		2D653A501B92CA0E00420E18 /* Threepeater.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Threepeater.atlas; sourceTree = "<group>"; };
+		2D653A511B92CA0E00420E18 /* WallNut.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WallNut.atlas; sourceTree = "<group>"; };
+		2D653A531B92CA0E00420E18 /* Sun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sun.atlas; sourceTree = "<group>"; };
+		2D653A551B92CA0E00420E18 /* BoomDie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BoomDie.atlas; sourceTree = "<group>"; };
+		2D653A561B92CA0E00420E18 /* BucketheadZombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BucketheadZombie.atlas; sourceTree = "<group>"; };
+		2D653A571B92CA0E00420E18 /* BucketheadZombieAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BucketheadZombieAttack.atlas; sourceTree = "<group>"; };
+		2D653A581B92CA0E00420E18 /* ConeheadZombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ConeheadZombie.atlas; sourceTree = "<group>"; };
+		2D653A591B92CA0E00420E18 /* ConeheadZombieAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ConeheadZombieAttack.atlas; sourceTree = "<group>"; };
+		2D653A5A1B92CA0E00420E18 /* FlagZombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = FlagZombie.atlas; sourceTree = "<group>"; };
+		2D653A5B1B92CA0E00420E18 /* FlagZombieAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = FlagZombieAttack.atlas; sourceTree = "<group>"; };
+		2D653A5C1B92CA0E00420E18 /* FlagZombieLostHead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = FlagZombieLostHead.atlas; sourceTree = "<group>"; };
+		2D653A5D1B92CA0E00420E18 /* FlagZombieLostHeadAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = FlagZombieLostHeadAttack.atlas; sourceTree = "<group>"; };
+		2D653A5E1B92CA0E00420E18 /* PoleVaultingZombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombie.atlas; sourceTree = "<group>"; };
+		2D653A5F1B92CA0E00420E18 /* PoleVaultingZombieAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieAttack.atlas; sourceTree = "<group>"; };
+		2D653A601B92CA0E00420E18 /* PoleVaultingZombieDie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieDie.atlas; sourceTree = "<group>"; };
+		2D653A611B92CA0E00420E18 /* PoleVaultingZombieHead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieHead.atlas; sourceTree = "<group>"; };
+		2D653A621B92CA0E00420E18 /* PoleVaultingZombieJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieJump.atlas; sourceTree = "<group>"; };
+		2D653A631B92CA0E00420E18 /* PoleVaultingZombieJump2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieJump2.atlas; sourceTree = "<group>"; };
+		2D653A641B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieLostHead.atlas; sourceTree = "<group>"; };
+		2D653A651B92CA0E00420E18 /* PoleVaultingZombieLostHeadAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieLostHeadAttack.atlas; sourceTree = "<group>"; };
+		2D653A661B92CA0E00420E18 /* PoleVaultingZombieLostHeadWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieLostHeadWalk.atlas; sourceTree = "<group>"; };
+		2D653A671B92CA0E00420E18 /* PoleVaultingZombieWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PoleVaultingZombieWalk.atlas; sourceTree = "<group>"; };
+		2D653A681B92CA0E00420E18 /* PrepareGrowPlants.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PrepareGrowPlants.atlas; sourceTree = "<group>"; };
+		2D653A691B92CA0E00420E18 /* Zombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Zombie.atlas; sourceTree = "<group>"; };
+		2D653A6A1B92CA0E00420E18 /* Zombie3.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Zombie3.atlas; sourceTree = "<group>"; };
+		2D653A6B1B92CA0E00420E18 /* ZombieAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ZombieAttack.atlas; sourceTree = "<group>"; };
+		2D653A6C1B92CA0E00420E18 /* ZombieDie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ZombieDie.atlas; sourceTree = "<group>"; };
+		2D653A6D1B92CA0E00420E18 /* ZombieHead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ZombieHead.atlas; sourceTree = "<group>"; };
+		2D653A6E1B92CA0E00420E18 /* ZombieLostHead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ZombieLostHead.atlas; sourceTree = "<group>"; };
+		2D653A6F1B92CA0E00420E18 /* ZombieLostHeadAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ZombieLostHeadAttack.atlas; sourceTree = "<group>"; };
+		2D653A711B92CA0E00420E18 /* game1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game1.mp3; sourceTree = "<group>"; };
+		2D653A721B92CA0E00420E18 /* game2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game2.mp3; sourceTree = "<group>"; };
+		2D653A731B92CA0E00420E18 /* game3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game3.mp3; sourceTree = "<group>"; };
+		2D653A741B92CA0E00420E18 /* gameScene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameScene.mp3; sourceTree = "<group>"; };
+		2D653A751B92CA0E00420E18 /* rootScene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rootScene.mp3; sourceTree = "<group>"; };
+		2D653ADA1B92D25300420E18 /* PVZConfigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZConfigration.h; sourceTree = "<group>"; };
+		2D653ADB1B92D25300420E18 /* PVZConfigration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZConfigration.m; sourceTree = "<group>"; };
+		2D653ADD1B92D28B00420E18 /* PVZAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZAudioPlayer.h; sourceTree = "<group>"; };
+		2D653ADE1B92D28B00420E18 /* PVZAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZAudioPlayer.m; sourceTree = "<group>"; };
+		2D653AE41B92DBD200420E18 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		2D653AE51B92DBD200420E18 /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
+		2DC8D6D91B92EA4200EE2484 /* macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		767FE1119049BE4B8FD0A51C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A6E791A3557A5F02B588EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE891B4ACEE7B9BCCFD5CFDD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +329,7 @@
 				2D2A69511B9168510021F8BF /* Scene */,
 				2D2A69551B9168510021F8BF /* Sprite */,
 				2D2A69591B916A140021F8BF /* Extension */,
-				2D2A695D1B916CAA0021F8BF /* Resource */,
+				2D653A0A1B92CA0E00420E18 /* Resource */,
 				2D2A69211B9160A30021F8BF /* Supporting Files */,
 			);
 			path = PlantsVsZombies;
@@ -181,11 +384,9 @@
 		2D2A69511B9168510021F8BF /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2D653AD91B92CCC700420E18 /* FristScene */,
 				2D2A695A1B916AD70021F8BF /* BaseGameScene.h */,
 				2D2A695B1B916AD70021F8BF /* BaseGameScene.m */,
-				2D2A69521B9168510021F8BF /* GameScene.h */,
-				2D2A69531B9168510021F8BF /* GameScene.m */,
-				2D2A69661B916F170021F8BF /* GameScene.sks */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -200,7 +401,13 @@
 		2D2A69581B91691A0021F8BF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				2D2A696F1B9173CC0021F8BF /* Configration */,
+				2DC8D6D91B92EA4200EE2484 /* macros.h */,
+				2D653ADA1B92D25300420E18 /* PVZConfigration.h */,
+				2D653ADB1B92D25300420E18 /* PVZConfigration.m */,
+				2D653ADD1B92D28B00420E18 /* PVZAudioPlayer.h */,
+				2D653ADE1B92D28B00420E18 /* PVZAudioPlayer.m */,
+				2D653AE41B92DBD200420E18 /* common.h */,
+				2D653AE51B92DBD200420E18 /* common.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -208,16 +415,10 @@
 		2D2A69591B916A140021F8BF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2D653AD81B92CA8B00420E18 /* Plist */,
 				2D2A69621B916E930021F8BF /* Category */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		2D2A695D1B916CAA0021F8BF /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		2D2A69621B916E930021F8BF /* Category */ = {
@@ -233,13 +434,198 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		2D2A696F1B9173CC0021F8BF /* Configration */ = {
+		2D653A0A1B92CA0E00420E18 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				2D2A69701B9173E90021F8BF /* PVZConfigration.h */,
-				2D2A69711B9173E90021F8BF /* PVZConfigration.m */,
+				2D653A0B1B92CA0E00420E18 /* Images */,
+				2D653A701B92CA0E00420E18 /* Music */,
 			);
-			path = Configration;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2D653A0B1B92CA0E00420E18 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A0C1B92CA0E00420E18 /* Background */,
+				2D653A171B92CA0E00420E18 /* Bullets */,
+				2D653A1A1B92CA0E00420E18 /* Cards */,
+				2D653A451B92CA0E00420E18 /* Items */,
+				2D653A4B1B92CA0E00420E18 /* Plants */,
+				2D653A521B92CA0E00420E18 /* Sun */,
+				2D653A541B92CA0E00420E18 /* Zombies */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2D653A0C1B92CA0E00420E18 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A0D1B92CA0E00420E18 /* firstpage.jpg */,
+				2D653A0E1B92CA0E00420E18 /* background1.jpg */,
+				2D653A0F1B92CA0E00420E18 /* background1unsodded.jpg */,
+				2D653A101B92CA0E00420E18 /* background1unsodded2.jpg */,
+				2D653A111B92CA0E00420E18 /* background1unsodded_1.jpg */,
+				2D653A121B92CA0E00420E18 /* background2.jpg */,
+				2D653A131B92CA0E00420E18 /* background3.jpg */,
+				2D653A141B92CA0E00420E18 /* background4.jpg */,
+				2D653A151B92CA0E00420E18 /* background5.jpg */,
+				2D653A161B92CA0E00420E18 /* background6boss.jpg */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		2D653A171B92CA0E00420E18 /* Bullets */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A181B92CA0E00420E18 /* PB_ICE.atlas */,
+				2D653A191B92CA0E00420E18 /* PB_Normal.atlas */,
+			);
+			path = Bullets;
+			sourceTree = "<group>";
+		};
+		2D653A1A1B92CA0E00420E18 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A1B1B92CA0E00420E18 /* Blover.png */,
+				2D653A1C1B92CA0E00420E18 /* Cactus.png */,
+				2D653A1D1B92CA0E00420E18 /* CherryBomb.png */,
+				2D653A1E1B92CA0E00420E18 /* Chomper.png */,
+				2D653A1F1B92CA0E00420E18 /* CoffeeBean.png */,
+				2D653A201B92CA0E00420E18 /* DoomShroom.png */,
+				2D653A211B92CA0E00420E18 /* FlowerPot.png */,
+				2D653A221B92CA0E00420E18 /* FumeShroom.png */,
+				2D653A231B92CA0E00420E18 /* Garlic.png */,
+				2D653A241B92CA0E00420E18 /* GatlingPea.png */,
+				2D653A251B92CA0E00420E18 /* GloomShroom.png */,
+				2D653A261B92CA0E00420E18 /* Gralic.png */,
+				2D653A271B92CA0E00420E18 /* HypnoShroom.png */,
+				2D653A281B92CA0E00420E18 /* IceShroom.png */,
+				2D653A291B92CA0E00420E18 /* Jalapeno.png */,
+				2D653A2A1B92CA0E00420E18 /* LilyPad.png */,
+				2D653A2B1B92CA0E00420E18 /* Peashooter.gif */,
+				2D653A2C1B92CA0E00420E18 /* Peashooter.png */,
+				2D653A2D1B92CA0E00420E18 /* Plantern.png */,
+				2D653A2E1B92CA0E00420E18 /* PotatoMine.gif */,
+				2D653A2F1B92CA0E00420E18 /* PotatoMine.png */,
+				2D653A301B92CA0E00420E18 /* PuffShroom.png */,
+				2D653A311B92CA0E00420E18 /* PumpkinHead.gif */,
+				2D653A321B92CA0E00420E18 /* PumpkinHead.png */,
+				2D653A331B92CA0E00420E18 /* Repeater.png */,
+				2D653A341B92CA0E00420E18 /* ScaredyShroom.png */,
+				2D653A351B92CA0E00420E18 /* SeaShroom.png */,
+				2D653A361B92CA0E00420E18 /* SnowPea.png */,
+				2D653A371B92CA0E00420E18 /* Spikerock.png */,
+				2D653A381B92CA0E00420E18 /* Spikeweed.png */,
+				2D653A391B92CA0E00420E18 /* SplitPea.png */,
+				2D653A3A1B92CA0E00420E18 /* Squash.png */,
+				2D653A3B1B92CA0E00420E18 /* Starfruit.png */,
+				2D653A3C1B92CA0E00420E18 /* SunFlower.png */,
+				2D653A3D1B92CA0E00420E18 /* SunShroom.png */,
+				2D653A3E1B92CA0E00420E18 /* TallNut.png */,
+				2D653A3F1B92CA0E00420E18 /* Threepeater.png */,
+				2D653A401B92CA0E00420E18 /* Torchwood.png */,
+				2D653A411B92CA0E00420E18 /* TwinSunflower.gif */,
+				2D653A421B92CA0E00420E18 /* TwinSunflower.png */,
+				2D653A431B92CA0E00420E18 /* WallNut.gif */,
+				2D653A441B92CA0E00420E18 /* WallNut.png */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		2D653A451B92CA0E00420E18 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A461B92CA0E00420E18 /* MainMenu.atlas */,
+				2D653A471B92CA0E00420E18 /* Menu.atlas */,
+				2D653A481B92CA0E00420E18 /* sod1row.png */,
+				2D653A491B92CA0E00420E18 /* sod3row.png */,
+				2D653A4A1B92CA0E00420E18 /* Welcome.atlas */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		2D653A4B1B92CA0E00420E18 /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A4C1B92CA0E00420E18 /* CherryBomb.atlas */,
+				2D653A4D1B92CA0E00420E18 /* Peashooter.atlas */,
+				2D653A4E1B92CA0E00420E18 /* SnowPea.atlas */,
+				2D653A4F1B92CA0E00420E18 /* SunFlower.atlas */,
+				2D653A501B92CA0E00420E18 /* Threepeater.atlas */,
+				2D653A511B92CA0E00420E18 /* WallNut.atlas */,
+			);
+			path = Plants;
+			sourceTree = "<group>";
+		};
+		2D653A521B92CA0E00420E18 /* Sun */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A531B92CA0E00420E18 /* Sun.atlas */,
+			);
+			path = Sun;
+			sourceTree = "<group>";
+		};
+		2D653A541B92CA0E00420E18 /* Zombies */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A551B92CA0E00420E18 /* BoomDie.atlas */,
+				2D653A561B92CA0E00420E18 /* BucketheadZombie.atlas */,
+				2D653A571B92CA0E00420E18 /* BucketheadZombieAttack.atlas */,
+				2D653A581B92CA0E00420E18 /* ConeheadZombie.atlas */,
+				2D653A591B92CA0E00420E18 /* ConeheadZombieAttack.atlas */,
+				2D653A5A1B92CA0E00420E18 /* FlagZombie.atlas */,
+				2D653A5B1B92CA0E00420E18 /* FlagZombieAttack.atlas */,
+				2D653A5C1B92CA0E00420E18 /* FlagZombieLostHead.atlas */,
+				2D653A5D1B92CA0E00420E18 /* FlagZombieLostHeadAttack.atlas */,
+				2D653A5E1B92CA0E00420E18 /* PoleVaultingZombie.atlas */,
+				2D653A5F1B92CA0E00420E18 /* PoleVaultingZombieAttack.atlas */,
+				2D653A601B92CA0E00420E18 /* PoleVaultingZombieDie.atlas */,
+				2D653A611B92CA0E00420E18 /* PoleVaultingZombieHead.atlas */,
+				2D653A621B92CA0E00420E18 /* PoleVaultingZombieJump.atlas */,
+				2D653A631B92CA0E00420E18 /* PoleVaultingZombieJump2.atlas */,
+				2D653A641B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas */,
+				2D653A651B92CA0E00420E18 /* PoleVaultingZombieLostHeadAttack.atlas */,
+				2D653A661B92CA0E00420E18 /* PoleVaultingZombieLostHeadWalk.atlas */,
+				2D653A671B92CA0E00420E18 /* PoleVaultingZombieWalk.atlas */,
+				2D653A681B92CA0E00420E18 /* PrepareGrowPlants.atlas */,
+				2D653A691B92CA0E00420E18 /* Zombie.atlas */,
+				2D653A6A1B92CA0E00420E18 /* Zombie3.atlas */,
+				2D653A6B1B92CA0E00420E18 /* ZombieAttack.atlas */,
+				2D653A6C1B92CA0E00420E18 /* ZombieDie.atlas */,
+				2D653A6D1B92CA0E00420E18 /* ZombieHead.atlas */,
+				2D653A6E1B92CA0E00420E18 /* ZombieLostHead.atlas */,
+				2D653A6F1B92CA0E00420E18 /* ZombieLostHeadAttack.atlas */,
+			);
+			path = Zombies;
+			sourceTree = "<group>";
+		};
+		2D653A701B92CA0E00420E18 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				2D653A711B92CA0E00420E18 /* game1.mp3 */,
+				2D653A721B92CA0E00420E18 /* game2.mp3 */,
+				2D653A731B92CA0E00420E18 /* game3.mp3 */,
+				2D653A741B92CA0E00420E18 /* gameScene.mp3 */,
+				2D653A751B92CA0E00420E18 /* rootScene.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		2D653AD81B92CA8B00420E18 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		2D653AD91B92CCC700420E18 /* FristScene */ = {
+			isa = PBXGroup;
+			children = (
+				2D2A69521B9168510021F8BF /* FirstScene.h */,
+				2D2A69531B9168510021F8BF /* FirstScene.m */,
+				2D2A69661B916F170021F8BF /* FirstScene.sks */,
+			);
+			name = FristScene;
 			sourceTree = "<group>";
 		};
 		E5557F1EB7B89DC35394BF5C /* Frameworks */ = {
@@ -332,10 +718,108 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2A69671B916F170021F8BF /* GameScene.sks in Resources */,
+				2D653AB11B92CA0E00420E18 /* CherryBomb.atlas in Resources */,
+				2D653A791B92CA0E00420E18 /* background1unsodded2.jpg in Resources */,
+				2D653ACF1B92CA0E00420E18 /* ZombieDie.atlas in Resources */,
+				2D653A8E1B92CA0E00420E18 /* HypnoShroom.png in Resources */,
+				2D653AC51B92CA0E00420E18 /* PoleVaultingZombieJump.atlas in Resources */,
+				2D653AA11B92CA0E00420E18 /* Squash.png in Resources */,
+				2D653AA71B92CA0E00420E18 /* Torchwood.png in Resources */,
+				2D653ACA1B92CA0E00420E18 /* PoleVaultingZombieWalk.atlas in Resources */,
+				2D653AB51B92CA0E00420E18 /* Threepeater.atlas in Resources */,
+				2D653AD71B92CA0E00420E18 /* rootScene.mp3 in Resources */,
+				2D653ABA1B92CA0E00420E18 /* BucketheadZombieAttack.atlas in Resources */,
+				2D653A9E1B92CA0E00420E18 /* Spikerock.png in Resources */,
+				2D653A7C1B92CA0E00420E18 /* background3.jpg in Resources */,
+				2D653A871B92CA0E00420E18 /* DoomShroom.png in Resources */,
+				2D653AA01B92CA0E00420E18 /* SplitPea.png in Resources */,
+				2D653ABD1B92CA0E00420E18 /* FlagZombie.atlas in Resources */,
+				2D653AC31B92CA0E00420E18 /* PoleVaultingZombieDie.atlas in Resources */,
+				2D2A69671B916F170021F8BF /* FirstScene.sks in Resources */,
+				2D653AA41B92CA0E00420E18 /* SunShroom.png in Resources */,
+				2D653A881B92CA0E00420E18 /* FlowerPot.png in Resources */,
+				2D653A7B1B92CA0E00420E18 /* background2.jpg in Resources */,
+				2D653A9D1B92CA0E00420E18 /* SnowPea.png in Resources */,
+				2D653ABB1B92CA0E00420E18 /* ConeheadZombie.atlas in Resources */,
+				2D653AAB1B92CA0E00420E18 /* WallNut.png in Resources */,
+				2D653AAD1B92CA0E00420E18 /* Menu.atlas in Resources */,
+				2D653A931B92CA0E00420E18 /* Peashooter.png in Resources */,
+				2D653A991B92CA0E00420E18 /* PumpkinHead.png in Resources */,
+				2D653AB61B92CA0E00420E18 /* WallNut.atlas in Resources */,
+				2D653A971B92CA0E00420E18 /* PuffShroom.png in Resources */,
+				2D653AD61B92CA0E00420E18 /* gameScene.mp3 in Resources */,
+				2D653AC61B92CA0E00420E18 /* PoleVaultingZombieJump2.atlas in Resources */,
+				2D653A771B92CA0E00420E18 /* background1.jpg in Resources */,
+				2D653A781B92CA0E00420E18 /* background1unsodded.jpg in Resources */,
+				2D653A951B92CA0E00420E18 /* PotatoMine.gif in Resources */,
+				2D653AC41B92CA0E00420E18 /* PoleVaultingZombieHead.atlas in Resources */,
+				2D653AA61B92CA0E00420E18 /* Threepeater.png in Resources */,
+				2D653A901B92CA0E00420E18 /* Jalapeno.png in Resources */,
+				2D653ACB1B92CA0E00420E18 /* PrepareGrowPlants.atlas in Resources */,
+				2D653AAC1B92CA0E00420E18 /* MainMenu.atlas in Resources */,
+				2D653AD41B92CA0E00420E18 /* game2.mp3 in Resources */,
+				2D653A841B92CA0E00420E18 /* CherryBomb.png in Resources */,
+				2D653A801B92CA0E00420E18 /* PB_ICE.atlas in Resources */,
+				2D653A851B92CA0E00420E18 /* Chomper.png in Resources */,
+				2D653A911B92CA0E00420E18 /* LilyPad.png in Resources */,
+				2D653AB21B92CA0E00420E18 /* Peashooter.atlas in Resources */,
+				2D653AA21B92CA0E00420E18 /* Starfruit.png in Resources */,
+				2D653A8B1B92CA0E00420E18 /* GatlingPea.png in Resources */,
+				2D653A9A1B92CA0E00420E18 /* Repeater.png in Resources */,
+				2D653AAF1B92CA0E00420E18 /* sod3row.png in Resources */,
+				2D653AB41B92CA0E00420E18 /* SunFlower.atlas in Resources */,
 				2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */,
+				2D653A9B1B92CA0E00420E18 /* ScaredyShroom.png in Resources */,
+				2D653AD11B92CA0E00420E18 /* ZombieLostHead.atlas in Resources */,
+				2D653A821B92CA0E00420E18 /* Blover.png in Resources */,
 				2D2A69341B9160A30021F8BF /* Images.xcassets in Resources */,
+				2D653A891B92CA0E00420E18 /* FumeShroom.png in Resources */,
+				2D653ABC1B92CA0E00420E18 /* ConeheadZombieAttack.atlas in Resources */,
+				2D653A981B92CA0E00420E18 /* PumpkinHead.gif in Resources */,
+				2D653A7E1B92CA0E00420E18 /* background5.jpg in Resources */,
+				2D653AD31B92CA0E00420E18 /* game1.mp3 in Resources */,
+				2D653AAE1B92CA0E00420E18 /* sod1row.png in Resources */,
+				2D653AB01B92CA0E00420E18 /* Welcome.atlas in Resources */,
+				2D653A921B92CA0E00420E18 /* Peashooter.gif in Resources */,
+				2D653AD21B92CA0E00420E18 /* ZombieLostHeadAttack.atlas in Resources */,
+				2D653ABF1B92CA0E00420E18 /* FlagZombieLostHead.atlas in Resources */,
+				2D653AC01B92CA0E00420E18 /* FlagZombieLostHeadAttack.atlas in Resources */,
+				2D653A8A1B92CA0E00420E18 /* Garlic.png in Resources */,
+				2D653A9F1B92CA0E00420E18 /* Spikeweed.png in Resources */,
 				2D2A69321B9160A30021F8BF /* Main.storyboard in Resources */,
+				2D653AD01B92CA0E00420E18 /* ZombieHead.atlas in Resources */,
+				2D653A941B92CA0E00420E18 /* Plantern.png in Resources */,
+				2D653A961B92CA0E00420E18 /* PotatoMine.png in Resources */,
+				2D653AC71B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas in Resources */,
+				2D653ACD1B92CA0E00420E18 /* Zombie3.atlas in Resources */,
+				2D653AB81B92CA0E00420E18 /* BoomDie.atlas in Resources */,
+				2D653AC11B92CA0E00420E18 /* PoleVaultingZombie.atlas in Resources */,
+				2D653A8D1B92CA0E00420E18 /* Gralic.png in Resources */,
+				2D653AC91B92CA0E00420E18 /* PoleVaultingZombieLostHeadWalk.atlas in Resources */,
+				2D653AC81B92CA0E00420E18 /* PoleVaultingZombieLostHeadAttack.atlas in Resources */,
+				2D653ACC1B92CA0E00420E18 /* Zombie.atlas in Resources */,
+				2D653A7A1B92CA0E00420E18 /* background1unsodded_1.jpg in Resources */,
+				2D653AA81B92CA0E00420E18 /* TwinSunflower.gif in Resources */,
+				2D653AAA1B92CA0E00420E18 /* WallNut.gif in Resources */,
+				2D653AB31B92CA0E00420E18 /* SnowPea.atlas in Resources */,
+				2D653A811B92CA0E00420E18 /* PB_Normal.atlas in Resources */,
+				2D653A8C1B92CA0E00420E18 /* GloomShroom.png in Resources */,
+				2D653A9C1B92CA0E00420E18 /* SeaShroom.png in Resources */,
+				2D653A831B92CA0E00420E18 /* Cactus.png in Resources */,
+				2D653A8F1B92CA0E00420E18 /* IceShroom.png in Resources */,
+				2D653AB71B92CA0E00420E18 /* Sun.atlas in Resources */,
+				2D653AA31B92CA0E00420E18 /* SunFlower.png in Resources */,
+				2D653A861B92CA0E00420E18 /* CoffeeBean.png in Resources */,
+				2D653AA91B92CA0E00420E18 /* TwinSunflower.png in Resources */,
+				2D653ABE1B92CA0E00420E18 /* FlagZombieAttack.atlas in Resources */,
+				2D653A7D1B92CA0E00420E18 /* background4.jpg in Resources */,
+				2D653ACE1B92CA0E00420E18 /* ZombieAttack.atlas in Resources */,
+				2D653A761B92CA0E00420E18 /* firstpage.jpg in Resources */,
+				2D653AA51B92CA0E00420E18 /* TallNut.png in Resources */,
+				2D653AD51B92CA0E00420E18 /* game3.mp3 in Resources */,
+				2D653A7F1B92CA0E00420E18 /* background6boss.jpg in Resources */,
+				2D653AB91B92CA0E00420E18 /* BucketheadZombie.atlas in Resources */,
+				2D653AC21B92CA0E00420E18 /* PoleVaultingZombieAttack.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,11 +873,13 @@
 				2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */,
 				2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */,
 				2D2A696E1B9172890021F8BF /* UIDevice+PVZ.m in Sources */,
-				2D2A69721B9173E90021F8BF /* PVZConfigration.m in Sources */,
+				2D653ADC1B92D25300420E18 /* PVZConfigration.m in Sources */,
+				2D653ADF1B92D28B00420E18 /* PVZAudioPlayer.m in Sources */,
 				2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */,
-				2D2A69561B9168510021F8BF /* GameScene.m in Sources */,
+				2D2A69561B9168510021F8BF /* FirstScene.m in Sources */,
 				2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */,
 				2D2A69241B9160A30021F8BF /* main.m in Sources */,
+				2D653AE61B92DBD200420E18 /* common.m in Sources */,
 				2D2A695C1B916AD70021F8BF /* BaseGameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

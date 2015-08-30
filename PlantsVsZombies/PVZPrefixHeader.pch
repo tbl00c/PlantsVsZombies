@@ -11,6 +11,8 @@
 
 // Common Header
 
+#import "common.h"
+#import "macros.h"
 #import "PVZConfigration.h"
 
 

@@ -14,7 +14,7 @@
 
 @interface GameViewController ()
 {
-    NSTimer *timer;
+    NSTimer *testTimer;
 }
 
 @property (nonatomic, strong) UIImageView *bgImageView;
@@ -22,6 +22,8 @@
 @property (nonatomic, strong) UIImageView *floorImageView;
 @property (nonatomic, strong) UIImageView *progressImageView;
 @property (nonatomic, strong) UIImageView *tagImageView;
+@property (nonatomic, strong) UIView *tagView;
+@property (nonatomic, strong) UIButton *startButton;
 
 
 @end
@@ -54,65 +56,101 @@
     [_progressImageView setHidden:YES];
     [self.view addSubview:_progressImageView];
     
-    _tagImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_tag"]];
-    [_tagImageView setSize:CGSizeMake(36, 36)];
-    [_tagImageView setHidden:YES];
-    [self.view addSubview:_tagImageView];
+    _tagView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
+    [_tagView setHidden:YES];
+    [self.view addSubview:_tagView];
     
-//    SKView * skView = (SKView *)self.view;
-//    skView.showsFPS = YES;
-//    skView.showsNodeCount = YES;
-//    skView.ignoresSiblingOrder = YES;
-//    
-//    GameScene *scene = [GameScene unarchiveFromFile:@"FirstScene"];
-//    scene.scaleMode = SKSceneScaleModeAspectFill;
-//    [skView presentScene:scene];
+    _tagImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_tag"]];
+    [_tagImageView setFrame:_tagView.frame];
+    [_tagView addSubview:_tagImageView];
+    
+    _startButton = [[UIButton alloc] init];
+    [_startButton setHidden:YES];
+    [_startButton setTitle:@"Click To Start Game" forState:UIControlStateNormal];
+    [_startButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [_startButton addTarget:self action:@selector(startButtonDown) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:_startButton];
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
+    // 播放音乐
     [[PVZAudioPlayer sharedAudioPlayer] playMusicByName:@"game3.mp3" loop:YES];
     
+    // 标题动画
     [UIView animateWithDuration:1.0 animations:^{
         [_titleImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN / 6.5)];
     } completion:^(BOOL finished) {
         
     }];
+    // 底部动画
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:1.0 animations:^{
             [_floorImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN - 53)];
         } completion:^(BOOL finished) {
+            [_startButton setFrame:_floorImageView.frame];
             [_progressImageView setFrame:CGRectMake(_floorImageView.originX - 5, _floorImageView.originY - 17, 0, 27)];
             [_progressImageView setHidden:NO];
-            [_tagImageView setCenter:CGPointMake(_progressImageView.originX + _progressImageView.frameWidth + _tagImageView.frameWidth * 0.5, _progressImageView.originY + _progressImageView.frameHeight - 36 * 0.5)];
-            [_tagImageView setHidden:NO];
+            [_tagView setCenter:CGPointMake(_progressImageView.originX + _progressImageView.frameWidth + _tagImageView.frameWidth * 0.5, _progressImageView.originY + _progressImageView.frameHeight - 36 * 0.5)];
+            [_tagView setHidden:NO];
             
-            timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(go) userInfo:nil repeats:YES];
+            // 开始进度条动画
+            testTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(testProgress) userInfo:nil repeats:YES];
         }];
     });
 }
 
+- (void) startButtonDown
+{
+    for (UIView *view in self.view.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    SKView * skView = (SKView *)self.view;
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
+    skView.ignoresSiblingOrder = YES;
+    
+    GameScene *scene = [GameScene unarchiveFromFile:@"FirstScene"];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    [skView presentScene:scene];
+}
+
 static float a = 0;
-- (void) go
+- (void) testProgress
 {
     a += 0.5;
     [self setProgress:a / 150.0];
     if (a >= 150.0) {
-        [_tagImageView removeFromSuperview];
-        [timer invalidate];
+        [testTimer invalidate];
     }
 }
 
 - (void) setProgress:(float)progress
 {
+    if (progress >= 1.0) {
+        [_tagImageView removeFromSuperview];
+        [_startButton setHidden:NO];
+        return;
+    }
     [_progressImageView setFrameWidth:(_floorImageView.frameWidth - 5) * progress];
-    float x = _progressImageView.originX + _progressImageView.frameWidth + _tagImageView.frameWidth * 0.5;
-    float y = _progressImageView.originY + _progressImageView.frameHeight - _tagImageView.frameHeight * 0.5;
-    [_tagImageView setCenter:CGPointMake(x, y)];
-    float w = 36 * (1.0 - progress * 0.6);
+    
+    float w = 36 * sin(M_PI_2 * (1.0 - progress * 0.8));
     [_tagImageView setSize:CGSizeMake(w, w)];
+    [_tagImageView setCenter:CGPointMake(18, 18)];
+    
+    CGAffineTransform transform = CGAffineTransformRotate(CGAffineTransformMakeRotation(0), progress * M_PI * 3);
+    [_tagView setTransform:transform];
+    float x = _progressImageView.originX + _progressImageView.frameWidth + w * 0.3;
+    float y = _progressImageView.originY + _progressImageView.frameHeight - w * 0.5;
+    [_tagView setCenter:CGPointMake(x, y)];
+}
+
+- (void) showStartButton
+{
+
 }
 
 - (BOOL)shouldAutorotate

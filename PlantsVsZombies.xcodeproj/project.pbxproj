@@ -78,7 +78,6 @@
 		2D653AAD1B92CA0E00420E18 /* Menu.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A471B92CA0E00420E18 /* Menu.atlas */; };
 		2D653AAE1B92CA0E00420E18 /* sod1row.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A481B92CA0E00420E18 /* sod1row.png */; };
 		2D653AAF1B92CA0E00420E18 /* sod3row.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A491B92CA0E00420E18 /* sod3row.png */; };
-		2D653AB01B92CA0E00420E18 /* Welcome.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4A1B92CA0E00420E18 /* Welcome.atlas */; };
 		2D653AB11B92CA0E00420E18 /* CherryBomb.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4C1B92CA0E00420E18 /* CherryBomb.atlas */; };
 		2D653AB21B92CA0E00420E18 /* Peashooter.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4D1B92CA0E00420E18 /* Peashooter.atlas */; };
 		2D653AB31B92CA0E00420E18 /* SnowPea.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A4E1B92CA0E00420E18 /* SnowPea.atlas */; };
@@ -121,6 +120,12 @@
 		2D653ADC1B92D25300420E18 /* PVZConfigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D653ADB1B92D25300420E18 /* PVZConfigration.m */; };
 		2D653ADF1B92D28B00420E18 /* PVZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D653ADE1B92D28B00420E18 /* PVZAudioPlayer.m */; };
 		2D653AE61B92DBD200420E18 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D653AE51B92DBD200420E18 /* common.m */; };
+		2DC8D6DD1B9304CC00EE2484 /* LoadingPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6DC1B9304CC00EE2484 /* LoadingPage.png */; };
+		2DC8D6E41B93056B00EE2484 /* fp_floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6DF1B93056B00EE2484 /* fp_floor.png */; };
+		2DC8D6E51B93056B00EE2484 /* fp_grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E01B93056B00EE2484 /* fp_grass.png */; };
+		2DC8D6E61B93056B00EE2484 /* LoadingPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E11B93056B00EE2484 /* LoadingPage.png */; };
+		2DC8D6E71B93056B00EE2484 /* fp_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E21B93056B00EE2484 /* fp_title.png */; };
+		2DC8D6E81B93056B00EE2484 /* fp_tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E31B93056B00EE2484 /* fp_tag.png */; };
 		8C3A3B1442EF16FEA707A710 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FE1119049BE4B8FD0A51C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -218,7 +223,6 @@
 		2D653A471B92CA0E00420E18 /* Menu.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Menu.atlas; sourceTree = "<group>"; };
 		2D653A481B92CA0E00420E18 /* sod1row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sod1row.png; sourceTree = "<group>"; };
 		2D653A491B92CA0E00420E18 /* sod3row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sod3row.png; sourceTree = "<group>"; };
-		2D653A4A1B92CA0E00420E18 /* Welcome.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Welcome.atlas; sourceTree = "<group>"; };
 		2D653A4C1B92CA0E00420E18 /* CherryBomb.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = CherryBomb.atlas; sourceTree = "<group>"; };
 		2D653A4D1B92CA0E00420E18 /* Peashooter.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Peashooter.atlas; sourceTree = "<group>"; };
 		2D653A4E1B92CA0E00420E18 /* SnowPea.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SnowPea.atlas; sourceTree = "<group>"; };
@@ -265,6 +269,12 @@
 		2D653AE41B92DBD200420E18 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		2D653AE51B92DBD200420E18 /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
 		2DC8D6D91B92EA4200EE2484 /* macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		2DC8D6DC1B9304CC00EE2484 /* LoadingPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadingPage.png; sourceTree = "<group>"; };
+		2DC8D6DF1B93056B00EE2484 /* fp_floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_floor.png; sourceTree = "<group>"; };
+		2DC8D6E01B93056B00EE2484 /* fp_grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_grass.png; sourceTree = "<group>"; };
+		2DC8D6E11B93056B00EE2484 /* LoadingPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadingPage.png; sourceTree = "<group>"; };
+		2DC8D6E21B93056B00EE2484 /* fp_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_title.png; sourceTree = "<group>"; };
+		2DC8D6E31B93056B00EE2484 /* fp_tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_tag.png; sourceTree = "<group>"; };
 		767FE1119049BE4B8FD0A51C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A6E791A3557A5F02B588EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE891B4ACEE7B9BCCFD5CFDD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -460,6 +470,7 @@
 		2D653A0C1B92CA0E00420E18 /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				2DC8D6DC1B9304CC00EE2484 /* LoadingPage.png */,
 				2D653A0D1B92CA0E00420E18 /* firstpage.jpg */,
 				2D653A0E1B92CA0E00420E18 /* background1.jpg */,
 				2D653A0F1B92CA0E00420E18 /* background1unsodded.jpg */,
@@ -535,11 +546,11 @@
 		2D653A451B92CA0E00420E18 /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				2DC8D6DE1B93056B00EE2484 /* Welcome */,
 				2D653A461B92CA0E00420E18 /* MainMenu.atlas */,
 				2D653A471B92CA0E00420E18 /* Menu.atlas */,
 				2D653A481B92CA0E00420E18 /* sod1row.png */,
 				2D653A491B92CA0E00420E18 /* sod3row.png */,
-				2D653A4A1B92CA0E00420E18 /* Welcome.atlas */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -626,6 +637,18 @@
 				2D2A69661B916F170021F8BF /* FirstScene.sks */,
 			);
 			name = FristScene;
+			sourceTree = "<group>";
+		};
+		2DC8D6DE1B93056B00EE2484 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2DC8D6DF1B93056B00EE2484 /* fp_floor.png */,
+				2DC8D6E01B93056B00EE2484 /* fp_grass.png */,
+				2DC8D6E11B93056B00EE2484 /* LoadingPage.png */,
+				2DC8D6E21B93056B00EE2484 /* fp_title.png */,
+				2DC8D6E31B93056B00EE2484 /* fp_tag.png */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		E5557F1EB7B89DC35394BF5C /* Frameworks */ = {
@@ -755,6 +778,7 @@
 				2D653AC41B92CA0E00420E18 /* PoleVaultingZombieHead.atlas in Resources */,
 				2D653AA61B92CA0E00420E18 /* Threepeater.png in Resources */,
 				2D653A901B92CA0E00420E18 /* Jalapeno.png in Resources */,
+				2DC8D6E71B93056B00EE2484 /* fp_title.png in Resources */,
 				2D653ACB1B92CA0E00420E18 /* PrepareGrowPlants.atlas in Resources */,
 				2D653AAC1B92CA0E00420E18 /* MainMenu.atlas in Resources */,
 				2D653AD41B92CA0E00420E18 /* game2.mp3 in Resources */,
@@ -766,6 +790,7 @@
 				2D653AA21B92CA0E00420E18 /* Starfruit.png in Resources */,
 				2D653A8B1B92CA0E00420E18 /* GatlingPea.png in Resources */,
 				2D653A9A1B92CA0E00420E18 /* Repeater.png in Resources */,
+				2DC8D6E41B93056B00EE2484 /* fp_floor.png in Resources */,
 				2D653AAF1B92CA0E00420E18 /* sod3row.png in Resources */,
 				2D653AB41B92CA0E00420E18 /* SunFlower.atlas in Resources */,
 				2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */,
@@ -777,9 +802,10 @@
 				2D653ABC1B92CA0E00420E18 /* ConeheadZombieAttack.atlas in Resources */,
 				2D653A981B92CA0E00420E18 /* PumpkinHead.gif in Resources */,
 				2D653A7E1B92CA0E00420E18 /* background5.jpg in Resources */,
+				2DC8D6E51B93056B00EE2484 /* fp_grass.png in Resources */,
 				2D653AD31B92CA0E00420E18 /* game1.mp3 in Resources */,
 				2D653AAE1B92CA0E00420E18 /* sod1row.png in Resources */,
-				2D653AB01B92CA0E00420E18 /* Welcome.atlas in Resources */,
+				2DC8D6E81B93056B00EE2484 /* fp_tag.png in Resources */,
 				2D653A921B92CA0E00420E18 /* Peashooter.gif in Resources */,
 				2D653AD21B92CA0E00420E18 /* ZombieLostHeadAttack.atlas in Resources */,
 				2D653ABF1B92CA0E00420E18 /* FlagZombieLostHead.atlas in Resources */,
@@ -791,6 +817,7 @@
 				2D653A941B92CA0E00420E18 /* Plantern.png in Resources */,
 				2D653A961B92CA0E00420E18 /* PotatoMine.png in Resources */,
 				2D653AC71B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas in Resources */,
+				2DC8D6E61B93056B00EE2484 /* LoadingPage.png in Resources */,
 				2D653ACD1B92CA0E00420E18 /* Zombie3.atlas in Resources */,
 				2D653AB81B92CA0E00420E18 /* BoomDie.atlas in Resources */,
 				2D653AC11B92CA0E00420E18 /* PoleVaultingZombie.atlas in Resources */,
@@ -814,6 +841,7 @@
 				2D653ABE1B92CA0E00420E18 /* FlagZombieAttack.atlas in Resources */,
 				2D653A7D1B92CA0E00420E18 /* background4.jpg in Resources */,
 				2D653ACE1B92CA0E00420E18 /* ZombieAttack.atlas in Resources */,
+				2DC8D6DD1B9304CC00EE2484 /* LoadingPage.png in Resources */,
 				2D653A761B92CA0E00420E18 /* firstpage.jpg in Resources */,
 				2D653AA51B92CA0E00420E18 /* TallNut.png in Resources */,
 				2D653AD51B92CA0E00420E18 /* game3.mp3 in Resources */,

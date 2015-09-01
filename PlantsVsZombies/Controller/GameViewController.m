@@ -7,8 +7,24 @@
 //
 
 #import "GameViewController.h"
+
 #import "PVZAudioPlayer.h"
+
 #import "FirstScene.h"
+
+@interface GameViewController ()
+{
+    NSTimer *timer;
+}
+
+@property (nonatomic, strong) UIImageView *bgImageView;
+@property (nonatomic, strong) UIImageView *titleImageView;
+@property (nonatomic, strong) UIImageView *floorImageView;
+@property (nonatomic, strong) UIImageView *progressImageView;
+@property (nonatomic, strong) UIImageView *tagImageView;
+
+
+@end
 
 @implementation GameViewController
 
@@ -16,21 +32,87 @@
 {
     [super viewDidLoad];
 
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    skView.ignoresSiblingOrder = YES;
     
-    GameScene *scene = [GameScene unarchiveFromFile:@"FirstScene"];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    [skView presentScene:scene];
+    _bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LoadingPage"]];
+    [_bgImageView setBackgroundColor:[UIColor redColor]];
+    [_bgImageView setFrame:self.view.frame];
+    [self.view addSubview:_bgImageView];
+    
+    _titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_title"]];
+    [_titleImageView setSize:CGSizeMake(374 * 1.1, 62 * 1.1)];
+    [_titleImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, - 62 * 1.2)];
+    [self.view addSubview:_titleImageView];
+    
+    _floorImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_floor"]];
+    [_floorImageView setSize:CGSizeMake(320 * 0.8, 53 * 0.8)];
+    [_floorImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN + 53 * 0.8)];
+    [self.view addSubview:_floorImageView];
+    
+    _progressImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_grass"]];
+    [_progressImageView setClipsToBounds:YES];
+    [_progressImageView setContentMode: UIViewContentModeTopLeft];
+    [_progressImageView setHidden:YES];
+    [self.view addSubview:_progressImageView];
+    
+    _tagImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_tag"]];
+    [_tagImageView setSize:CGSizeMake(36, 36)];
+    [_tagImageView setHidden:YES];
+    [self.view addSubview:_tagImageView];
+    
+//    SKView * skView = (SKView *)self.view;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
+//    skView.ignoresSiblingOrder = YES;
+//    
+//    GameScene *scene = [GameScene unarchiveFromFile:@"FirstScene"];
+//    scene.scaleMode = SKSceneScaleModeAspectFill;
+//    [skView presentScene:scene];
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    [[PVZAudioPlayer sharedAudioPlayer] playMusicByName:@"game2.mp3" loop:YES];
+    [[PVZAudioPlayer sharedAudioPlayer] playMusicByName:@"game3.mp3" loop:YES];
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [_titleImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN / 6.5)];
+    } completion:^(BOOL finished) {
+        
+    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:1.0 animations:^{
+            [_floorImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN - 53)];
+        } completion:^(BOOL finished) {
+            [_progressImageView setFrame:CGRectMake(_floorImageView.originX - 5, _floorImageView.originY - 17, 0, 27)];
+            [_progressImageView setHidden:NO];
+            [_tagImageView setCenter:CGPointMake(_progressImageView.originX + _progressImageView.frameWidth + _tagImageView.frameWidth * 0.5, _progressImageView.originY + _progressImageView.frameHeight - 36 * 0.5)];
+            [_tagImageView setHidden:NO];
+            
+            timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(go) userInfo:nil repeats:YES];
+        }];
+    });
+}
+
+static float a = 0;
+- (void) go
+{
+    a += 0.5;
+    [self setProgress:a / 150.0];
+    if (a >= 150.0) {
+        [_tagImageView removeFromSuperview];
+        [timer invalidate];
+    }
+}
+
+- (void) setProgress:(float)progress
+{
+    [_progressImageView setFrameWidth:(_floorImageView.frameWidth - 5) * progress];
+    float x = _progressImageView.originX + _progressImageView.frameWidth + _tagImageView.frameWidth * 0.5;
+    float y = _progressImageView.originY + _progressImageView.frameHeight - _tagImageView.frameHeight * 0.5;
+    [_tagImageView setCenter:CGPointMake(x, y)];
+    float w = 36 * (1.0 - progress * 0.6);
+    [_tagImageView setSize:CGSizeMake(w, w)];
 }
 
 - (BOOL)shouldAutorotate

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 lbk. All rights reserved.
 //
 
-#import "BaseGameScene.h"
+#import <SpriteKit/SKScene.h>
 
-@interface GameScene : BaseGameScene
+@interface RootScene : SKScene
 
 @end

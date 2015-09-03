@@ -14,12 +14,12 @@
 		2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69351B9160A30021F8BF /* LaunchScreen.xib */; };
 		2D2A69431B9160A30021F8BF /* PlantsVsZombiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69421B9160A30021F8BF /* PlantsVsZombiesTests.m */; };
 		2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A694E1B9168490021F8BF /* GameViewController.m */; };
-		2D2A69561B9168510021F8BF /* FirstScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69531B9168510021F8BF /* FirstScene.m */; };
-		2D2A695C1B916AD70021F8BF /* BaseGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A695B1B916AD70021F8BF /* BaseGameScene.m */; };
+		2D2A69561B9168510021F8BF /* RootScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69531B9168510021F8BF /* RootScene.m */; };
 		2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */; };
-		2D2A69671B916F170021F8BF /* FirstScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69661B916F170021F8BF /* FirstScene.sks */; };
 		2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A696A1B9170620021F8BF /* UIView+PVZ.m */; };
 		2D2A696E1B9172890021F8BF /* UIDevice+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */; };
+		2D62D6821B98809D00CF3059 /* PVZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62D6811B98809D00CF3059 /* PVZButton.m */; };
+		2D62D6851B988B2A00CF3059 /* PVZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D62D6841B988B2A00CF3059 /* PVZProgressView.m */; };
 		2D653A761B92CA0E00420E18 /* firstpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A0D1B92CA0E00420E18 /* firstpage.jpg */; };
 		2D653A771B92CA0E00420E18 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A0E1B92CA0E00420E18 /* background1.jpg */; };
 		2D653A781B92CA0E00420E18 /* background1unsodded.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A0F1B92CA0E00420E18 /* background1unsodded.jpg */; };
@@ -123,7 +123,6 @@
 		2DC8D6DD1B9304CC00EE2484 /* LoadingPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6DC1B9304CC00EE2484 /* LoadingPage.png */; };
 		2DC8D6E41B93056B00EE2484 /* fp_floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6DF1B93056B00EE2484 /* fp_floor.png */; };
 		2DC8D6E51B93056B00EE2484 /* fp_grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E01B93056B00EE2484 /* fp_grass.png */; };
-		2DC8D6E61B93056B00EE2484 /* LoadingPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E11B93056B00EE2484 /* LoadingPage.png */; };
 		2DC8D6E71B93056B00EE2484 /* fp_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E21B93056B00EE2484 /* fp_title.png */; };
 		2DC8D6E81B93056B00EE2484 /* fp_tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC8D6E31B93056B00EE2484 /* fp_tag.png */; };
 		8C3A3B1442EF16FEA707A710 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 767FE1119049BE4B8FD0A51C /* libPods.a */; };
@@ -153,18 +152,19 @@
 		2D2A69421B9160A30021F8BF /* PlantsVsZombiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlantsVsZombiesTests.m; sourceTree = "<group>"; };
 		2D2A694D1B9168490021F8BF /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2D2A694E1B9168490021F8BF /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		2D2A69521B9168510021F8BF /* FirstScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScene.h; sourceTree = "<group>"; };
-		2D2A69531B9168510021F8BF /* FirstScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstScene.m; sourceTree = "<group>"; };
-		2D2A695A1B916AD70021F8BF /* BaseGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGameScene.h; sourceTree = "<group>"; };
-		2D2A695B1B916AD70021F8BF /* BaseGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGameScene.m; sourceTree = "<group>"; };
+		2D2A69521B9168510021F8BF /* RootScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootScene.h; sourceTree = "<group>"; };
+		2D2A69531B9168510021F8BF /* RootScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootScene.m; sourceTree = "<group>"; };
 		2D2A69631B916EA30021F8BF /* SKScene+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKScene+PVZ.h"; sourceTree = "<group>"; };
 		2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKScene+PVZ.m"; sourceTree = "<group>"; };
-		2D2A69661B916F170021F8BF /* FirstScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirstScene.sks; sourceTree = "<group>"; };
 		2D2A69691B9170620021F8BF /* UIView+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PVZ.h"; sourceTree = "<group>"; };
 		2D2A696A1B9170620021F8BF /* UIView+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PVZ.m"; sourceTree = "<group>"; };
 		2D2A696C1B9172890021F8BF /* UIDevice+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+PVZ.h"; sourceTree = "<group>"; };
 		2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+PVZ.m"; sourceTree = "<group>"; };
 		2D2A69731B91747D0021F8BF /* PVZPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PVZPrefixHeader.pch; sourceTree = "<group>"; };
+		2D62D6801B98809D00CF3059 /* PVZButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZButton.h; sourceTree = "<group>"; };
+		2D62D6811B98809D00CF3059 /* PVZButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZButton.m; sourceTree = "<group>"; };
+		2D62D6831B988B2A00CF3059 /* PVZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZProgressView.h; sourceTree = "<group>"; };
+		2D62D6841B988B2A00CF3059 /* PVZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZProgressView.m; sourceTree = "<group>"; };
 		2D653A0D1B92CA0E00420E18 /* firstpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = firstpage.jpg; sourceTree = "<group>"; };
 		2D653A0E1B92CA0E00420E18 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 		2D653A0F1B92CA0E00420E18 /* background1unsodded.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1unsodded.jpg; sourceTree = "<group>"; };
@@ -272,7 +272,6 @@
 		2DC8D6DC1B9304CC00EE2484 /* LoadingPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadingPage.png; sourceTree = "<group>"; };
 		2DC8D6DF1B93056B00EE2484 /* fp_floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_floor.png; sourceTree = "<group>"; };
 		2DC8D6E01B93056B00EE2484 /* fp_grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_grass.png; sourceTree = "<group>"; };
-		2DC8D6E11B93056B00EE2484 /* LoadingPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadingPage.png; sourceTree = "<group>"; };
 		2DC8D6E21B93056B00EE2484 /* fp_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_title.png; sourceTree = "<group>"; };
 		2DC8D6E31B93056B00EE2484 /* fp_tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_tag.png; sourceTree = "<group>"; };
 		767FE1119049BE4B8FD0A51C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,6 +335,7 @@
 				2D2A69581B91691A0021F8BF /* Helper */,
 				2D2A69501B9168510021F8BF /* Model */,
 				2D2A694C1B9168490021F8BF /* Controller */,
+				2D62D67F1B98808B00CF3059 /* View */,
 				2D2A69511B9168510021F8BF /* Scene */,
 				2D2A69551B9168510021F8BF /* Sprite */,
 				2D2A69591B916A140021F8BF /* Extension */,
@@ -394,9 +394,7 @@
 		2D2A69511B9168510021F8BF /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				2D653AD91B92CCC700420E18 /* FristScene */,
-				2D2A695A1B916AD70021F8BF /* BaseGameScene.h */,
-				2D2A695B1B916AD70021F8BF /* BaseGameScene.m */,
+				2D653AD91B92CCC700420E18 /* RootScene */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -442,6 +440,17 @@
 				2D2A696D1B9172890021F8BF /* UIDevice+PVZ.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		2D62D67F1B98808B00CF3059 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D62D6801B98809D00CF3059 /* PVZButton.h */,
+				2D62D6811B98809D00CF3059 /* PVZButton.m */,
+				2D62D6831B988B2A00CF3059 /* PVZProgressView.h */,
+				2D62D6841B988B2A00CF3059 /* PVZProgressView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2D653A0A1B92CA0E00420E18 /* Resource */ = {
@@ -629,14 +638,13 @@
 			path = Plist;
 			sourceTree = "<group>";
 		};
-		2D653AD91B92CCC700420E18 /* FristScene */ = {
+		2D653AD91B92CCC700420E18 /* RootScene */ = {
 			isa = PBXGroup;
 			children = (
-				2D2A69521B9168510021F8BF /* FirstScene.h */,
-				2D2A69531B9168510021F8BF /* FirstScene.m */,
-				2D2A69661B916F170021F8BF /* FirstScene.sks */,
+				2D2A69521B9168510021F8BF /* RootScene.h */,
+				2D2A69531B9168510021F8BF /* RootScene.m */,
 			);
-			name = FristScene;
+			name = RootScene;
 			sourceTree = "<group>";
 		};
 		2DC8D6DE1B93056B00EE2484 /* Welcome */ = {
@@ -644,7 +652,6 @@
 			children = (
 				2DC8D6DF1B93056B00EE2484 /* fp_floor.png */,
 				2DC8D6E01B93056B00EE2484 /* fp_grass.png */,
-				2DC8D6E11B93056B00EE2484 /* LoadingPage.png */,
 				2DC8D6E21B93056B00EE2484 /* fp_title.png */,
 				2DC8D6E31B93056B00EE2484 /* fp_tag.png */,
 			);
@@ -758,7 +765,6 @@
 				2D653AA01B92CA0E00420E18 /* SplitPea.png in Resources */,
 				2D653ABD1B92CA0E00420E18 /* FlagZombie.atlas in Resources */,
 				2D653AC31B92CA0E00420E18 /* PoleVaultingZombieDie.atlas in Resources */,
-				2D2A69671B916F170021F8BF /* FirstScene.sks in Resources */,
 				2D653AA41B92CA0E00420E18 /* SunShroom.png in Resources */,
 				2D653A881B92CA0E00420E18 /* FlowerPot.png in Resources */,
 				2D653A7B1B92CA0E00420E18 /* background2.jpg in Resources */,
@@ -817,7 +823,6 @@
 				2D653A941B92CA0E00420E18 /* Plantern.png in Resources */,
 				2D653A961B92CA0E00420E18 /* PotatoMine.png in Resources */,
 				2D653AC71B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas in Resources */,
-				2DC8D6E61B93056B00EE2484 /* LoadingPage.png in Resources */,
 				2D653ACD1B92CA0E00420E18 /* Zombie3.atlas in Resources */,
 				2D653AB81B92CA0E00420E18 /* BoomDie.atlas in Resources */,
 				2D653AC11B92CA0E00420E18 /* PoleVaultingZombie.atlas in Resources */,
@@ -900,15 +905,16 @@
 			files = (
 				2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */,
 				2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */,
+				2D62D6821B98809D00CF3059 /* PVZButton.m in Sources */,
 				2D2A696E1B9172890021F8BF /* UIDevice+PVZ.m in Sources */,
 				2D653ADC1B92D25300420E18 /* PVZConfigration.m in Sources */,
 				2D653ADF1B92D28B00420E18 /* PVZAudioPlayer.m in Sources */,
 				2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */,
-				2D2A69561B9168510021F8BF /* FirstScene.m in Sources */,
+				2D2A69561B9168510021F8BF /* RootScene.m in Sources */,
+				2D62D6851B988B2A00CF3059 /* PVZProgressView.m in Sources */,
 				2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */,
 				2D2A69241B9160A30021F8BF /* main.m in Sources */,
 				2D653AE61B92DBD200420E18 /* common.m in Sources */,
-				2D2A695C1B916AD70021F8BF /* BaseGameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

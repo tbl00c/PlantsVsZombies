@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [NSThread sleepForTimeInterval:1.0];        // 启动页延时
+//    [NSThread sleepForTimeInterval:1.0];        // 启动页延时
     
     return YES;
 }

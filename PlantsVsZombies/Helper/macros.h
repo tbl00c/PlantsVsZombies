@@ -9,7 +9,7 @@
 #ifndef PlantsVsZombies_macros_h
 #define PlantsVsZombies_macros_h
 
-#define APPDELEGETE 	((L8AppDelegate*)[[UIApplication sharedApplication]delegate])
+#define APPDELEGETE 	((AppDelegate*)[[UIApplication sharedApplication]delegate])
 #define WIDTH_SCREEN	[UIScreen mainScreen].bounds.size.width
 #define HEIGHT_SCREEN	[UIScreen mainScreen].bounds.size.height
 #define HEIGHT_STATUSBAR	20

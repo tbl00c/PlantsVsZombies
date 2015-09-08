@@ -63,6 +63,11 @@
     [_labelNode setFontSize:fontSize];
 }
 
+- (void) setFontName:(NSString *)fontName
+{
+    [_labelNode setFontName:fontName];
+}
+
 #pragma mark - Image Button
 
 - (void) setSize:(CGSize)size

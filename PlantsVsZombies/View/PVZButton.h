@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) SKColor *fontColor;
 @property (nonatomic, assign) CGFloat fontSize;
+@property (nonatomic, strong) NSString *fontName;
 
 @property (nonatomic, assign) CGSize size;
 

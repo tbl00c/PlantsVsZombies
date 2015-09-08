@@ -12,6 +12,8 @@
 
 #import "PVZAudioPlayer.h"
 
+#import "AdventureModeScene.h"
+
 @interface GameViewController ()
 {
     NSTimer *testTimer;
@@ -65,8 +67,9 @@
     
     // 播放音乐
     [[PVZAudioPlayer sharedAudioPlayer] playMusicByName:@"game3.mp3" loop:YES];
-//    [self showInitView];
-    [self startButtonDown];
+    
+//    [self showInitView];        // 正常进入
+    [self startButtonDown];     // 直接进入主页面
 }
 
 /**
@@ -122,12 +125,13 @@ static float a = 0;
         [view removeFromSuperview];
     }
     
-    SKView * skView = (SKView *)self.view;
+    SKView *skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     skView.ignoresSiblingOrder = YES;
     
-    RootScene *scene = [RootScene sceneWithSize:CGSizeMake(667, 375)];
+//    RootScene *scene = [RootScene sceneWithSize:CGSizeMake(667, 375)];
+    AdventureModeScene *scene = [AdventureModeScene sceneWithSize:CGSizeMake(667, 375)];
     scene.scaleMode = SKSceneScaleModeAspectFit;
     [skView presentScene:scene];
 }

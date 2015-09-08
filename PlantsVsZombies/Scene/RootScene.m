@@ -9,11 +9,23 @@
 #import "RootScene.h"
 #import "PVZButton.h"
 
+#import "AdventureModeScene.h"
+
+@interface RootScene ()
+
+@property (nonatomic, strong) AdventureModeScene *adventrueModeScene;
+
+
+@end
+
 @implementation RootScene
 
 -(void)didMoveToView:(SKView *)view
 {
     [super didMoveToView:view];
+    
+    _adventrueModeScene = [AdventureModeScene sceneWithSize:self.size];
+    _adventrueModeScene.scaleMode = SKSceneScaleModeAspectFit;
     
     [self showMainMenu];
 }
@@ -81,9 +93,22 @@
     userNameNode.speed = 0.5;
     userNameNode.position = CGPointMake(-205, 250);
     [backgroundNode addChild:userNameNode];
+    
+    PVZButton *userNameButton = [[PVZButton alloc] initWithTitle:@"text"];
+    userNameButton.tag = 301;
+    userNameButton.fontSize = 12;
+    userNameButton.fontColor = [UIColor orangeColor];
+    userNameButton.fontName = @"ChalkboardSE-Light";
+    [userNameButton addTarget:self action:@selector(userButtonDown:)];
+    userNameButton.position = CGPointMake(-205, 119);
+    userNameButton.hidden = YES;
+    [backgroundNode addChild:userNameButton];
+    
     SKAction *cp = [SKAction speedTo:5 duration:1];
     SKAction *move = [SKAction moveTo:CGPointMake(-205, 145) duration:0.8];
-    [userNameNode runAction:[SKAction group:@[cp, move]]];
+    [userNameNode runAction:[SKAction group:@[cp, move]] completion:^{
+        userNameButton.hidden = NO;
+    }];
     
     PVZButton *changeUserButton = [[PVZButton alloc] initWithImageName:@"changePlayer1"];
     changeUserButton.size = CGSizeMake(195, 35);
@@ -107,17 +132,55 @@
 #pragma mark - Button Action
 - (void) vaseButtonDown: (PVZButton *) sender
 {
-    NSLog(@"vase button down, %lu", (unsigned long)sender.tag);
+    switch (sender.tag) {
+        case 201:
+            
+            break;
+        case 202:
+            
+            break;
+        case 203:
+            exit(0);
+            break;
+        default:
+            break;
+    }
 }
 
 - (void) modeButtonDown: (PVZButton *) sender
 {
-    NSLog(@"mode button down, %lu", (unsigned long)sender.tag);
+    switch (sender.tag) {
+        case 101:
+            [self.view presentScene:_adventrueModeScene];
+        
+            break;
+        case 102:
+            
+            break;
+        case 103:
+            
+            break;
+        case 104:
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void) userButtonDown: (PVZButton *) sender
 {
-    NSLog(@"user button down, %lu", (unsigned long)sender.tag);
+    switch (sender.tag) {
+        case 301:
+            
+            break;
+        case 302:
+            
+            break;
+        default:
+            break;
+    }
 }
 
 @end

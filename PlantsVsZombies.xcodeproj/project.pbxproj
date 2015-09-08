@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2120DC1B99477D00C4F1D0 /* AdventureModeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2120DB1B99477D00C4F1D0 /* AdventureModeScene.m */; };
 		2D2A69241B9160A30021F8BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69231B9160A30021F8BF /* main.m */; };
 		2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69261B9160A30021F8BF /* AppDelegate.m */; };
 		2D2A69321B9160A30021F8BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69301B9160A30021F8BF /* Main.storyboard */; };
@@ -139,6 +140,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D2120DA1B99477D00C4F1D0 /* AdventureModeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdventureModeScene.h; sourceTree = "<group>"; };
+		2D2120DB1B99477D00C4F1D0 /* AdventureModeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdventureModeScene.m; sourceTree = "<group>"; };
 		2D2A691E1B9160A30021F8BF /* PlantsVsZombies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantsVsZombies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2A69221B9160A30021F8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D2A69231B9160A30021F8BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -307,6 +310,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2D2120D91B99467E00C4F1D0 /* AdventureMode */ = {
+			isa = PBXGroup;
+			children = (
+				2D2120DA1B99477D00C4F1D0 /* AdventureModeScene.h */,
+				2D2120DB1B99477D00C4F1D0 /* AdventureModeScene.m */,
+			);
+			name = AdventureMode;
+			sourceTree = "<group>";
+		};
 		2D2A69151B9160A30021F8BF = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +406,7 @@
 		2D2A69511B9168510021F8BF /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2D2120D91B99467E00C4F1D0 /* AdventureMode */,
 				2D653AD91B92CCC700420E18 /* RootScene */,
 			);
 			path = Scene;
@@ -914,6 +927,7 @@
 				2D62D6851B988B2A00CF3059 /* PVZProgressView.m in Sources */,
 				2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */,
 				2D2A69241B9160A30021F8BF /* main.m in Sources */,
+				2D2120DC1B99477D00C4F1D0 /* AdventureModeScene.m in Sources */,
 				2D653AE61B92DBD200420E18 /* common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

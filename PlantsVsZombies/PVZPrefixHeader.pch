@@ -20,7 +20,6 @@
 
 #import "SKScene+PVZ.h"
 #import "UIView+PVZ.h"
-#import "UIDevice+PVZ.h"
 
 
 #endif

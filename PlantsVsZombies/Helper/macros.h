@@ -9,9 +9,18 @@
 #ifndef PlantsVsZombies_macros_h
 #define PlantsVsZombies_macros_h
 
-#define APPDELEGETE 	((AppDelegate*)[[UIApplication sharedApplication]delegate])
-#define WIDTH_SCREEN	[UIScreen mainScreen].bounds.size.width
-#define HEIGHT_SCREEN	[UIScreen mainScreen].bounds.size.height
+#define APPDELEGETE         ((AppDelegate*)[[UIApplication sharedApplication]delegate])
+#define WIDTH_SCREEN        667
+#define HEIGHT_SCREEN       375
 #define HEIGHT_STATUSBAR	20
+
+
+#define SuppressPerformSelectorLeakWarning(Stuff) \
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
+} while (0)
 
 #endif

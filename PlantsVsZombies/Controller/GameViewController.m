@@ -8,11 +8,11 @@
 
 #import "GameViewController.h"
 #import "PVZProgressView.h"
-#import "RootScene.h"
+#import "PVZRootScene.h"
 
 #import "PVZAudioPlayer.h"
 
-#import "AdventureModeScene.h"
+#import "PVZAdventureModeScene.h"
 
 @interface GameViewController ()
 {
@@ -40,12 +40,12 @@
     
     _titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_title"]];
     [_titleImageView setSize:CGSizeMake(374 * 1.1, 62 * 1.1)];
-    [_titleImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, - 62 * 1.2)];
+    [_titleImageView setCenter:CGPointMake(self.view.frameWidth / 2.0, - 62 * 1.2)];
     [self.view addSubview:_titleImageView];
     
     _floorImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_floor"]];
     [_floorImageView setSize:CGSizeMake(320 * 0.8, 53 * 0.8)];
-    [_floorImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN + 53 * 0.8)];
+    [_floorImageView setCenter:CGPointMake(self.view.frameWidth / 2.0, self.view.frameHeight + 53 * 0.8)];
     [self.view addSubview:_floorImageView];
     
     _progressView = [[PVZProgressView alloc] init];
@@ -79,14 +79,14 @@
 {
     // 标题动画
     [UIView animateWithDuration:1.0 animations:^{
-        [_titleImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN / 6.5)];
+        [_titleImageView setCenter:CGPointMake(self.view.frameWidth / 2.0, self.view.frameHeight / 6.5)];
     } completion:^(BOOL finished) {
         
     }];
     // 底部动画
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:1.0 animations:^{
-            [_floorImageView setCenter:CGPointMake(WIDTH_SCREEN / 2.0, HEIGHT_SCREEN - 53)];
+            [_floorImageView setCenter:CGPointMake(self.view.frameWidth / 2.0, self.view.frameHeight - 53)];
         } completion:^(BOOL finished) {
             [_startButton setFrame:CGRectMake(_floorImageView.originX, _floorImageView.originY, _floorImageView.frameWidth, _floorImageView.frameHeight * 0.9)];
             [_progressView setFrame:CGRectMake(_floorImageView.originX - 5, _floorImageView.originY - 32, _floorImageView.frameWidth, 40)];
@@ -130,8 +130,8 @@ static float a = 0;
     skView.showsNodeCount = YES;
     skView.ignoresSiblingOrder = YES;
     
-//    RootScene *scene = [RootScene sceneWithSize:CGSizeMake(667, 375)];
-    AdventureModeScene *scene = [AdventureModeScene sceneWithSize:CGSizeMake(667, 375)];
+    PVZRootScene *scene = [PVZRootScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
+//    PVZAdventureModeScene *scene = [PVZAdventureModeScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
     scene.scaleMode = SKSceneScaleModeAspectFit;
     [skView presentScene:scene];
 }

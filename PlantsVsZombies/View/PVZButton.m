@@ -47,8 +47,8 @@
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (_skAction) {
-        [_skTarget performSelector:_skAction withObject:self];
+    if (_skAction && _skTarget) {
+        SuppressPerformSelectorLeakWarning([_skTarget performSelector:_skAction withObject:self]);
     }
 }
 

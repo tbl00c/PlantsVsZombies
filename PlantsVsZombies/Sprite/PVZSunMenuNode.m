@@ -23,7 +23,11 @@
 {
     PVZSunMenuNode *node = [PVZSunMenuNode spriteNodeWithImageNamed:@"SunBack"];
     [node setSize:CGSizeMake(WIDTH_SUNMENU, HEIGHT_SUNMENU)];
+#ifdef DEBUG_SUN_INFINATE
+    [node setSunValue:5000];
+#else
     [node setSunValue:sunValue];
+#endif
     
     return node;
 }

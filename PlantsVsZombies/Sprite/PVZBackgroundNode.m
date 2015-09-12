@@ -10,6 +10,16 @@
 
 static PVZBackgroundNode *backgroundNode = nil;
 
+@interface PVZBackgroundNode ()
+{
+    id map[5][9];
+}
+
+@property (nonatomic, assign) CGRect plantsRect;            // 植物放置区域
+@property (nonatomic, assign) CGSize plantItemSize;         // 单个植物大小
+
+@end
+
 @implementation PVZBackgroundNode
 
 + (PVZBackgroundNode *) createBackgroundNodeByType: (PVZBackgroundType) type
@@ -19,28 +29,39 @@ static PVZBackgroundNode *backgroundNode = nil;
     }
     NSString *imageName = [NSString stringWithFormat:@"PVZBackground_%ld.jpg", (long)type];
     backgroundNode = [PVZBackgroundNode spriteNodeWithImageNamed:imageName];
+    [backgroundNode setUserInteractionEnabled:YES];
     [backgroundNode setType:type];
     return backgroundNode;
 }
 
+/**
+ *  根据地图类型划分植物放置区域
+ *
+ *  @param type 地图类型
+ */
 - (void) setType:(PVZBackgroundType)type
 {
     [self setSize:CGSizeMake(HEIGHT_SCREEN * 7 / 3, HEIGHT_SCREEN)];
     switch (type) {
         case PVZBackgroundLawnEmpty:
-     
+            _plantItemSize = CGSizeMake(0, 0);
+            _plantsRect = CGRectMake(0, 0, 0, 0);
             break;
         case PVZBackgroundLawnOne:
-            
+            _plantItemSize = CGSizeMake(50, 60);
+            _plantsRect = CGRectMake(-280, -45, _plantItemSize.width * 9, _plantItemSize.height);
             break;
         case PVZBackgroundLawnThree:
-            
+            _plantItemSize = CGSizeMake(50, 60);
+            _plantsRect = CGRectMake(-280, -105, _plantItemSize.width * 9, _plantItemSize.height * 3);
             break;
         case PVZBackgroundLawn:
-            
+            _plantItemSize = CGSizeMake(50, 60);
+            _plantsRect = CGRectMake(-280, -165, _plantItemSize.width * 9, _plantItemSize.height * 5);
             break;
         case PVZBackgroundLawnDark:
-            
+            _plantItemSize = CGSizeMake(50, 60);
+            _plantsRect = CGRectMake(-280, -165, _plantItemSize.width * 9, _plantItemSize.height * 5);
             break;
         case PVZBackgroundRoof:
             
@@ -59,6 +80,11 @@ static PVZBackgroundNode *backgroundNode = nil;
     }
 }
 
+/**
+ *  展示本局的僵尸
+ *
+ *  @param zombies 僵尸数组
+ */
 - (void) scrollToShowZombies:(NSArray *)zombies;
 {
     CGPoint startPoint = self.position;
@@ -68,6 +94,61 @@ static PVZBackgroundNode *backgroundNode = nil;
     SKAction *moveBack = [SKAction moveTo:startPoint duration:1];
     SKAction *action = [SKAction sequence:@[moveToRight, wait, moveBack]];
     [self runAction:action];
+}
+
+/**
+ *  在制定位置放置植物
+ *
+ *  @param point 位置
+ *  @param plant 植物
+ *
+ *  @return 放置是否成功
+ */
+- (BOOL) putPlantAtPoint:(CGPoint)point plant:(id)plant
+{
+    int x = point.x;
+    int y = point.y;
+    if (map[y][x] != nil) {
+        return NO;
+    }
+    map[y][x] = plant;
+    CGPoint mapPoint = [self getPlantItemPostionByMapPoint:point];
+    [plant setPosition: mapPoint];
+    [self addChild:plant];
+    
+    return YES;
+}
+
+#pragma mark - 点击事件及处理
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint point = [[touches anyObject] locationInNode:self];
+    CGPoint plantPoint = [self getPlantItemMapPositionByTouchPoint:point];
+    BOOL canPutPlant = YES;
+    if (plantPoint.x == -1 && plantPoint.y == -1) {
+        canPutPlant = NO;
+    }
+    if (_delegate && [_delegate respondsToSelector:@selector(backgroundNodeClickedAtPoint:canPutPlant:)]) {
+        [_delegate backgroundNodeClickedAtPoint:plantPoint canPutPlant:canPutPlant];
+    }
+}
+
+- (CGPoint) getPlantItemMapPositionByTouchPoint:(CGPoint)point
+{
+    if (point.x >= _plantsRect.origin.x && point.x < _plantsRect.origin.x + _plantsRect.size.width && point.y >= _plantsRect.origin.y && point.y < _plantsRect.origin.y + _plantsRect.size.height) {
+        int x = (point.x - _plantsRect.origin.x) / _plantItemSize.width;
+        int y = (point.y - _plantsRect.origin.y) / _plantItemSize.height;
+        return map[y][x] == nil ? CGPointMake(x, y) : CGPointMake(-1, -1);
+    }
+    return CGPointMake(-1, -1);
+}
+
+- (CGPoint) getPlantItemPostionByMapPoint:(CGPoint)point
+{
+    float x = _plantsRect.origin.x + (point.x + 0.5) * _plantItemSize.width;
+    float y = _plantsRect.origin.y + (point.y + 0.5) * _plantItemSize.height;
+    return CGPointMake(x, y);
 }
 
 @end

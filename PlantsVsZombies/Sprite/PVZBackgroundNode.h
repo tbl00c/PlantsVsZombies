@@ -20,11 +20,19 @@ typedef NS_ENUM(NSInteger, PVZBackgroundType) {
     PVZBackgroundPoolDark,
 };
 
+@protocol PVZBackgroundDelegate <NSObject>
+
+- (void) backgroundNodeClickedAtPoint:(CGPoint)point canPutPlant:(BOOL)canPutPlant;
+
+@end
+
 @interface PVZBackgroundNode : SKSpriteNode
 
 @property (nonatomic, assign) PVZBackgroundType type;
+@property (nonatomic, assign) id<PVZBackgroundDelegate>delegate;
 
 + (PVZBackgroundNode *) createBackgroundNodeByType: (PVZBackgroundType) type;
 - (void) scrollToShowZombies:(NSArray *)zombies;
+- (BOOL) putPlantAtPoint:(CGPoint)point plant:(id)plant;
 
 @end

@@ -68,8 +68,8 @@
     // 播放音乐
     [[PVZAudioPlayer sharedAudioPlayer] playMusicByName:@"game3.mp3" loop:YES];
     
-//    [self showInitView];        // 正常进入
-    [self startButtonDown];     // 直接进入主页面
+    [self showInitView];        // 正常进入
+//    [self startButtonDown];     // 直接进入主页面
 }
 
 /**
@@ -115,10 +115,9 @@ static float a = 0;
             [_startButton setAlpha:0];
         } completion:^(BOOL finished) {
             [_startButton setTitle:@"Click To Start Game" forState:UIControlStateNormal];
+            [_startButton setUserInteractionEnabled:YES];
             [UIView animateWithDuration:0.3 animations:^{
                 [_startButton setAlpha:1.0];
-            } completion:^(BOOL finished) {
-                [_startButton setUserInteractionEnabled:YES];
             }];
         }];
     }
@@ -137,9 +136,12 @@ static float a = 0;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     skView.ignoresSiblingOrder = YES;
-    
-//    PVZRootScene *scene = [PVZRootScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
+
+#ifdef DEBUG_ADVENTURE_MODE
     PVZAdventureModeScene *scene = [PVZAdventureModeScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
+#else
+    PVZRootScene *scene = [PVZRootScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
+#endif
     scene.scaleMode = SKSceneScaleModeAspectFit;
     [skView presentScene:scene];
 }

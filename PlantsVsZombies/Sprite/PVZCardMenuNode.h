@@ -19,10 +19,12 @@
 
 @property (nonatomic, strong) NSMutableArray *cardArray;
 @property (nonatomic, assign) id<PVZCardMenuDelegate>delegate;
+@property (nonatomic, weak) PVZCardItemNode *choosedNode;
 
 + (PVZCardMenuNode *) createCardMenuNode;
 
 - (void) addCardItem:(PVZCardItemNode *)cardItem withAnimation:(BOOL)animation;
-- (void) resignChooseMenuItem;
+- (void) startAllCardItemCooling;
+- (void) cancelChooseMenuItemAndPutPlant:(BOOL)putPlant;
 
 @end

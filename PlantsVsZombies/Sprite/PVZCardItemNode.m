@@ -11,6 +11,7 @@
 @interface PVZCardItemNode ()
 
 @property (nonatomic, strong) SKLabelNode *costLabel;
+@property (nonatomic, strong) SKSpriteNode *progressNode;
 
 @end
 
@@ -19,9 +20,10 @@
 + (PVZCardItemNode *) createCareItemNodeWithInfo:(PVZCard *)cardInfo
 {
     PVZCardItemNode *node = [[PVZCardItemNode alloc] initWithImageNamed:cardInfo.imageName];
-    [node setUserInteractionEnabled:YES];
     [node setSize:CGSizeMake(WIDTH_CARDMENU, HEIGHT_CARDITEM)];
     [node setCardInfo:cardInfo];
+    [node setUserInteractionEnabled:YES];
+    [node setIsReady:YES];
     return node;
 }
 
@@ -41,9 +43,39 @@
         [self addChild:_costLabel];
     }
     [_costLabel setText:[NSString stringWithFormat:@"%3d", cardInfo.cost]];
-    [self setIsReady:YES];
 }
 
+/**
+ *  开始冷却
+ */
+- (void) startCooling
+{
+#ifdef DEBUG_COOLING_CLOSED
+    [self setUserInteractionEnabled:YES];
+    [self setIsReady:YES];
+#else
+    [self setUserInteractionEnabled:NO];
+    [self setIsReady:NO];
+    _progressNode = [SKSpriteNode spriteNodeWithColor:[UIColor grayColor] size:CGSizeMake(self.size.width, self.size.height * 0.88)];
+    [_progressNode setPosition:CGPointMake(0, - self.size.height * 0.03)];
+    [_progressNode setAlpha:0.4];
+    [_progressNode setZPosition:1];
+    [self addChild:_progressNode];
+    SKAction *changeSize = [SKAction resizeToHeight:0 duration:_cardInfo.coolingTime];
+    SKAction *changePosition = [SKAction moveTo:CGPointMake(0, self.size.height * 0.42) duration:_cardInfo.coolingTime];
+    SKAction *groupAnimation = [SKAction group:@[changeSize, changePosition]];
+    [_progressNode runAction:groupAnimation completion:^{
+        [self setUserInteractionEnabled:YES];
+        [self setIsReady:YES];
+    }];
+#endif
+}
+
+/**
+ *  是否冷却完毕
+ *
+ *  @return 是否冷却完毕
+ */
 - (BOOL) isReady
 {
     if (! _isReady) {

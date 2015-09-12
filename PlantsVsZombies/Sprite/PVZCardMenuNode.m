@@ -10,7 +10,7 @@
 
 @interface PVZCardMenuNode ()
 
-@property (nonatomic, strong) SKSpriteNode *chooseNode;
+@property (nonatomic, strong) SKSpriteNode *choosedMarkNode;
 
 @end
 
@@ -40,12 +40,29 @@
     [self addChild:cardItem];
 }
 
+
 /**
  *  取消选中状态
+ *
+ *  @param putPlant 是否成功种植植物
  */
-- (void) resignChooseMenuItem
+- (void) cancelChooseMenuItemAndPutPlant:(BOOL)putPlant
 {
-    [_chooseNode removeFromParent];
+    if (putPlant && _choosedNode) {
+        [_choosedNode startCooling];
+    }
+    [_choosedMarkNode removeFromParent];
+    _choosedNode = nil;
+}
+
+/**
+ *  所有卡片开始冷却
+ */
+- (void) startAllCardItemCooling
+{
+    for (PVZCardItemNode *node in _cardArray) {
+        [node startCooling];
+    }
 }
 
 #pragma mark - 卡片点击事件
@@ -53,18 +70,19 @@
 {
     if (_delegate && [_delegate respondsToSelector:@selector(cardMenuDidSelectedCardItem:)]) {
         if ([cardItem isReady] && [_delegate cardMenuDidSelectedCardItem:cardItem.cardInfo]) {
-            if (_chooseNode == nil) {
-                _chooseNode = [SKSpriteNode spriteNodeWithImageNamed:@"chooseMenu"];
-                [_chooseNode setZPosition:1];
-                [_chooseNode setSize:cardItem.size];
+            if (_choosedMarkNode == nil) {
+                _choosedMarkNode = [SKSpriteNode spriteNodeWithImageNamed:@"chooseMenu"];
+                [_choosedMarkNode setZPosition:1];
+                [_choosedMarkNode setSize:cardItem.size];
             }
-            if (_chooseNode.parent == nil) {
-                [self addChild:_chooseNode];
+            if (_choosedMarkNode.parent == nil) {
+                [self addChild:_choosedMarkNode];
             }
-            [_chooseNode setPosition:cardItem.position];
+            _choosedNode = cardItem;
+            [_choosedMarkNode setPosition:cardItem.position];
         }
         else {
-            [self resignChooseMenuItem];
+            [self cancelChooseMenuItemAndPutPlant:NO];
         }
     }
 }

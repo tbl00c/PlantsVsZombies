@@ -16,11 +16,11 @@
 @property (nonatomic, assign) NSUInteger tag;
 
 @property (nonatomic, assign) BOOL isReady;
-
 @property (nonatomic, strong) PVZCard *cardInfo;
 
 + (PVZCardItemNode *) createCareItemNodeWithInfo:(PVZCard *) cardInfo;
 
 - (void) addTarget:(id)target action:(SEL)action;
+- (void) startCooling;
 
 @end

@@ -9,6 +9,14 @@
 #ifndef PlantsVsZombies_macros_h
 #define PlantsVsZombies_macros_h
 
+#pragma mark - 测试用
+
+//#define DEBUG_ADVENTURE_MODE
+//#define DEBUG_SUN_INFINATE
+//#define DEBUG_COOLING_CLOSED
+
+#pragma mark - 控件大小
+
 #define WIDTH_SCREEN        667
 #define HEIGHT_SCREEN       375
 

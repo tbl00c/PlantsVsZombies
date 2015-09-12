@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -15,7 +15,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="坤哥出品 必属精品" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnR-In-zfd">
-                    <rect key="frame" x="186" y="426" width="108" height="21"/>
+                    <rect key="frame" x="186" y="443" width="108" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="cnR-In-zfd" secondAttribute="height" multiplier="36:7" id="ERZ-7f-9KA"/>
                     </constraints>
@@ -28,7 +28,7 @@
             <constraints>
                 <constraint firstItem="s7Z-om-88q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1tt-0Q-VXM"/>
                 <constraint firstAttribute="trailing" secondItem="s7Z-om-88q" secondAttribute="trailing" id="3uH-BD-cKm"/>
-                <constraint firstAttribute="bottom" secondItem="cnR-In-zfd" secondAttribute="bottom" constant="33" id="7Er-Bq-4cF"/>
+                <constraint firstAttribute="bottom" secondItem="cnR-In-zfd" secondAttribute="bottom" constant="16" id="7Er-Bq-4cF"/>
                 <constraint firstAttribute="bottom" secondItem="s7Z-om-88q" secondAttribute="bottom" id="dkA-ED-vZb"/>
                 <constraint firstItem="s7Z-om-88q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e64-5H-bNg"/>
                 <constraint firstItem="s7Z-om-88q" firstAttribute="centerX" secondItem="cnR-In-zfd" secondAttribute="centerX" id="wHe-K8-lbI"/>

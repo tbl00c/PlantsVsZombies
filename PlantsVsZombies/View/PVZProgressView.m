@@ -32,9 +32,7 @@
         
         _tagView = [[UIView alloc] init];
         [self addSubview:_tagView];
-        
         _tagImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fp_tag"]];
-        
         [_tagView addSubview:_tagImageView];
     }
     return self;
@@ -47,9 +45,8 @@
     grassHeight = frame.size.height * 0.6;
     [_grassImageView setFrame:CGRectMake(0, frame.size.height - grassHeight, 0, grassHeight + 10)];
     
-    tagWidth = frame.size.height * 0.9;
+    tagWidth = frame.size.height;
     [_tagView setSize:CGSizeMake(tagWidth, tagWidth)];
-    
     [_tagImageView setFrame:_tagView.frame];
     
     [self setProgress:0];
@@ -70,10 +67,9 @@
     
     float w = tagWidth * sin(M_PI_2 * (1.0 - progress * 0.8));
     [_tagImageView setSize:CGSizeMake(w, w)];
-    [_tagImageView setCenter:CGPointMake(18, 18)];
+    [_tagImageView setCenter:CGPointMake(tagWidth * 0.5, tagWidth * 0.5)];
     
-    CGAffineTransform transform = CGAffineTransformRotate(CGAffineTransformMakeRotation(0), progress * M_PI * 3.5);
-    [_tagView setTransform:transform];
+    [_tagView setTransform:CGAffineTransformRotate(CGAffineTransformMakeRotation(0), progress * M_PI * 3.5)];
     [_tagView setCenter:CGPointMake(_grassImageView.frameWidth + w * 0.3 - 2, _grassImageView.originY + grassHeight - w * 0.5)];
 }
 

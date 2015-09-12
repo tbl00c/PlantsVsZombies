@@ -72,7 +72,7 @@
     [_tagImageView setSize:CGSizeMake(w, w)];
     [_tagImageView setCenter:CGPointMake(18, 18)];
     
-    CGAffineTransform transform = CGAffineTransformRotate(CGAffineTransformMakeRotation(0), progress * M_PI * 3);
+    CGAffineTransform transform = CGAffineTransformRotate(CGAffineTransformMakeRotation(0), progress * M_PI * 3.5);
     [_tagView setTransform:transform];
     [_tagView setCenter:CGPointMake(_grassImageView.frameWidth + w * 0.3 - 2, _grassImageView.originY + grassHeight - w * 0.5)];
 }

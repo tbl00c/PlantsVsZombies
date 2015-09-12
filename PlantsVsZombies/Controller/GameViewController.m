@@ -53,9 +53,9 @@
     [self.view addSubview:_progressView];
     
     _startButton = [[UIButton alloc] init];
-    [_startButton setHidden:NO];
     [_startButton setAlpha:0];
-    [_startButton setTitle:@"Click To Start Game" forState:UIControlStateNormal];
+    [_startButton setUserInteractionEnabled:NO];
+    [_startButton setTitle:@"Loading..." forState:UIControlStateNormal];
     [_startButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [_startButton addTarget:self action:@selector(startButtonDown) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:_startButton];
@@ -85,13 +85,15 @@
     }];
     // 底部动画
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [UIView animateWithDuration:1.0 animations:^{
-            [_floorImageView setCenter:CGPointMake(self.view.frameWidth / 2.0, self.view.frameHeight - 53)];
+        [UIView animateWithDuration:0.8 animations:^{
+            [_floorImageView setCenter:CGPointMake(self.view.frameWidth / 2.0, self.view.frameHeight - 33)];
         } completion:^(BOOL finished) {
             [_startButton setFrame:CGRectMake(_floorImageView.originX, _floorImageView.originY, _floorImageView.frameWidth, _floorImageView.frameHeight * 0.9)];
             [_progressView setFrame:CGRectMake(_floorImageView.originX - 5, _floorImageView.originY - 32, _floorImageView.frameWidth, 40)];
             [_progressView setHidden:NO];
-            
+            [UIView animateWithDuration:0.3 animations:^{
+                [_startButton setAlpha:1.0];
+            }];
             // 开始进度条动画(测试用)
             testTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(testProgress) userInfo:nil repeats:YES];
         }];
@@ -109,9 +111,15 @@ static float a = 0;
     [_progressView setProgress:a / 150.0];
     if (a >= 150.0) {
         [testTimer invalidate];
-        [_startButton setHidden:NO];
-        [UIView animateWithDuration:0.5 animations:^{
-            [_startButton setAlpha:1.0];
+        [UIView animateWithDuration:0.3 animations:^{
+            [_startButton setAlpha:0];
+        } completion:^(BOOL finished) {
+            [_startButton setTitle:@"Click To Start Game" forState:UIControlStateNormal];
+            [UIView animateWithDuration:0.3 animations:^{
+                [_startButton setAlpha:1.0];
+            } completion:^(BOOL finished) {
+                [_startButton setUserInteractionEnabled:YES];
+            }];
         }];
     }
 }
@@ -130,8 +138,8 @@ static float a = 0;
     skView.showsNodeCount = YES;
     skView.ignoresSiblingOrder = YES;
     
-    PVZRootScene *scene = [PVZRootScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
-//    PVZAdventureModeScene *scene = [PVZAdventureModeScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
+//    PVZRootScene *scene = [PVZRootScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
+    PVZAdventureModeScene *scene = [PVZAdventureModeScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
     scene.scaleMode = SKSceneScaleModeAspectFit;
     [skView presentScene:scene];
 }

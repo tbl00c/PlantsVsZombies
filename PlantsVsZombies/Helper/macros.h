@@ -9,10 +9,16 @@
 #ifndef PlantsVsZombies_macros_h
 #define PlantsVsZombies_macros_h
 
-#define APPDELEGETE         ((AppDelegate*)[[UIApplication sharedApplication]delegate])
 #define WIDTH_SCREEN        667
 #define HEIGHT_SCREEN       375
-#define HEIGHT_STATUSBAR	20
+
+#define WIDTH_SUNMENU       123
+#define HEIGHT_SUNMENU      37
+
+#define WIDTH_CARDMENU      76
+#define HEIGHT_CARDMENU     300
+#define HEIGHT_CARDITEM     43
+
 
 
 #define SuppressPerformSelectorLeakWarning(Stuff) \

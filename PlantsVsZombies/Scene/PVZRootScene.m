@@ -30,6 +30,61 @@
     [self showMainMenu];
 }
 
+#pragma mark - 按钮点击事件
+- (void) vaseButtonDown: (PVZButton *) sender
+{
+    switch (sender.tag) {
+        case 201:
+            
+            break;
+        case 202:
+            
+            break;
+        case 203:
+            exit(0);
+            break;
+        default:
+            break;
+    }
+}
+
+- (void) modeButtonDown: (PVZButton *) sender
+{
+    switch (sender.tag) {
+        case 101:
+            [self.view presentScene:_adventrueModeScene];
+        
+            break;
+        case 102:
+            
+            break;
+        case 103:
+            
+            break;
+        case 104:
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void) userButtonDown: (PVZButton *) sender
+{
+    switch (sender.tag) {
+        case 301:
+            
+            break;
+        case 302:
+            
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - 加载界面元素
 - (void) showMainMenu
 {
     [self removeAllChildren];
@@ -45,7 +100,7 @@
     optionsButton.position = CGPointMake(170, -135);
     [optionsButton addTarget:self action:@selector(vaseButtonDown:)];
     [backgroundNode addChild:optionsButton];
-
+    
     PVZButton *helpButton = [[PVZButton alloc] initWithTitle:@"帮助"];
     helpButton.tag = 202;
     helpButton.position = CGPointMake(228, -152);
@@ -127,60 +182,6 @@
     [backgroundNode addChild:warningLabelNode];
     SKAction *move3 = [SKAction moveTo:CGPointMake(-210, 55) duration:1.1];
     [warningLabelNode runAction:[SKAction group:@[cp, move3]]];
-}
-
-#pragma mark - Button Action
-- (void) vaseButtonDown: (PVZButton *) sender
-{
-    switch (sender.tag) {
-        case 201:
-            
-            break;
-        case 202:
-            
-            break;
-        case 203:
-            exit(0);
-            break;
-        default:
-            break;
-    }
-}
-
-- (void) modeButtonDown: (PVZButton *) sender
-{
-    switch (sender.tag) {
-        case 101:
-            [self.view presentScene:_adventrueModeScene];
-        
-            break;
-        case 102:
-            
-            break;
-        case 103:
-            
-            break;
-        case 104:
-            
-            break;
-            
-        default:
-            break;
-    }
-}
-
-- (void) userButtonDown: (PVZButton *) sender
-{
-    switch (sender.tag) {
-        case 301:
-            
-            break;
-        case 302:
-            
-            break;
-        default:
-            break;
-    }
 }
 
 @end

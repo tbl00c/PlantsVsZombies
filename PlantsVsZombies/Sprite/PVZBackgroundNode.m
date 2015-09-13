@@ -22,15 +22,13 @@ static PVZBackgroundNode *backgroundNode = nil;
 
 @implementation PVZBackgroundNode
 
-+ (PVZBackgroundNode *) createBackgroundNodeByType: (PVZBackgroundType) type
++ (PVZBackgroundNode *) createBackgroundNode
 {
     if (backgroundNode != nil) {
         [backgroundNode removeFromParent];
     }
-    NSString *imageName = [NSString stringWithFormat:@"PVZBackground_%ld.jpg", (long)type];
-    backgroundNode = [PVZBackgroundNode spriteNodeWithImageNamed:imageName];
+    backgroundNode = [PVZBackgroundNode spriteNodeWithColor:[UIColor clearColor] size:CGSizeMake(HEIGHT_SCREEN * 7 / 3, HEIGHT_SCREEN)];
     [backgroundNode setUserInteractionEnabled:YES];
-    [backgroundNode setType:type];
     return backgroundNode;
 }
 
@@ -41,7 +39,8 @@ static PVZBackgroundNode *backgroundNode = nil;
  */
 - (void) setType:(PVZBackgroundType)type
 {
-    [self setSize:CGSizeMake(HEIGHT_SCREEN * 7 / 3, HEIGHT_SCREEN)];
+    NSString *imageName = [NSString stringWithFormat:@"PVZBackground_%ld.jpg", (long)type];
+    [self setTexture:[SKTexture textureWithImageNamed:imageName]];
     switch (type) {
         case PVZBackgroundLawnEmpty:
             _plantItemSize = CGSizeMake(0, 0);

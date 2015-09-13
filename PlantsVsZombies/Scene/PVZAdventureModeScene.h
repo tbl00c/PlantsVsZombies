@@ -11,6 +11,8 @@
 
 @interface PVZAdventureModeScene : SKScene
 
++ (PVZAdventureModeScene *) sharedAdventureModeScene;
+
 @property (nonatomic, strong) PVZTollgate *tollgate;
 
 @end

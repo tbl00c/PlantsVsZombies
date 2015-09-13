@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1BA6FF1BA56BCF009BB687 /* PVZSunNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BA6FE1BA56BCF009BB687 /* PVZSunNode.m */; };
+		2D1BA7021BA56DF4009BB687 /* SKSpriteNode+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BA7011BA56DF4009BB687 /* SKSpriteNode+PVZ.m */; };
 		2D2120DC1B99477D00C4F1D0 /* PVZAdventureModeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2120DB1B99477D00C4F1D0 /* PVZAdventureModeScene.m */; };
 		2D2A69241B9160A30021F8BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69231B9160A30021F8BF /* main.m */; };
 		2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69261B9160A30021F8BF /* AppDelegate.m */; };
@@ -68,7 +70,7 @@
 		2D653AA31B92CA0E00420E18 /* Card_SunFlower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3C1B92CA0E00420E18 /* Card_SunFlower.png */; };
 		2D653AA41B92CA0E00420E18 /* SunShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3D1B92CA0E00420E18 /* SunShroom.png */; };
 		2D653AA51B92CA0E00420E18 /* TallNut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3E1B92CA0E00420E18 /* TallNut.png */; };
-		2D653AA61B92CA0E00420E18 /* Threepeater.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3F1B92CA0E00420E18 /* Threepeater.png */; };
+		2D653AA61B92CA0E00420E18 /* Card_Threepeater.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3F1B92CA0E00420E18 /* Card_Threepeater.png */; };
 		2D653AA71B92CA0E00420E18 /* Torchwood.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A401B92CA0E00420E18 /* Torchwood.png */; };
 		2D653AA91B92CA0E00420E18 /* TwinSunflower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A421B92CA0E00420E18 /* TwinSunflower.png */; };
 		2D653AAB1B92CA0E00420E18 /* Card_WallNut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A441B92CA0E00420E18 /* Card_WallNut.png */; };
@@ -138,6 +140,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D1BA6FD1BA56BCF009BB687 /* PVZSunNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZSunNode.h; sourceTree = "<group>"; };
+		2D1BA6FE1BA56BCF009BB687 /* PVZSunNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZSunNode.m; sourceTree = "<group>"; };
+		2D1BA7001BA56DF4009BB687 /* SKSpriteNode+PVZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKSpriteNode+PVZ.h"; sourceTree = "<group>"; };
+		2D1BA7011BA56DF4009BB687 /* SKSpriteNode+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKSpriteNode+PVZ.m"; sourceTree = "<group>"; };
 		2D2120DA1B99477D00C4F1D0 /* PVZAdventureModeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZAdventureModeScene.h; sourceTree = "<group>"; };
 		2D2120DB1B99477D00C4F1D0 /* PVZAdventureModeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZAdventureModeScene.m; sourceTree = "<group>"; };
 		2D2A691E1B9160A30021F8BF /* PlantsVsZombies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantsVsZombies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,7 +222,7 @@
 		2D653A3C1B92CA0E00420E18 /* Card_SunFlower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_SunFlower.png; sourceTree = "<group>"; };
 		2D653A3D1B92CA0E00420E18 /* SunShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SunShroom.png; sourceTree = "<group>"; };
 		2D653A3E1B92CA0E00420E18 /* TallNut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TallNut.png; sourceTree = "<group>"; };
-		2D653A3F1B92CA0E00420E18 /* Threepeater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Threepeater.png; sourceTree = "<group>"; };
+		2D653A3F1B92CA0E00420E18 /* Card_Threepeater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Threepeater.png; sourceTree = "<group>"; };
 		2D653A401B92CA0E00420E18 /* Torchwood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Torchwood.png; sourceTree = "<group>"; };
 		2D653A421B92CA0E00420E18 /* TwinSunflower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinSunflower.png; sourceTree = "<group>"; };
 		2D653A441B92CA0E00420E18 /* Card_WallNut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_WallNut.png; sourceTree = "<group>"; };
@@ -299,6 +305,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1BA6FC1BA56B80009BB687 /* Sun */ = {
+			isa = PBXGroup;
+			children = (
+				2D1BA6FD1BA56BCF009BB687 /* PVZSunNode.h */,
+				2D1BA6FE1BA56BCF009BB687 /* PVZSunNode.m */,
+			);
+			name = Sun;
+			sourceTree = "<group>";
+		};
 		2D2120D91B99467E00C4F1D0 /* AdventureMode */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,7 +410,8 @@
 		2D2A69551B9168510021F8BF /* Sprite */ = {
 			isa = PBXGroup;
 			children = (
-				2D68E6291BA30FED005145D5 /* Menu */,
+				2D1BA6FC1BA56B80009BB687 /* Sun */,
+				2D68E6291BA30FED005145D5 /* SceneElement */,
 				2D5D41991BA1BE7000FFF763 /* GameBackground */,
 			);
 			path = Sprite;
@@ -431,6 +447,8 @@
 				2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */,
 				2D2A69691B9170620021F8BF /* UIView+PVZ.h */,
 				2D2A696A1B9170620021F8BF /* UIView+PVZ.m */,
+				2D1BA7001BA56DF4009BB687 /* SKSpriteNode+PVZ.h */,
+				2D1BA7011BA56DF4009BB687 /* SKSpriteNode+PVZ.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -586,7 +604,7 @@
 				2D653A3C1B92CA0E00420E18 /* Card_SunFlower.png */,
 				2D653A3D1B92CA0E00420E18 /* SunShroom.png */,
 				2D653A3E1B92CA0E00420E18 /* TallNut.png */,
-				2D653A3F1B92CA0E00420E18 /* Threepeater.png */,
+				2D653A3F1B92CA0E00420E18 /* Card_Threepeater.png */,
 				2D653A401B92CA0E00420E18 /* Torchwood.png */,
 				2D653A421B92CA0E00420E18 /* TwinSunflower.png */,
 				2D653A441B92CA0E00420E18 /* Card_WallNut.png */,
@@ -689,13 +707,13 @@
 			name = RootScene;
 			sourceTree = "<group>";
 		};
-		2D68E6291BA30FED005145D5 /* Menu */ = {
+		2D68E6291BA30FED005145D5 /* SceneElement */ = {
 			isa = PBXGroup;
 			children = (
 				2D68E62A1BA30FFD005145D5 /* Sun */,
 				2D5D41A71BA1D1BA00FFF763 /* Card */,
 			);
-			name = Menu;
+			name = SceneElement;
 			sourceTree = "<group>";
 		};
 		2D68E62A1BA30FFD005145D5 /* Sun */ = {
@@ -831,7 +849,7 @@
 				2D653A771B92CA0E00420E18 /* PVZBackground_3.jpg in Resources */,
 				2D653A781B92CA0E00420E18 /* PVZBackground_0.jpg in Resources */,
 				2D653AC41B92CA0E00420E18 /* PoleVaultingZombieHead.atlas in Resources */,
-				2D653AA61B92CA0E00420E18 /* Threepeater.png in Resources */,
+				2D653AA61B92CA0E00420E18 /* Card_Threepeater.png in Resources */,
 				2D653A901B92CA0E00420E18 /* Jalapeno.png in Resources */,
 				2DC8D6E71B93056B00EE2484 /* fp_title.png in Resources */,
 				2D653ACB1B92CA0E00420E18 /* PrepareGrowPlants.atlas in Resources */,
@@ -917,6 +935,7 @@
 				2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */,
 				2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */,
 				2D62D6821B98809D00CF3059 /* PVZButton.m in Sources */,
+				2D1BA6FF1BA56BCF009BB687 /* PVZSunNode.m in Sources */,
 				2D5D419C1BA1BFB500FFF763 /* PVZBackgroundNode.m in Sources */,
 				2D653ADC1B92D25300420E18 /* PVZConfigration.m in Sources */,
 				2D653ADF1B92D28B00420E18 /* PVZAudioPlayer.m in Sources */,
@@ -928,6 +947,7 @@
 				2D62D6851B988B2A00CF3059 /* PVZProgressView.m in Sources */,
 				2D68E6281BA304EB005145D5 /* PVZCardMenuNode.m in Sources */,
 				2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */,
+				2D1BA7021BA56DF4009BB687 /* SKSpriteNode+PVZ.m in Sources */,
 				2D2A69241B9160A30021F8BF /* main.m in Sources */,
 				2D2120DC1B99477D00C4F1D0 /* PVZAdventureModeScene.m in Sources */,
 				2D5D41B01BA1D32A00FFF763 /* PVZCard.m in Sources */,

@@ -13,7 +13,6 @@
 
 @property (nonatomic, weak) id skTarget;
 @property (nonatomic, assign) SEL skAction;
-@property (nonatomic, assign) NSUInteger tag;
 
 @property (nonatomic, assign) BOOL isReady;
 @property (nonatomic, strong) PVZCard *cardInfo;

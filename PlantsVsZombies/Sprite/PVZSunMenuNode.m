@@ -32,17 +32,15 @@
     return node;
 }
 
-#pragma mark - 加减阳光值
-
-- (void) setSunValue:(int)sunValue
+- (SKLabelNode *) sunValueNode
 {
-    _sunValue = sunValue;
-    if (_sunValueNode == nil) {
-        _sunValueNode = [SKLabelNode labelNodeWithText:@"0"];
+    if (!_sunValueNode) {
+        _sunValueNode = [SKLabelNode labelNodeWithFontNamed:@"0"];
         [_sunValueNode setFontName:@"Impact"];
         [_sunValueNode setFontColor:[UIColor blackColor]];
         [_sunValueNode setFontSize:25.0f];
         [_sunValueNode setPosition:CGPointMake(WIDTH_SUNMENU * 0.12, - HEIGHT_SUNMENU * 0.28)];
+        [_sunValueNode setZPosition:1];
         [self addChild:_sunValueNode];
         SKAction *moveRight = [SKAction moveBy:CGVectorMake(10, 0) duration:0.06];
         SKAction *moveLeft = [SKAction moveBy:CGVectorMake(-20, 0) duration:0.12];
@@ -52,7 +50,18 @@
         SKAction *wait = [SKAction waitForDuration:0.05];
         _cannotChooseAction = [SKAction sequence:@[repeatMove, wait]];
     }
-    [_sunValueNode setText:[NSString stringWithFormat:@"%d", sunValue]];
+    return _sunValueNode;
+}
+
+#pragma mark - 加减阳光值
+
+- (void) setSunValue:(int)sunValue
+{
+    _sunValue = sunValue;
+    //FIXME: 如果不延时，第一次放置植物会卡顿
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
+        [self.sunValueNode setText:[NSString stringWithFormat:@"%d", sunValue]];
+    });
     if (_delegate && [_delegate respondsToSelector:@selector(sunMenuNodeDidUpdateSunValue:)]) {
         [_delegate sunMenuNodeDidUpdateSunValue:_sunValue];
     }
@@ -80,7 +89,6 @@
             [self.sunValueNode runAction: _cannotChooseAction completion:^{
                 self.sunValueNode.fontColor = [SKColor blackColor];
             }];
-            //FIXME: 第一次动画卡顿
         }
         return NO;
     }

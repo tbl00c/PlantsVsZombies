@@ -10,4 +10,6 @@
 
 @interface PVZRootScene : SKScene
 
++ (PVZRootScene *) sharedRootScene;
+
 @end

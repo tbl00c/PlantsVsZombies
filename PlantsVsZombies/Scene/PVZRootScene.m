@@ -11,23 +11,45 @@
 
 #import "PVZAdventureModeScene.h"
 
+static PVZRootScene *rootScene = nil;
+
 @interface PVZRootScene ()
-
-@property (nonatomic, strong) PVZAdventureModeScene *adventrueModeScene;
-
+{
+    SKSpriteNode *backgroundNode;
+    
+    
+    SKSpriteNode *userNameNode;
+    PVZButton *userNameButton;
+    PVZButton *changeUserButton;
+    SKSpriteNode *warningLabelNode;
+}
 
 @end
 
 @implementation PVZRootScene
 
++ (PVZRootScene *) sharedRootScene
+{
+    if (rootScene == nil) {
+        rootScene = [PVZRootScene sceneWithSize:CGSizeMake(WIDTH_SCREEN, HEIGHT_SCREEN)];
+        rootScene.scaleMode = SKSceneScaleModeAspectFit;
+    }
+    return rootScene;
+}
+
+- (id) initWithSize:(CGSize)size
+{
+    if (self = [super initWithSize:size]) {
+        [self startInitSubViews];
+    }
+    return self;
+}
+
 -(void)didMoveToView:(SKView *)view
 {
     [super didMoveToView:view];
-    
-    _adventrueModeScene = [PVZAdventureModeScene sceneWithSize:self.size];
-    _adventrueModeScene.scaleMode = SKSceneScaleModeAspectFit;
-    
-    [self showMainMenu];
+
+    [self showSubViews];
 }
 
 #pragma mark - 按钮点击事件
@@ -52,8 +74,7 @@
 {
     switch (sender.tag) {
         case 101:
-            [self.view presentScene:_adventrueModeScene];
-        
+            [self.view presentScene:[PVZAdventureModeScene sharedAdventureModeScene]];
             break;
         case 102:
             
@@ -85,11 +106,11 @@
 }
 
 #pragma mark - 加载界面元素
-- (void) showMainMenu
+- (void) startInitSubViews
 {
     [self removeAllChildren];
     
-    SKSpriteNode *backgroundNode = [SKSpriteNode spriteNodeWithImageNamed:@"main_background"];
+    backgroundNode = [SKSpriteNode spriteNodeWithImageNamed:@"main_background"];
     backgroundNode.size = self.size;
     backgroundNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     [self addChild:backgroundNode];
@@ -143,13 +164,13 @@
     [backgroundNode addChild:survivalModeButton];
     
     // 标识牌信息
-    SKSpriteNode *userNameNode = [SKSpriteNode spriteNodeWithImageNamed:@"PlayerScreen"];
+    userNameNode = [SKSpriteNode spriteNodeWithImageNamed:@"PlayerScreen"];
     userNameNode.size = CGSizeMake(200, 100);
     userNameNode.speed = 0.5;
     userNameNode.position = CGPointMake(-205, 250);
     [backgroundNode addChild:userNameNode];
     
-    PVZButton *userNameButton = [[PVZButton alloc] initWithTitle:@"text"];
+    userNameButton = [[PVZButton alloc] initWithTitle:@"text"];
     userNameButton.tag = 301;
     userNameButton.fontSize = 12;
     userNameButton.fontColor = [UIColor orangeColor];
@@ -159,27 +180,38 @@
     userNameButton.hidden = YES;
     [backgroundNode addChild:userNameButton];
     
-    SKAction *cp = [SKAction speedTo:5 duration:1];
-    SKAction *move = [SKAction moveTo:CGPointMake(-205, 145) duration:0.8];
-    [userNameNode runAction:[SKAction group:@[cp, move]] completion:^{
-        userNameButton.hidden = NO;
-    }];
     
-    PVZButton *changeUserButton = [[PVZButton alloc] initWithImageName:@"changePlayer1"];
+    changeUserButton = [[PVZButton alloc] initWithImageName:@"changePlayer1"];
     changeUserButton.size = CGSizeMake(195, 35);
     changeUserButton.position = CGPointMake(-205, 250);
     changeUserButton.speed = 0.5;
     changeUserButton.tag = 302;
     [changeUserButton addTarget:self action:@selector(userButtonDown:)];
     [backgroundNode addChild:changeUserButton];
-    SKAction *move2 = [SKAction moveTo:CGPointMake(-205, 83) duration:0.9];
-    [changeUserButton runAction:[SKAction group:@[cp, move2]]];
+   
     
-    SKSpriteNode *warningLabelNode = [SKSpriteNode spriteNodeWithImageNamed:@"ps.png"];
+    warningLabelNode = [SKSpriteNode spriteNodeWithImageNamed:@"ps.png"];
     warningLabelNode.size = CGSizeMake(200, 40);
     warningLabelNode.position = CGPointMake(-210, 250);
     warningLabelNode.speed = 0.5;
     [backgroundNode addChild:warningLabelNode];
+    
+    
+}
+
+- (void) showSubViews
+{
+    SKAction *cp = [SKAction speedTo:5 duration:1];
+    SKAction *move = [SKAction moveTo:CGPointMake(-205, 145) duration:0.8];
+    [userNameNode runAction:[SKAction group:@[cp, move]] completion:^{
+    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+         userNameButton.hidden = NO;
+    });
+    
+    SKAction *move2 = [SKAction moveTo:CGPointMake(-205, 83) duration:0.9];
+    [changeUserButton runAction:[SKAction group:@[cp, move2]]];
+    
     SKAction *move3 = [SKAction moveTo:CGPointMake(-210, 55) duration:1.1];
     [warningLabelNode runAction:[SKAction group:@[cp, move3]]];
 }

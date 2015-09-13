@@ -710,19 +710,19 @@
 		2D68E6291BA30FED005145D5 /* SceneElement */ = {
 			isa = PBXGroup;
 			children = (
-				2D68E62A1BA30FFD005145D5 /* Sun */,
+				2D68E62A1BA30FFD005145D5 /* SunMenu */,
 				2D5D41A71BA1D1BA00FFF763 /* Card */,
 			);
 			name = SceneElement;
 			sourceTree = "<group>";
 		};
-		2D68E62A1BA30FFD005145D5 /* Sun */ = {
+		2D68E62A1BA30FFD005145D5 /* SunMenu */ = {
 			isa = PBXGroup;
 			children = (
 				2D68E62E1BA31029005145D5 /* PVZSunMenuNode.h */,
 				2D68E62F1BA31029005145D5 /* PVZSunMenuNode.m */,
 			);
-			name = Sun;
+			name = SunMenu;
 			sourceTree = "<group>";
 		};
 		2DC8D6DE1B93056B00EE2484 /* Welcome */ = {

@@ -11,10 +11,14 @@
 #import "PVZBackgroundNode.h"
 #import "PVZSunMenuNode.h"
 #import "PVZCardMenuNode.h"
+#import "PVZSunNode.h"
 
 static PVZAdventureModeScene *adventureModeScene = nil;
 
-@interface PVZAdventureModeScene () <PVZSunMenuDelegate, PVZCardMenuDelegate, PVZBackgroundDelegate>
+@interface PVZAdventureModeScene () <PVZSunMenuDelegate, PVZCardMenuDelegate, PVZBackgroundDelegate, PVZSunNodeDelegate>
+{
+    NSTimeInterval lastProductSunTime;
+}
 
 @property (nonatomic, strong) PVZBackgroundNode *backgroundNode;
 @property (nonatomic, strong) PVZSunMenuNode *sunMenuNode;
@@ -38,6 +42,8 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 {
     if (self = [super initWithSize:size]) {
         [self startInitSubViews];
+        
+        lastProductSunTime = 0;
     }
     return self;
 }
@@ -80,6 +86,15 @@ static PVZAdventureModeScene *adventureModeScene = nil;
         [_sunMenuNode subSunValue:cardInfo.cost];                           // 扣除阳光值
     }
     [_cardMenuNode cancelChooseMenuItemAndPutPlant:canPutPlant];
+}
+
+#pragma mark - PVZSunNodeDelegate
+- (void) didSelectedSunNode:(PVZSunNode *)sunNode
+{
+    if (sunNode) {
+        [_sunMenuNode addSunValue:sunNode.sunValue];
+        [sunNode moveToPositionAndDismiss:CGPointMake(sunNode.size.width * 0.33, self.size.height - sunNode.size.height * 0.37)];
+    }
 }
 
 #pragma mark - 加载视图
@@ -155,6 +170,20 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     card5.coolingTime = 5;
     PVZCardItemNode *node5 = [PVZCardItemNode createCareItemNodeWithInfo:card5];
     [_cardMenuNode addCardItem:node5 withAnimation:NO];
+}
+
+- (void) update:(NSTimeInterval)currentTime
+{
+    if (lastProductSunTime == 0) {
+        lastProductSunTime = currentTime - 5;;
+    }
+    if (currentTime - lastProductSunTime >= 10) {
+        lastProductSunTime = currentTime;
+        PVZSunNode *sunNode = [PVZSunNode createAutoFollowSunAtRect:CGRectMake(self.size.width * 0.2, 0, self.size.width, self.size.height)];
+        [sunNode setDelegate:self];
+        [sunNode setZPosition:10];
+        [self addChild:sunNode];
+    }
 }
 
 @end

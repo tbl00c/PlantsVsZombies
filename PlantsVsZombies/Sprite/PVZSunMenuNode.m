@@ -58,10 +58,8 @@
 - (void) setSunValue:(int)sunValue
 {
     _sunValue = sunValue;
-    //FIXME: 如果不延时，第一次放置植物会卡顿
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
-        [self.sunValueNode setText:[NSString stringWithFormat:@"%d", sunValue]];
-    });
+    //FIXME: 第一次操作会卡顿
+    [self.sunValueNode setText:[NSString stringWithFormat:@"%d", sunValue]];
     if (_delegate && [_delegate respondsToSelector:@selector(sunMenuNodeDidUpdateSunValue:)]) {
         [_delegate sunMenuNodeDidUpdateSunValue:_sunValue];
     }

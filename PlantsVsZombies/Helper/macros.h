@@ -11,7 +11,7 @@
 
 #pragma mark - 测试用
 
-#define DEBUG_ADVENTURE_MODE
+//#define DEBUG_ADVENTURE_MODE
 #define DEBUG_SUN_INFINATE
 //#define DEBUG_COOLING_CLOSED
 

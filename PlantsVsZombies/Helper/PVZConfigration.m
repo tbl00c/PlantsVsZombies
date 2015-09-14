@@ -8,6 +8,16 @@
 
 #import "PVZConfigration.h"
 
+static PVZConfigration *configration = nil;
+
 @implementation PVZConfigration
+
++ (PVZConfigration *) sharedConfigration
+{
+    if (configration == nil) {
+        configration = [[PVZConfigration alloc] init];
+    }
+    return configration;
+}
 
 @end

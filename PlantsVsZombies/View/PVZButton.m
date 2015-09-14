@@ -39,6 +39,11 @@
     return self;
 }
 
+- (void) setTitle:(NSString *)title
+{
+    [_labelNode setText:title];
+}
+
 - (void) addTarget:(id)target action:(SEL)action
 {
     _skTarget = target;

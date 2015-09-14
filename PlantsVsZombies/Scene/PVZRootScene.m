@@ -9,6 +9,8 @@
 #import "PVZRootScene.h"
 #import "PVZButton.h"
 
+#import "PVZUserHelper.h"
+
 #import "PVZAdventureModeScene.h"
 
 static PVZRootScene *rootScene = nil;
@@ -50,6 +52,13 @@ static PVZRootScene *rootScene = nil;
     [super didMoveToView:view];
 
     [self showSubViews];
+    
+    if (! [[PVZUserHelper sharedUserHelper] autoLogin]) {
+        //TODO: 无用户数据
+    }
+    else {
+        [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+    }
 }
 
 #pragma mark - 按钮点击事件
@@ -170,7 +179,7 @@ static PVZRootScene *rootScene = nil;
     userNameNode.position = CGPointMake(-205, 250);
     [backgroundNode addChild:userNameNode];
     
-    userNameButton = [[PVZButton alloc] initWithTitle:@"text"];
+    userNameButton = [[PVZButton alloc] initWithTitle:@""];
     userNameButton.tag = 301;
     userNameButton.fontSize = 12;
     userNameButton.fontColor = [UIColor orangeColor];

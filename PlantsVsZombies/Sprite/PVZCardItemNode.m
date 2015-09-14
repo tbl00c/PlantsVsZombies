@@ -61,8 +61,8 @@
     [_progressNode setAlpha:0.4];
     [_progressNode setZPosition:1];
     [self addChild:_progressNode];
-    SKAction *changeSize = [SKAction resizeToHeight:0 duration:_cardInfo.coolingTime];
-    SKAction *changePosition = [SKAction moveTo:CGPointMake(0, self.size.height * 0.42) duration:_cardInfo.coolingTime];
+    SKAction *changeSize = [SKAction resizeToHeight:0 duration:_cardInfo.cd];
+    SKAction *changePosition = [SKAction moveTo:CGPointMake(0, self.size.height * 0.42) duration:_cardInfo.cd];
     SKAction *groupAnimation = [SKAction group:@[changeSize, changePosition]];
     [_progressNode runAction:groupAnimation completion:^{
         [self setUserInteractionEnabled:YES];

@@ -22,6 +22,8 @@
 
 - (id) initWithTitle:(NSString *)title;
 - (id) initWithImageName:(NSString *)imageName;
+- (void) setTitle:(NSString *)title;
+- (void) setImageNamed:(NSString *)imageName;
 - (void) addTarget:(id)target action:(SEL)action;
 
 @end

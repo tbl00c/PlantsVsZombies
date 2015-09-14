@@ -9,6 +9,9 @@
 #import "PVZRootScene.h"
 #import "PVZButton.h"
 
+#import "PVZUserHelper.h"
+
+#import "PVZUserListViewController.h"
 #import "PVZAdventureModeScene.h"
 
 static PVZRootScene *rootScene = nil;
@@ -23,6 +26,8 @@ static PVZRootScene *rootScene = nil;
     PVZButton *changeUserButton;
     SKSpriteNode *warningLabelNode;
 }
+
+@property (nonatomic, strong) PVZUserListViewController *userListVC;
 
 @end
 
@@ -50,19 +55,26 @@ static PVZRootScene *rootScene = nil;
     [super didMoveToView:view];
 
     [self showSubViews];
+    
+    if (! [[PVZUserHelper sharedUserHelper] autoLogin]) {
+        //TODO: 无用户数据
+    }
+    else {
+        [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+    }
 }
 
 #pragma mark - 按钮点击事件
 - (void) vaseButtonDown: (PVZButton *) sender
 {
     switch (sender.tag) {
-        case 201:
+        case 201:       // 选项
             
             break;
-        case 202:
+        case 202:       // 帮助
             
             break;
-        case 203:
+        case 203:       // 退出
             exit(0);
             break;
         default:
@@ -72,33 +84,42 @@ static PVZRootScene *rootScene = nil;
 
 - (void) modeButtonDown: (PVZButton *) sender
 {
-    switch (sender.tag) {
-        case 101:
-            [self.view presentScene:[PVZAdventureModeScene sharedAdventureModeScene]];
-            break;
-        case 102:
-            
-            break;
-        case 103:
-            
-            break;
-        case 104:
-            
-            break;
-            
-        default:
-            break;
-    }
+    SKAction *wait = [SKAction waitForDuration:0.1];
+    [sender setImageNamed:[NSString stringWithFormat:@"select%d1.png", ((int)sender.tag) % 100]];
+    [sender runAction:wait completion:^{
+        switch (sender.tag) {
+            case 101:       // 冒险模式
+                [self.view presentScene:[PVZAdventureModeScene sharedAdventureModeScene]];
+                break;
+            case 102:       // 迷你模式
+                
+                break;
+            case 103:       // 益智模式
+                
+                break;
+            case 104:       // 生存模式
+                
+                break;
+            default:
+                break;
+        }
+        [sender setImageNamed:[NSString stringWithFormat:@"select%d0.png", ((int)sender.tag) % 100]];
+    }];
 }
 
 - (void) userButtonDown: (PVZButton *) sender
 {
     switch (sender.tag) {
-        case 301:
+        case 301:       // 用户信息
             
             break;
-        case 302:
-            
+        case 302:       // 更改用户
+            if (_userListVC == nil) {
+                _userListVC = [[PVZUserListViewController alloc] init];
+                [_userListVC.view setFrame:CGRectMake(WIDTH_SCREEN * 0.3, HEIGHT_SCREEN * 0.1, WIDTH_SCREEN * 0.4, HEIGHT_SCREEN * 0.7)];
+            }
+            _userListVC.userListArray = [[PVZUserHelper sharedUserHelper] getUserList];
+            [self.view addSubview:_userListVC.view];
             break;
         default:
             break;
@@ -170,7 +191,7 @@ static PVZRootScene *rootScene = nil;
     userNameNode.position = CGPointMake(-205, 250);
     [backgroundNode addChild:userNameNode];
     
-    userNameButton = [[PVZButton alloc] initWithTitle:@"text"];
+    userNameButton = [[PVZButton alloc] initWithTitle:@""];
     userNameButton.tag = 301;
     userNameButton.fontSize = 12;
     userNameButton.fontColor = [UIColor orangeColor];
@@ -180,7 +201,6 @@ static PVZRootScene *rootScene = nil;
     userNameButton.hidden = YES;
     [backgroundNode addChild:userNameButton];
     
-    
     changeUserButton = [[PVZButton alloc] initWithImageName:@"changePlayer1"];
     changeUserButton.size = CGSizeMake(195, 35);
     changeUserButton.position = CGPointMake(-205, 250);
@@ -188,15 +208,12 @@ static PVZRootScene *rootScene = nil;
     changeUserButton.tag = 302;
     [changeUserButton addTarget:self action:@selector(userButtonDown:)];
     [backgroundNode addChild:changeUserButton];
-   
     
     warningLabelNode = [SKSpriteNode spriteNodeWithImageNamed:@"ps.png"];
     warningLabelNode.size = CGSizeMake(200, 40);
     warningLabelNode.position = CGPointMake(-210, 250);
     warningLabelNode.speed = 0.5;
     [backgroundNode addChild:warningLabelNode];
-    
-    
 }
 
 - (void) showSubViews

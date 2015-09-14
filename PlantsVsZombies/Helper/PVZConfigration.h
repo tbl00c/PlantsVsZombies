@@ -10,4 +10,6 @@
 
 @interface PVZConfigration : NSObject
 
++ (PVZConfigration *) sharedConfigration;
+
 @end

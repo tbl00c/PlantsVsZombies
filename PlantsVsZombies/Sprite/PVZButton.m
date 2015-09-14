@@ -39,6 +39,16 @@
     return self;
 }
 
+- (void) setTitle:(NSString *)title
+{
+    [_labelNode setText:title];
+}
+
+- (void) setImageNamed:(NSString *)imageName
+{
+    [_imageNode setTexture:[SKTexture textureWithImageNamed:imageName]];
+}
+
 - (void) addTarget:(id)target action:(SEL)action
 {
     _skTarget = target;

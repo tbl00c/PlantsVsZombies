@@ -10,6 +10,7 @@
 #import "PVZProgressView.h"
 #import "PVZRootScene.h"
 
+#import "PVZUserHelper.h"
 #import "PVZAudioPlayer.h"
 
 #import "PVZAdventureModeScene.h"
@@ -112,6 +113,7 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [PVZRootScene sharedRootScene];
         [PVZAdventureModeScene sharedAdventureModeScene];
+        [PVZUserHelper sharedUserHelper];
         
 #ifdef DEBUG_ADVENTURE_MODE
         _gameScene = [PVZAdventureModeScene sharedAdventureModeScene];

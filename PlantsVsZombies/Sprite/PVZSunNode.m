@@ -36,11 +36,11 @@ static NSMutableArray *sunReuseArray = nil;
     switch (type) {
         case PVZSunNodeTypeNormal:
             changeSize = [SKAction resizeByWidth:55 height:55 duration:0.5];
-            sunNode.sunValue = 50;
+            sunNode.sunValue = 25;
             break;
         case PVZSunNodeTypeMini:
             changeSize = [SKAction resizeByWidth:35 height:35 duration:0.5];
-            sunNode.sunValue = 25;
+            sunNode.sunValue = 15;
             break;
         default:
             break;

@@ -21,3 +21,27 @@ void PVZLogWarning(id className, id funcName, NSString *format,...)
     NSLog(@"WARNING\nClass: %@\nFunc: %@\nInfo: %@", className, funcName, str);
     va_end(args);
 }
+
+float getFloatValueByObject(id obj)
+{
+    if(obj == nil) {
+        return 0.0f;
+    }
+    return ((NSString *)obj).floatValue;
+}
+
+float getIntValueByObject(id obj)
+{
+    if(obj == nil) {
+        return 0;
+    }
+    return ((NSString *)obj).intValue;
+}
+
+float getDoubleValueByObject(id obj)
+{
+    if(obj == nil) {
+        return 0.0f;
+    }
+    return ((NSString *)obj).doubleValue;
+}

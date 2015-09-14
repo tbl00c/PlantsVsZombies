@@ -9,4 +9,7 @@
 
 void PVZLogError(id className, id funcName, NSError *error);
 void PVZLogWarning(id className, id funcName, NSString *format,...);
+float getFloatValueByObject(id obj);
+float getIntValueByObject(id obj);
+float getDoubleValueByObject(id obj);
 

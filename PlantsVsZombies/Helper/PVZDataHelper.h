@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PVZPlistHelper : NSObject
+@interface PVZDataHelper : NSObject
 
 + (NSArray *) getArrayFromPlistByPlistName:(NSString *)plistName;
 

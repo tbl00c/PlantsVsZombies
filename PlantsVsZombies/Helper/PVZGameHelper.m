@@ -7,7 +7,7 @@
 //
 
 #import "PVZGameHelper.h"
-#import "PVZPlistHelper.h"
+#import "PVZDataHelper.h"
 
 #import "PVZPlant.h"
 #import "PVZCard.h"
@@ -26,7 +26,7 @@ static PVZGameHelper *gameHelper = nil;
 
 - (NSArray *) getAllCardsArray
 {
-    NSArray *cardInfoArray = [PVZPlistHelper getArrayFromPlistByPlistName:@"Cards"];
+    NSArray *cardInfoArray = [PVZDataHelper getArrayFromPlistByPlistName:@"Cards"];
     NSMutableArray *cardArray = [[NSMutableArray alloc] initWithCapacity:cardInfoArray.count];
     for (NSDictionary *dic in cardInfoArray) {
         PVZCard *card = [[PVZCard alloc] init];
@@ -46,7 +46,7 @@ static PVZGameHelper *gameHelper = nil;
 {
     PVZPlant *plant = [[PVZPlant alloc] init];
     plant.plantID = card.cardID;
-    NSDictionary *dic = [PVZPlistHelper getDictionaryFromPlistByPlistName:[NSString stringWithFormat:@"Plant_%d", plant.plantID]];
+    NSDictionary *dic = [PVZDataHelper getDictionaryFromPlistByPlistName:[NSString stringWithFormat:@"Plant_%d", plant.plantID]];
     if (dic == nil) {
         PVZLogWarning([self class], @"PVZGameHelper", @"读取植物%dPlist文件失败");
     }

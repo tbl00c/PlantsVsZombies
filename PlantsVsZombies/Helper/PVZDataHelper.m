@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 lbk. All rights reserved.
 //
 
-#import "PVZPlistHelper.h"
+#import "PVZDataHelper.h"
 
-@implementation PVZPlistHelper
+@implementation PVZDataHelper
 
 + (NSArray *) getArrayFromPlistByPlistName:(NSString *)plistName
 {

@@ -14,6 +14,7 @@
 //#define DEBUG_ADVENTURE_MODE
 //#define DEBUG_SUN_INFINATE
 //#define DEBUG_COOLING_CLOSED
+//#define DEBUG_DEFAULT_CARDS
 
 #pragma mark - 控件大小
 

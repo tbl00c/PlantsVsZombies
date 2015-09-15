@@ -270,7 +270,7 @@
 		<key>CardID</key>
 		<string>1023</string>
 		<key>CardName</key>
-		<string>Trchwood</string>
+		<string>Torchwood</string>
 		<key>CardChineseName</key>
 		<string>火炬树桩</string>
 		<key>CD</key>
@@ -486,7 +486,7 @@
 		<key>CardID</key>
 		<string>1041</string>
 		<key>CardName</key>
-		<string>GaltingPea</string>
+		<string>GatlingPea</string>
 		<key>CardChineseName</key>
 		<string>机枪豌豆</string>
 		<key>CD</key>
@@ -510,7 +510,7 @@
 		<key>CardID</key>
 		<string>1043</string>
 		<key>CardName</key>
-		<string>Gloom-Shrrom</string>
+		<string>Gloom-Shroom</string>
 		<key>CardChineseName</key>
 		<string>忧郁菇</string>
 		<key>CD</key>

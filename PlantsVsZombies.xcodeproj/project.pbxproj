@@ -37,41 +37,41 @@
 		2D653A7F1B92CA0E00420E18 /* PVZBackground_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A161B92CA0E00420E18 /* PVZBackground_6.jpg */; };
 		2D653A801B92CA0E00420E18 /* PB_ICE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A181B92CA0E00420E18 /* PB_ICE.atlas */; };
 		2D653A811B92CA0E00420E18 /* PB_Normal.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A191B92CA0E00420E18 /* PB_Normal.atlas */; };
-		2D653A821B92CA0E00420E18 /* Blover.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1B1B92CA0E00420E18 /* Blover.png */; };
-		2D653A831B92CA0E00420E18 /* Cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1C1B92CA0E00420E18 /* Cactus.png */; };
+		2D653A821B92CA0E00420E18 /* Card_Blover.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1B1B92CA0E00420E18 /* Card_Blover.png */; };
+		2D653A831B92CA0E00420E18 /* Card_Cactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1C1B92CA0E00420E18 /* Card_Cactus.png */; };
 		2D653A841B92CA0E00420E18 /* Card_CherryBomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1D1B92CA0E00420E18 /* Card_CherryBomb.png */; };
-		2D653A851B92CA0E00420E18 /* Chomper.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1E1B92CA0E00420E18 /* Chomper.png */; };
-		2D653A861B92CA0E00420E18 /* CoffeeBean.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1F1B92CA0E00420E18 /* CoffeeBean.png */; };
-		2D653A871B92CA0E00420E18 /* DoomShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A201B92CA0E00420E18 /* DoomShroom.png */; };
-		2D653A881B92CA0E00420E18 /* FlowerPot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A211B92CA0E00420E18 /* FlowerPot.png */; };
-		2D653A891B92CA0E00420E18 /* FumeShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A221B92CA0E00420E18 /* FumeShroom.png */; };
-		2D653A8A1B92CA0E00420E18 /* Garlic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A231B92CA0E00420E18 /* Garlic.png */; };
-		2D653A8B1B92CA0E00420E18 /* GatlingPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A241B92CA0E00420E18 /* GatlingPea.png */; };
-		2D653A8C1B92CA0E00420E18 /* GloomShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A251B92CA0E00420E18 /* GloomShroom.png */; };
-		2D653A8E1B92CA0E00420E18 /* HypnoShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A271B92CA0E00420E18 /* HypnoShroom.png */; };
-		2D653A8F1B92CA0E00420E18 /* IceShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A281B92CA0E00420E18 /* IceShroom.png */; };
-		2D653A901B92CA0E00420E18 /* Jalapeno.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A291B92CA0E00420E18 /* Jalapeno.png */; };
-		2D653A911B92CA0E00420E18 /* LilyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2A1B92CA0E00420E18 /* LilyPad.png */; };
+		2D653A851B92CA0E00420E18 /* Card_Chomper.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1E1B92CA0E00420E18 /* Card_Chomper.png */; };
+		2D653A861B92CA0E00420E18 /* Card_Coffee-Bean.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A1F1B92CA0E00420E18 /* Card_Coffee-Bean.png */; };
+		2D653A871B92CA0E00420E18 /* Card_Doom-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A201B92CA0E00420E18 /* Card_Doom-Shroom.png */; };
+		2D653A881B92CA0E00420E18 /* Card_FlowerPot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A211B92CA0E00420E18 /* Card_FlowerPot.png */; };
+		2D653A891B92CA0E00420E18 /* Card_Fume-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A221B92CA0E00420E18 /* Card_Fume-Shroom.png */; };
+		2D653A8A1B92CA0E00420E18 /* Card_Garlic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A231B92CA0E00420E18 /* Card_Garlic.png */; };
+		2D653A8B1B92CA0E00420E18 /* Card_GatlingPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A241B92CA0E00420E18 /* Card_GatlingPea.png */; };
+		2D653A8C1B92CA0E00420E18 /* Card_Gloom-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A251B92CA0E00420E18 /* Card_Gloom-Shroom.png */; };
+		2D653A8E1B92CA0E00420E18 /* Card_Hypno-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A271B92CA0E00420E18 /* Card_Hypno-Shroom.png */; };
+		2D653A8F1B92CA0E00420E18 /* Card_Ice-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A281B92CA0E00420E18 /* Card_Ice-Shroom.png */; };
+		2D653A901B92CA0E00420E18 /* Card_Jalapeno.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A291B92CA0E00420E18 /* Card_Jalapeno.png */; };
+		2D653A911B92CA0E00420E18 /* Card_LilyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2A1B92CA0E00420E18 /* Card_LilyPad.png */; };
 		2D653A931B92CA0E00420E18 /* Card_Peashooter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2C1B92CA0E00420E18 /* Card_Peashooter.png */; };
-		2D653A941B92CA0E00420E18 /* Plantern.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2D1B92CA0E00420E18 /* Plantern.png */; };
+		2D653A941B92CA0E00420E18 /* Card_Plantern.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2D1B92CA0E00420E18 /* Card_Plantern.png */; };
 		2D653A961B92CA0E00420E18 /* Card_PotatoMine.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A2F1B92CA0E00420E18 /* Card_PotatoMine.png */; };
-		2D653A971B92CA0E00420E18 /* PuffShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A301B92CA0E00420E18 /* PuffShroom.png */; };
-		2D653A991B92CA0E00420E18 /* PumpkinHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A321B92CA0E00420E18 /* PumpkinHead.png */; };
-		2D653A9A1B92CA0E00420E18 /* Repeater.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A331B92CA0E00420E18 /* Repeater.png */; };
-		2D653A9B1B92CA0E00420E18 /* ScaredyShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A341B92CA0E00420E18 /* ScaredyShroom.png */; };
-		2D653A9C1B92CA0E00420E18 /* SeaShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A351B92CA0E00420E18 /* SeaShroom.png */; };
+		2D653A971B92CA0E00420E18 /* Card_Puff-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A301B92CA0E00420E18 /* Card_Puff-Shroom.png */; };
+		2D653A991B92CA0E00420E18 /* Card_Pumpkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A321B92CA0E00420E18 /* Card_Pumpkin.png */; };
+		2D653A9A1B92CA0E00420E18 /* Card_Repeater.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A331B92CA0E00420E18 /* Card_Repeater.png */; };
+		2D653A9B1B92CA0E00420E18 /* Card_Scaredy-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A341B92CA0E00420E18 /* Card_Scaredy-Shroom.png */; };
+		2D653A9C1B92CA0E00420E18 /* Card_Sea-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A351B92CA0E00420E18 /* Card_Sea-Shroom.png */; };
 		2D653A9D1B92CA0E00420E18 /* Card_SnowPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A361B92CA0E00420E18 /* Card_SnowPea.png */; };
-		2D653A9E1B92CA0E00420E18 /* Spikerock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A371B92CA0E00420E18 /* Spikerock.png */; };
+		2D653A9E1B92CA0E00420E18 /* Card_Spiker.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A371B92CA0E00420E18 /* Card_Spiker.png */; };
 		2D653A9F1B92CA0E00420E18 /* Card_Spikeweed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A381B92CA0E00420E18 /* Card_Spikeweed.png */; };
-		2D653AA01B92CA0E00420E18 /* SplitPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A391B92CA0E00420E18 /* SplitPea.png */; };
-		2D653AA11B92CA0E00420E18 /* Squash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3A1B92CA0E00420E18 /* Squash.png */; };
-		2D653AA21B92CA0E00420E18 /* Starfruit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3B1B92CA0E00420E18 /* Starfruit.png */; };
+		2D653AA01B92CA0E00420E18 /* Card_SplitPea.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A391B92CA0E00420E18 /* Card_SplitPea.png */; };
+		2D653AA11B92CA0E00420E18 /* Card_Squash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3A1B92CA0E00420E18 /* Card_Squash.png */; };
+		2D653AA21B92CA0E00420E18 /* Card_Starfruit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3B1B92CA0E00420E18 /* Card_Starfruit.png */; };
 		2D653AA31B92CA0E00420E18 /* Card_SunFlower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3C1B92CA0E00420E18 /* Card_SunFlower.png */; };
-		2D653AA41B92CA0E00420E18 /* SunShroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3D1B92CA0E00420E18 /* SunShroom.png */; };
-		2D653AA51B92CA0E00420E18 /* TallNut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3E1B92CA0E00420E18 /* TallNut.png */; };
+		2D653AA41B92CA0E00420E18 /* Card_Sun-Shroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3D1B92CA0E00420E18 /* Card_Sun-Shroom.png */; };
+		2D653AA51B92CA0E00420E18 /* Card_Tall-Nut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3E1B92CA0E00420E18 /* Card_Tall-Nut.png */; };
 		2D653AA61B92CA0E00420E18 /* Card_Threepeater.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A3F1B92CA0E00420E18 /* Card_Threepeater.png */; };
-		2D653AA71B92CA0E00420E18 /* Torchwood.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A401B92CA0E00420E18 /* Torchwood.png */; };
-		2D653AA91B92CA0E00420E18 /* TwinSunflower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A421B92CA0E00420E18 /* TwinSunflower.png */; };
+		2D653AA71B92CA0E00420E18 /* Card_Torchwood.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A401B92CA0E00420E18 /* Card_Torchwood.png */; };
+		2D653AA91B92CA0E00420E18 /* Card_TwinSunFlower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A421B92CA0E00420E18 /* Card_TwinSunFlower.png */; };
 		2D653AAB1B92CA0E00420E18 /* Card_Wall-Nut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A441B92CA0E00420E18 /* Card_Wall-Nut.png */; };
 		2D653AAC1B92CA0E00420E18 /* MainMenu.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A461B92CA0E00420E18 /* MainMenu.atlas */; };
 		2D653AAD1B92CA0E00420E18 /* Menu.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D653A471B92CA0E00420E18 /* Menu.atlas */; };
@@ -136,6 +136,8 @@
 		C2D97E191BA6995C009FB9F4 /* PVZGameHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D97E181BA6995C009FB9F4 /* PVZGameHelper.m */; };
 		C2D97E261BA6B315009FB9F4 /* PVZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D97E251BA6B315009FB9F4 /* PVZUser.m */; };
 		C2D97E291BA6B38A009FB9F4 /* PVZUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D97E281BA6B38A009FB9F4 /* PVZUserHelper.m */; };
+		C2DAE8E61BA80820008D2759 /* PVZCardChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAE8E51BA80820008D2759 /* PVZCardChooseViewController.m */; };
+		C2DAE8EA1BA80CCE008D2759 /* PVZCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAE8E91BA80CCE008D2759 /* PVZCardCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,41 +199,41 @@
 		2D653A161B92CA0E00420E18 /* PVZBackground_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PVZBackground_6.jpg; sourceTree = "<group>"; };
 		2D653A181B92CA0E00420E18 /* PB_ICE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PB_ICE.atlas; sourceTree = "<group>"; };
 		2D653A191B92CA0E00420E18 /* PB_Normal.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PB_Normal.atlas; sourceTree = "<group>"; };
-		2D653A1B1B92CA0E00420E18 /* Blover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blover.png; sourceTree = "<group>"; };
-		2D653A1C1B92CA0E00420E18 /* Cactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cactus.png; sourceTree = "<group>"; };
+		2D653A1B1B92CA0E00420E18 /* Card_Blover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Blover.png; sourceTree = "<group>"; };
+		2D653A1C1B92CA0E00420E18 /* Card_Cactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Cactus.png; sourceTree = "<group>"; };
 		2D653A1D1B92CA0E00420E18 /* Card_CherryBomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_CherryBomb.png; sourceTree = "<group>"; };
-		2D653A1E1B92CA0E00420E18 /* Chomper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chomper.png; sourceTree = "<group>"; };
-		2D653A1F1B92CA0E00420E18 /* CoffeeBean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoffeeBean.png; sourceTree = "<group>"; };
-		2D653A201B92CA0E00420E18 /* DoomShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoomShroom.png; sourceTree = "<group>"; };
-		2D653A211B92CA0E00420E18 /* FlowerPot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlowerPot.png; sourceTree = "<group>"; };
-		2D653A221B92CA0E00420E18 /* FumeShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FumeShroom.png; sourceTree = "<group>"; };
-		2D653A231B92CA0E00420E18 /* Garlic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Garlic.png; sourceTree = "<group>"; };
-		2D653A241B92CA0E00420E18 /* GatlingPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GatlingPea.png; sourceTree = "<group>"; };
-		2D653A251B92CA0E00420E18 /* GloomShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GloomShroom.png; sourceTree = "<group>"; };
-		2D653A271B92CA0E00420E18 /* HypnoShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HypnoShroom.png; sourceTree = "<group>"; };
-		2D653A281B92CA0E00420E18 /* IceShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IceShroom.png; sourceTree = "<group>"; };
-		2D653A291B92CA0E00420E18 /* Jalapeno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jalapeno.png; sourceTree = "<group>"; };
-		2D653A2A1B92CA0E00420E18 /* LilyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LilyPad.png; sourceTree = "<group>"; };
+		2D653A1E1B92CA0E00420E18 /* Card_Chomper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Chomper.png; sourceTree = "<group>"; };
+		2D653A1F1B92CA0E00420E18 /* Card_Coffee-Bean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Coffee-Bean.png"; sourceTree = "<group>"; };
+		2D653A201B92CA0E00420E18 /* Card_Doom-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Doom-Shroom.png"; sourceTree = "<group>"; };
+		2D653A211B92CA0E00420E18 /* Card_FlowerPot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_FlowerPot.png; sourceTree = "<group>"; };
+		2D653A221B92CA0E00420E18 /* Card_Fume-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Fume-Shroom.png"; sourceTree = "<group>"; };
+		2D653A231B92CA0E00420E18 /* Card_Garlic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Garlic.png; sourceTree = "<group>"; };
+		2D653A241B92CA0E00420E18 /* Card_GatlingPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_GatlingPea.png; sourceTree = "<group>"; };
+		2D653A251B92CA0E00420E18 /* Card_Gloom-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Gloom-Shroom.png"; sourceTree = "<group>"; };
+		2D653A271B92CA0E00420E18 /* Card_Hypno-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Hypno-Shroom.png"; sourceTree = "<group>"; };
+		2D653A281B92CA0E00420E18 /* Card_Ice-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Ice-Shroom.png"; sourceTree = "<group>"; };
+		2D653A291B92CA0E00420E18 /* Card_Jalapeno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Jalapeno.png; sourceTree = "<group>"; };
+		2D653A2A1B92CA0E00420E18 /* Card_LilyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_LilyPad.png; sourceTree = "<group>"; };
 		2D653A2C1B92CA0E00420E18 /* Card_Peashooter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Peashooter.png; sourceTree = "<group>"; };
-		2D653A2D1B92CA0E00420E18 /* Plantern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plantern.png; sourceTree = "<group>"; };
+		2D653A2D1B92CA0E00420E18 /* Card_Plantern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Plantern.png; sourceTree = "<group>"; };
 		2D653A2F1B92CA0E00420E18 /* Card_PotatoMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_PotatoMine.png; sourceTree = "<group>"; };
-		2D653A301B92CA0E00420E18 /* PuffShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PuffShroom.png; sourceTree = "<group>"; };
-		2D653A321B92CA0E00420E18 /* PumpkinHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PumpkinHead.png; sourceTree = "<group>"; };
-		2D653A331B92CA0E00420E18 /* Repeater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Repeater.png; sourceTree = "<group>"; };
-		2D653A341B92CA0E00420E18 /* ScaredyShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScaredyShroom.png; sourceTree = "<group>"; };
-		2D653A351B92CA0E00420E18 /* SeaShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeaShroom.png; sourceTree = "<group>"; };
+		2D653A301B92CA0E00420E18 /* Card_Puff-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Puff-Shroom.png"; sourceTree = "<group>"; };
+		2D653A321B92CA0E00420E18 /* Card_Pumpkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Pumpkin.png; sourceTree = "<group>"; };
+		2D653A331B92CA0E00420E18 /* Card_Repeater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Repeater.png; sourceTree = "<group>"; };
+		2D653A341B92CA0E00420E18 /* Card_Scaredy-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Scaredy-Shroom.png"; sourceTree = "<group>"; };
+		2D653A351B92CA0E00420E18 /* Card_Sea-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Sea-Shroom.png"; sourceTree = "<group>"; };
 		2D653A361B92CA0E00420E18 /* Card_SnowPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_SnowPea.png; sourceTree = "<group>"; };
-		2D653A371B92CA0E00420E18 /* Spikerock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spikerock.png; sourceTree = "<group>"; };
+		2D653A371B92CA0E00420E18 /* Card_Spiker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Spiker.png; sourceTree = "<group>"; };
 		2D653A381B92CA0E00420E18 /* Card_Spikeweed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Spikeweed.png; sourceTree = "<group>"; };
-		2D653A391B92CA0E00420E18 /* SplitPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplitPea.png; sourceTree = "<group>"; };
-		2D653A3A1B92CA0E00420E18 /* Squash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squash.png; sourceTree = "<group>"; };
-		2D653A3B1B92CA0E00420E18 /* Starfruit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Starfruit.png; sourceTree = "<group>"; };
+		2D653A391B92CA0E00420E18 /* Card_SplitPea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_SplitPea.png; sourceTree = "<group>"; };
+		2D653A3A1B92CA0E00420E18 /* Card_Squash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Squash.png; sourceTree = "<group>"; };
+		2D653A3B1B92CA0E00420E18 /* Card_Starfruit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Starfruit.png; sourceTree = "<group>"; };
 		2D653A3C1B92CA0E00420E18 /* Card_SunFlower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_SunFlower.png; sourceTree = "<group>"; };
-		2D653A3D1B92CA0E00420E18 /* SunShroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SunShroom.png; sourceTree = "<group>"; };
-		2D653A3E1B92CA0E00420E18 /* TallNut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TallNut.png; sourceTree = "<group>"; };
+		2D653A3D1B92CA0E00420E18 /* Card_Sun-Shroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Sun-Shroom.png"; sourceTree = "<group>"; };
+		2D653A3E1B92CA0E00420E18 /* Card_Tall-Nut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Tall-Nut.png"; sourceTree = "<group>"; };
 		2D653A3F1B92CA0E00420E18 /* Card_Threepeater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Threepeater.png; sourceTree = "<group>"; };
-		2D653A401B92CA0E00420E18 /* Torchwood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Torchwood.png; sourceTree = "<group>"; };
-		2D653A421B92CA0E00420E18 /* TwinSunflower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinSunflower.png; sourceTree = "<group>"; };
+		2D653A401B92CA0E00420E18 /* Card_Torchwood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_Torchwood.png; sourceTree = "<group>"; };
+		2D653A421B92CA0E00420E18 /* Card_TwinSunFlower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Card_TwinSunFlower.png; sourceTree = "<group>"; };
 		2D653A441B92CA0E00420E18 /* Card_Wall-Nut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card_Wall-Nut.png"; sourceTree = "<group>"; };
 		2D653A461B92CA0E00420E18 /* MainMenu.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MainMenu.atlas; sourceTree = "<group>"; };
 		2D653A471B92CA0E00420E18 /* Menu.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Menu.atlas; sourceTree = "<group>"; };
@@ -311,6 +313,10 @@
 		C2D97E251BA6B315009FB9F4 /* PVZUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZUser.m; sourceTree = "<group>"; };
 		C2D97E271BA6B38A009FB9F4 /* PVZUserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZUserHelper.h; sourceTree = "<group>"; };
 		C2D97E281BA6B38A009FB9F4 /* PVZUserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZUserHelper.m; sourceTree = "<group>"; };
+		C2DAE8E41BA80820008D2759 /* PVZCardChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZCardChooseViewController.h; sourceTree = "<group>"; };
+		C2DAE8E51BA80820008D2759 /* PVZCardChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZCardChooseViewController.m; sourceTree = "<group>"; };
+		C2DAE8E81BA80CCE008D2759 /* PVZCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZCardCell.h; sourceTree = "<group>"; };
+		C2DAE8E91BA80CCE008D2759 /* PVZCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZCardCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +426,7 @@
 			children = (
 				C203AEA81BA6C89700E23941 /* Root */,
 				C203AEA91BA6C8A500E23941 /* UserList */,
+				C2DAE8E31BA807F2008D2759 /* CardChoose */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -549,6 +556,7 @@
 		2D62D67F1B98808B00CF3059 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2DAE8E71BA80C9F008D2759 /* CardChoose */,
 				C203AEB11BA6CA3000E23941 /* Game */,
 				C203AEB21BA6CA4500E23941 /* UserList */,
 			);
@@ -608,41 +616,41 @@
 		2D653A1A1B92CA0E00420E18 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				2D653A1B1B92CA0E00420E18 /* Blover.png */,
-				2D653A1C1B92CA0E00420E18 /* Cactus.png */,
+				2D653A1B1B92CA0E00420E18 /* Card_Blover.png */,
+				2D653A1C1B92CA0E00420E18 /* Card_Cactus.png */,
 				2D653A1D1B92CA0E00420E18 /* Card_CherryBomb.png */,
-				2D653A1E1B92CA0E00420E18 /* Chomper.png */,
-				2D653A1F1B92CA0E00420E18 /* CoffeeBean.png */,
-				2D653A201B92CA0E00420E18 /* DoomShroom.png */,
-				2D653A211B92CA0E00420E18 /* FlowerPot.png */,
-				2D653A221B92CA0E00420E18 /* FumeShroom.png */,
-				2D653A231B92CA0E00420E18 /* Garlic.png */,
-				2D653A241B92CA0E00420E18 /* GatlingPea.png */,
-				2D653A251B92CA0E00420E18 /* GloomShroom.png */,
-				2D653A271B92CA0E00420E18 /* HypnoShroom.png */,
-				2D653A281B92CA0E00420E18 /* IceShroom.png */,
-				2D653A291B92CA0E00420E18 /* Jalapeno.png */,
-				2D653A2A1B92CA0E00420E18 /* LilyPad.png */,
+				2D653A1E1B92CA0E00420E18 /* Card_Chomper.png */,
+				2D653A1F1B92CA0E00420E18 /* Card_Coffee-Bean.png */,
+				2D653A201B92CA0E00420E18 /* Card_Doom-Shroom.png */,
+				2D653A211B92CA0E00420E18 /* Card_FlowerPot.png */,
+				2D653A221B92CA0E00420E18 /* Card_Fume-Shroom.png */,
+				2D653A231B92CA0E00420E18 /* Card_Garlic.png */,
+				2D653A241B92CA0E00420E18 /* Card_GatlingPea.png */,
+				2D653A251B92CA0E00420E18 /* Card_Gloom-Shroom.png */,
+				2D653A271B92CA0E00420E18 /* Card_Hypno-Shroom.png */,
+				2D653A281B92CA0E00420E18 /* Card_Ice-Shroom.png */,
+				2D653A291B92CA0E00420E18 /* Card_Jalapeno.png */,
+				2D653A2A1B92CA0E00420E18 /* Card_LilyPad.png */,
 				2D653A2C1B92CA0E00420E18 /* Card_Peashooter.png */,
-				2D653A2D1B92CA0E00420E18 /* Plantern.png */,
+				2D653A2D1B92CA0E00420E18 /* Card_Plantern.png */,
 				2D653A2F1B92CA0E00420E18 /* Card_PotatoMine.png */,
-				2D653A301B92CA0E00420E18 /* PuffShroom.png */,
-				2D653A321B92CA0E00420E18 /* PumpkinHead.png */,
-				2D653A331B92CA0E00420E18 /* Repeater.png */,
-				2D653A341B92CA0E00420E18 /* ScaredyShroom.png */,
-				2D653A351B92CA0E00420E18 /* SeaShroom.png */,
+				2D653A301B92CA0E00420E18 /* Card_Puff-Shroom.png */,
+				2D653A321B92CA0E00420E18 /* Card_Pumpkin.png */,
+				2D653A331B92CA0E00420E18 /* Card_Repeater.png */,
+				2D653A341B92CA0E00420E18 /* Card_Scaredy-Shroom.png */,
+				2D653A351B92CA0E00420E18 /* Card_Sea-Shroom.png */,
 				2D653A361B92CA0E00420E18 /* Card_SnowPea.png */,
-				2D653A371B92CA0E00420E18 /* Spikerock.png */,
+				2D653A371B92CA0E00420E18 /* Card_Spiker.png */,
 				2D653A381B92CA0E00420E18 /* Card_Spikeweed.png */,
-				2D653A391B92CA0E00420E18 /* SplitPea.png */,
-				2D653A3A1B92CA0E00420E18 /* Squash.png */,
-				2D653A3B1B92CA0E00420E18 /* Starfruit.png */,
+				2D653A391B92CA0E00420E18 /* Card_SplitPea.png */,
+				2D653A3A1B92CA0E00420E18 /* Card_Squash.png */,
+				2D653A3B1B92CA0E00420E18 /* Card_Starfruit.png */,
 				2D653A3C1B92CA0E00420E18 /* Card_SunFlower.png */,
-				2D653A3D1B92CA0E00420E18 /* SunShroom.png */,
-				2D653A3E1B92CA0E00420E18 /* TallNut.png */,
+				2D653A3D1B92CA0E00420E18 /* Card_Sun-Shroom.png */,
+				2D653A3E1B92CA0E00420E18 /* Card_Tall-Nut.png */,
 				2D653A3F1B92CA0E00420E18 /* Card_Threepeater.png */,
-				2D653A401B92CA0E00420E18 /* Torchwood.png */,
-				2D653A421B92CA0E00420E18 /* TwinSunflower.png */,
+				2D653A401B92CA0E00420E18 /* Card_Torchwood.png */,
+				2D653A421B92CA0E00420E18 /* Card_TwinSunFlower.png */,
 				2D653A441B92CA0E00420E18 /* Card_Wall-Nut.png */,
 			);
 			path = Cards;
@@ -835,6 +843,24 @@
 			name = Plants;
 			sourceTree = "<group>";
 		};
+		C2DAE8E31BA807F2008D2759 /* CardChoose */ = {
+			isa = PBXGroup;
+			children = (
+				C2DAE8E41BA80820008D2759 /* PVZCardChooseViewController.h */,
+				C2DAE8E51BA80820008D2759 /* PVZCardChooseViewController.m */,
+			);
+			name = CardChoose;
+			sourceTree = "<group>";
+		};
+		C2DAE8E71BA80C9F008D2759 /* CardChoose */ = {
+			isa = PBXGroup;
+			children = (
+				C2DAE8E81BA80CCE008D2759 /* PVZCardCell.h */,
+				C2DAE8E91BA80CCE008D2759 /* PVZCardCell.m */,
+			);
+			name = CardChoose;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -918,59 +944,59 @@
 				2D653AB11B92CA0E00420E18 /* CherryBomb.atlas in Resources */,
 				2D653A791B92CA0E00420E18 /* PVZBackground_2.jpg in Resources */,
 				2D653ACF1B92CA0E00420E18 /* ZombieDie.atlas in Resources */,
-				2D653A8E1B92CA0E00420E18 /* HypnoShroom.png in Resources */,
+				2D653A8E1B92CA0E00420E18 /* Card_Hypno-Shroom.png in Resources */,
 				2D653AC51B92CA0E00420E18 /* PoleVaultingZombieJump.atlas in Resources */,
-				2D653AA11B92CA0E00420E18 /* Squash.png in Resources */,
-				2D653AA71B92CA0E00420E18 /* Torchwood.png in Resources */,
+				2D653AA11B92CA0E00420E18 /* Card_Squash.png in Resources */,
+				2D653AA71B92CA0E00420E18 /* Card_Torchwood.png in Resources */,
 				2D653ACA1B92CA0E00420E18 /* PoleVaultingZombieWalk.atlas in Resources */,
 				2D653AB51B92CA0E00420E18 /* Threepeater.atlas in Resources */,
 				2D653AD71B92CA0E00420E18 /* rootScene.mp3 in Resources */,
 				2D653ABA1B92CA0E00420E18 /* BucketheadZombieAttack.atlas in Resources */,
-				2D653A9E1B92CA0E00420E18 /* Spikerock.png in Resources */,
+				2D653A9E1B92CA0E00420E18 /* Card_Spiker.png in Resources */,
 				2D653A7C1B92CA0E00420E18 /* PVZBackground_7.jpg in Resources */,
-				2D653A871B92CA0E00420E18 /* DoomShroom.png in Resources */,
-				2D653AA01B92CA0E00420E18 /* SplitPea.png in Resources */,
+				2D653A871B92CA0E00420E18 /* Card_Doom-Shroom.png in Resources */,
+				2D653AA01B92CA0E00420E18 /* Card_SplitPea.png in Resources */,
 				2D653ABD1B92CA0E00420E18 /* FlagZombie.atlas in Resources */,
 				2D653AC31B92CA0E00420E18 /* PoleVaultingZombieDie.atlas in Resources */,
-				2D653AA41B92CA0E00420E18 /* SunShroom.png in Resources */,
-				2D653A881B92CA0E00420E18 /* FlowerPot.png in Resources */,
+				2D653AA41B92CA0E00420E18 /* Card_Sun-Shroom.png in Resources */,
+				2D653A881B92CA0E00420E18 /* Card_FlowerPot.png in Resources */,
 				2D653A7B1B92CA0E00420E18 /* PVZBackground_4.jpg in Resources */,
 				2D653A9D1B92CA0E00420E18 /* Card_SnowPea.png in Resources */,
 				2D653ABB1B92CA0E00420E18 /* ConeheadZombie.atlas in Resources */,
 				2D653AAB1B92CA0E00420E18 /* Card_Wall-Nut.png in Resources */,
 				2D653AAD1B92CA0E00420E18 /* Menu.atlas in Resources */,
 				2D653A931B92CA0E00420E18 /* Card_Peashooter.png in Resources */,
-				2D653A991B92CA0E00420E18 /* PumpkinHead.png in Resources */,
+				2D653A991B92CA0E00420E18 /* Card_Pumpkin.png in Resources */,
 				2D653AB61B92CA0E00420E18 /* WallNut.atlas in Resources */,
-				2D653A971B92CA0E00420E18 /* PuffShroom.png in Resources */,
+				2D653A971B92CA0E00420E18 /* Card_Puff-Shroom.png in Resources */,
 				2D653AD61B92CA0E00420E18 /* gameScene.mp3 in Resources */,
 				2D653AC61B92CA0E00420E18 /* PoleVaultingZombieJump2.atlas in Resources */,
 				2D653A771B92CA0E00420E18 /* PVZBackground_3.jpg in Resources */,
 				2D653A781B92CA0E00420E18 /* PVZBackground_0.jpg in Resources */,
 				2D653AC41B92CA0E00420E18 /* PoleVaultingZombieHead.atlas in Resources */,
 				2D653AA61B92CA0E00420E18 /* Card_Threepeater.png in Resources */,
-				2D653A901B92CA0E00420E18 /* Jalapeno.png in Resources */,
+				2D653A901B92CA0E00420E18 /* Card_Jalapeno.png in Resources */,
 				2DC8D6E71B93056B00EE2484 /* fp_title.png in Resources */,
 				2D653ACB1B92CA0E00420E18 /* PrepareGrowPlants.atlas in Resources */,
 				2D653AAC1B92CA0E00420E18 /* MainMenu.atlas in Resources */,
 				2D653AD41B92CA0E00420E18 /* game2.mp3 in Resources */,
 				2D653A841B92CA0E00420E18 /* Card_CherryBomb.png in Resources */,
 				2D653A801B92CA0E00420E18 /* PB_ICE.atlas in Resources */,
-				2D653A851B92CA0E00420E18 /* Chomper.png in Resources */,
-				2D653A911B92CA0E00420E18 /* LilyPad.png in Resources */,
+				2D653A851B92CA0E00420E18 /* Card_Chomper.png in Resources */,
+				2D653A911B92CA0E00420E18 /* Card_LilyPad.png in Resources */,
 				2D653AB21B92CA0E00420E18 /* Peashooter.atlas in Resources */,
-				2D653AA21B92CA0E00420E18 /* Starfruit.png in Resources */,
-				2D653A8B1B92CA0E00420E18 /* GatlingPea.png in Resources */,
-				2D653A9A1B92CA0E00420E18 /* Repeater.png in Resources */,
+				2D653AA21B92CA0E00420E18 /* Card_Starfruit.png in Resources */,
+				2D653A8B1B92CA0E00420E18 /* Card_GatlingPea.png in Resources */,
+				2D653A9A1B92CA0E00420E18 /* Card_Repeater.png in Resources */,
 				2DC8D6E41B93056B00EE2484 /* fp_floor.png in Resources */,
 				2D653AAF1B92CA0E00420E18 /* sod3row.png in Resources */,
 				2D653AB41B92CA0E00420E18 /* SunFlower.atlas in Resources */,
 				2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */,
-				2D653A9B1B92CA0E00420E18 /* ScaredyShroom.png in Resources */,
+				2D653A9B1B92CA0E00420E18 /* Card_Scaredy-Shroom.png in Resources */,
 				2D653AD11B92CA0E00420E18 /* ZombieLostHead.atlas in Resources */,
-				2D653A821B92CA0E00420E18 /* Blover.png in Resources */,
+				2D653A821B92CA0E00420E18 /* Card_Blover.png in Resources */,
 				2D2A69341B9160A30021F8BF /* Images.xcassets in Resources */,
-				2D653A891B92CA0E00420E18 /* FumeShroom.png in Resources */,
+				2D653A891B92CA0E00420E18 /* Card_Fume-Shroom.png in Resources */,
 				2D653ABC1B92CA0E00420E18 /* ConeheadZombieAttack.atlas in Resources */,
 				2D653A7E1B92CA0E00420E18 /* PVZBackground_5.jpg in Resources */,
 				2DC8D6E51B93056B00EE2484 /* fp_grass.png in Resources */,
@@ -980,11 +1006,11 @@
 				2D653AD21B92CA0E00420E18 /* ZombieLostHeadAttack.atlas in Resources */,
 				2D653ABF1B92CA0E00420E18 /* FlagZombieLostHead.atlas in Resources */,
 				2D653AC01B92CA0E00420E18 /* FlagZombieLostHeadAttack.atlas in Resources */,
-				2D653A8A1B92CA0E00420E18 /* Garlic.png in Resources */,
+				2D653A8A1B92CA0E00420E18 /* Card_Garlic.png in Resources */,
 				2D653A9F1B92CA0E00420E18 /* Card_Spikeweed.png in Resources */,
 				2D2A69321B9160A30021F8BF /* Main.storyboard in Resources */,
 				2D653AD01B92CA0E00420E18 /* ZombieHead.atlas in Resources */,
-				2D653A941B92CA0E00420E18 /* Plantern.png in Resources */,
+				2D653A941B92CA0E00420E18 /* Card_Plantern.png in Resources */,
 				2D653A961B92CA0E00420E18 /* Card_PotatoMine.png in Resources */,
 				2D653AC71B92CA0E00420E18 /* PoleVaultingZombieLostHead.atlas in Resources */,
 				2D653ACD1B92CA0E00420E18 /* Zombie3.atlas in Resources */,
@@ -996,21 +1022,21 @@
 				2D653A7A1B92CA0E00420E18 /* PVZBackground_1.jpg in Resources */,
 				2D653AB31B92CA0E00420E18 /* SnowPea.atlas in Resources */,
 				2D653A811B92CA0E00420E18 /* PB_Normal.atlas in Resources */,
-				2D653A8C1B92CA0E00420E18 /* GloomShroom.png in Resources */,
-				2D653A9C1B92CA0E00420E18 /* SeaShroom.png in Resources */,
-				2D653A831B92CA0E00420E18 /* Cactus.png in Resources */,
-				2D653A8F1B92CA0E00420E18 /* IceShroom.png in Resources */,
+				2D653A8C1B92CA0E00420E18 /* Card_Gloom-Shroom.png in Resources */,
+				2D653A9C1B92CA0E00420E18 /* Card_Sea-Shroom.png in Resources */,
+				2D653A831B92CA0E00420E18 /* Card_Cactus.png in Resources */,
+				2D653A8F1B92CA0E00420E18 /* Card_Ice-Shroom.png in Resources */,
 				2D653AB71B92CA0E00420E18 /* Sun.atlas in Resources */,
 				2D653AA31B92CA0E00420E18 /* Card_SunFlower.png in Resources */,
-				2D653A861B92CA0E00420E18 /* CoffeeBean.png in Resources */,
-				2D653AA91B92CA0E00420E18 /* TwinSunflower.png in Resources */,
+				2D653A861B92CA0E00420E18 /* Card_Coffee-Bean.png in Resources */,
+				2D653AA91B92CA0E00420E18 /* Card_TwinSunFlower.png in Resources */,
 				2D653ABE1B92CA0E00420E18 /* FlagZombieAttack.atlas in Resources */,
 				C203AEA41BA6BBD900E23941 /* Cards.plist in Resources */,
 				2D653A7D1B92CA0E00420E18 /* PVZBackground_8.jpg in Resources */,
 				2D653ACE1B92CA0E00420E18 /* ZombieAttack.atlas in Resources */,
 				2DC8D6DD1B9304CC00EE2484 /* LoadingPage.png in Resources */,
 				2D653A761B92CA0E00420E18 /* firstpage.jpg in Resources */,
-				2D653AA51B92CA0E00420E18 /* TallNut.png in Resources */,
+				2D653AA51B92CA0E00420E18 /* Card_Tall-Nut.png in Resources */,
 				2D653AD51B92CA0E00420E18 /* game3.mp3 in Resources */,
 				2D653A7F1B92CA0E00420E18 /* PVZBackground_6.jpg in Resources */,
 				2D653AB91B92CA0E00420E18 /* BucketheadZombie.atlas in Resources */,
@@ -1046,6 +1072,7 @@
 				2D5D41AD1BA1D2AD00FFF763 /* PVZCardItemNode.m in Sources */,
 				2D2A69561B9168510021F8BF /* PVZRootScene.m in Sources */,
 				2D62D6851B988B2A00CF3059 /* PVZProgressView.m in Sources */,
+				C2DAE8EA1BA80CCE008D2759 /* PVZCardCell.m in Sources */,
 				2D68E6281BA304EB005145D5 /* PVZCardMenuNode.m in Sources */,
 				C2D97E101BA69528009FB9F4 /* PVZPlant.m in Sources */,
 				C2D97E261BA6B315009FB9F4 /* PVZUser.m in Sources */,
@@ -1054,6 +1081,7 @@
 				2D2A69651B916EA30021F8BF /* SKScene+PVZ.m in Sources */,
 				2D1BA7021BA56DF4009BB687 /* SKSpriteNode+PVZ.m in Sources */,
 				2D2A69241B9160A30021F8BF /* main.m in Sources */,
+				C2DAE8E61BA80820008D2759 /* PVZCardChooseViewController.m in Sources */,
 				2D2120DC1B99477D00C4F1D0 /* PVZAdventureModeScene.m in Sources */,
 				C203AEAC1BA6C8CC00E23941 /* PVZUserListViewController.m in Sources */,
 				C2D97E191BA6995C009FB9F4 /* PVZGameHelper.m in Sources */,

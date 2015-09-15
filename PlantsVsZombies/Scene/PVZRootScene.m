@@ -16,10 +16,10 @@
 
 static PVZRootScene *rootScene = nil;
 
-@interface PVZRootScene ()
+@interface PVZRootScene () <PVZUserListDelegate>
 {
     SKSpriteNode *backgroundNode;
-    
+    int hasSubView;
     
     SKSpriteNode *userNameNode;
     PVZButton *userNameButton;
@@ -46,6 +46,7 @@ static PVZRootScene *rootScene = nil;
 {
     if (self = [super initWithSize:size]) {
         [self startInitSubViews];
+        hasSubView = 0;
     }
     return self;
 }
@@ -67,6 +68,9 @@ static PVZRootScene *rootScene = nil;
 #pragma mark - 按钮点击事件
 - (void) vaseButtonDown: (PVZButton *) sender
 {
+    if (hasSubView != 0) {
+        return;
+    }
     switch (sender.tag) {
         case 201:       // 选项
             
@@ -84,6 +88,9 @@ static PVZRootScene *rootScene = nil;
 
 - (void) modeButtonDown: (PVZButton *) sender
 {
+    if (hasSubView != 0) {
+        return;
+    }
     SKAction *wait = [SKAction waitForDuration:0.1];
     [sender setImageNamed:[NSString stringWithFormat:@"select%d1.png", ((int)sender.tag) % 100]];
     [sender runAction:wait completion:^{
@@ -109,21 +116,54 @@ static PVZRootScene *rootScene = nil;
 
 - (void) userButtonDown: (PVZButton *) sender
 {
+    if (hasSubView != 0) {
+        return;
+    }
     switch (sender.tag) {
         case 301:       // 用户信息
             
             break;
         case 302:       // 更改用户
+            hasSubView ++;
             if (_userListVC == nil) {
                 _userListVC = [[PVZUserListViewController alloc] init];
                 [_userListVC.view setFrame:CGRectMake(WIDTH_SCREEN * 0.3, HEIGHT_SCREEN * 0.1, WIDTH_SCREEN * 0.4, HEIGHT_SCREEN * 0.7)];
+                [_userListVC setDelegate:self];
             }
-            _userListVC.userListArray = [[PVZUserHelper sharedUserHelper] getUserList];
+            _userListVC.userListArray = [PVZUserHelper sharedUserHelper].userListArray;
             [self.view addSubview:_userListVC.view];
             break;
         default:
             break;
     }
+}
+
+#pragma mark - PVZUserListDelegate
+- (void) userListVCDidSelectUser:(PVZUser *)user
+{
+    [[PVZUserHelper sharedUserHelper] switchUser:user];
+    hasSubView --;
+    [_userListVC.view removeFromSuperview];
+    [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+}
+
+- (void) userListVCClosedButtonDown
+{
+    hasSubView --;
+    [_userListVC.view removeFromSuperview];
+}
+
+- (void) userListVCAddNewUser:(NSString *)username
+{
+    [[PVZUserHelper sharedUserHelper] addUserByUsername:username andLogin:YES];
+    hasSubView --;
+    [_userListVC.view removeFromSuperview];
+    [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+}
+
+- (void) userListVCRemoveUser:(PVZUser *)user
+{
+    [[PVZUserHelper sharedUserHelper] removeUser:user];
 }
 
 #pragma mark - 加载界面元素

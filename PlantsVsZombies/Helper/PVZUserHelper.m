@@ -22,30 +22,53 @@ static PVZUserHelper *userHelper = nil;
 
 - (BOOL) autoLogin
 {
-    NSArray *userListArray = [self getUserList];
-    if (!userListArray || userListArray.count == 0) {
+    if (!self.userListArray || self.userListArray.count == 0) {
         return NO;
     }
-    _curUser = [userListArray firstObject];
+    _curUser = [_userListArray firstObject];
     return YES;
 }
 
-- (NSArray *) getUserList
+- (NSMutableArray *) userListArray
 {
-    NSMutableArray *userListArray = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i < 10; i ++) {
-        PVZUser *user = [[PVZUser alloc] init];
-        user.username = [NSString stringWithFormat:@"text %d", i];
-        user.tollgate = 10;
-        [userListArray addObject:user];
+    if(_userListArray == nil) {
+        _userListArray = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 5; i ++) {
+            PVZUser *user = [[PVZUser alloc] init];
+            user.username = [NSString stringWithFormat:@"text %d", i];
+            user.tollgate = 10;
+            [_userListArray addObject:user];
+        }
     }
     
-    return userListArray;
+    return _userListArray;
 }
 
-- (BOOL) addUserByUsername:(NSString *)username
+- (BOOL) addUserByUsername:(NSString *)username andLogin:(BOOL)login
 {
+    PVZUser *user = [[PVZUser alloc] init];
+    user.username = username;
+    if (login) {
+        _curUser = user;
+        [self.userListArray insertObject:user atIndex:0];
+    }
+    else {
+        [self.userListArray addObject:user];
+    }
+    return YES;
+}
+
+- (BOOL) removeUser:(PVZUser *)user
+{
+    [self.userListArray removeObject:user];
+    return YES;
+}
+
+- (BOOL) switchUser:(PVZUser *)user
+{
+    _curUser = user;
+    [self.userListArray removeObject:user];
+    [self.userListArray insertObject:user atIndex:0];
     return YES;
 }
 

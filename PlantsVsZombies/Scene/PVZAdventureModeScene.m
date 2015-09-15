@@ -9,6 +9,8 @@
 #import "PVZAdventureModeScene.h"
 #import "PVZGameHelper.h"
 
+#import "PVZCardChooseViewController.h"
+
 #import "PVZBackgroundNode.h"
 #import "PVZSunMenuNode.h"
 #import "PVZCardMenuNode.h"
@@ -16,10 +18,14 @@
 
 static PVZAdventureModeScene *adventureModeScene = nil;
 
-@interface PVZAdventureModeScene () <PVZSunMenuDelegate, PVZCardMenuDelegate, PVZBackgroundDelegate, PVZSunNodeDelegate>
+@interface PVZAdventureModeScene () <PVZCardChooseDelegate, PVZSunMenuDelegate, PVZCardMenuDelegate, PVZBackgroundDelegate, PVZSunNodeDelegate>
 {
     NSTimeInterval lastProductSunTime;
+    
+    BOOL startGame;
 }
+
+@property (nonatomic, strong) PVZCardChooseViewController *cardChooseVC;
 
 @property (nonatomic, strong) PVZBackgroundNode *backgroundNode;
 @property (nonatomic, strong) PVZSunMenuNode *sunMenuNode;
@@ -52,10 +58,48 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 - (void) didMoveToView:(SKView *)view
 {
     [super didMoveToView:view];
-    [self showSubViews];
+    startGame = NO;
     
-//    [_backgroundNode scrollToShowZombies: nil];
-    [_cardMenuNode startAllCardItemCooling];
+    [self showSubViews];
+    [self choosedCard];
+}
+
+#pragma mark - 游戏控制
+- (void) choosedCard
+{
+#ifdef DEBUG_DEFAULT_CARDS
+    [self testCardMenu];
+    [self startGame];
+#else
+    if (_cardChooseVC == nil) {
+        _cardChooseVC = [[PVZCardChooseViewController alloc] init];
+        [_cardChooseVC.view setFrame:CGRectMake(WIDTH_CARDMENU * 1.5, [UIScreen mainScreen].bounds.size.height * 0.05, [UIScreen mainScreen].bounds.size.width - WIDTH_CARDMENU * 3, [UIScreen mainScreen].bounds.size.height * 0.9)];
+        [_cardChooseVC setDelegate:self];
+    }
+    [_cardChooseVC setCardsArray:[[PVZGameHelper sharedGameHelper] getAllCardsArray] andChooseCount:6];
+    [self.view addSubview:_cardChooseVC.view];
+#endif
+}
+
+- (void) startGame
+{
+    startGame = YES;
+    [_backgroundNode scrollToShowZombies: nil];     // 展示僵尸
+    [_cardMenuNode startAllCardItemCooling];        // 卡片开始刷新
+}
+
+#pragma mark - PVZCardChooseDelegate
+- (void) cardChooseVCDidSelectCard:(PVZCard *)card
+{
+    NSLog(@"\ncard:%@\nchineseName:%@\niamge:%@\ncost:%d\ncd:%f\n", card.cardName, card.cardChineseName, card.imageName, card.cost, card.cd);
+    PVZCardItemNode *node = [PVZCardItemNode createCareItemNodeWithInfo:card];
+    [_cardMenuNode addCardItem:node withAnimation:YES];
+}
+
+- (void) cardChooseVCCloseButtonDown
+{
+    [_cardChooseVC.view removeFromSuperview];
+    [self startGame];
 }
 
 #pragma mark - PVZSunMenuDelegate
@@ -81,9 +125,7 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 {
     if (canPutPlant && _cardMenuNode.choosedNode) {
         PVZCard *cardInfo = _cardMenuNode.choosedNode.cardInfo;
-        
         [_backgroundNode putPlantAtPoint:point plant:_choosedPlant];        // 放置植物
-        
         [_sunMenuNode subSunValue:cardInfo.cost];                           // 扣除阳光值
     }
     [_cardMenuNode cancelChooseMenuItemAndPutPlant:canPutPlant];
@@ -121,8 +163,6 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     [_cardMenuNode setDelegate:self];
     [_cardMenuNode setPosition:CGPointMake(x, y)];
     [_cardMenuNode setZPosition:1];
-    
-    [self testCardMenu];
 }
 
 - (void) showSubViews
@@ -145,6 +185,9 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 
 - (void) update:(NSTimeInterval)currentTime
 {
+    if (!startGame) {
+        return;
+    }
     if (lastProductSunTime == 0) {
         lastProductSunTime = currentTime - 5;;
     }

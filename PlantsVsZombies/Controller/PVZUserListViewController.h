@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class PVZUser;
+
+@protocol PVZUserListDelegate <NSObject>
+
+- (void) userListVCDidSelectUser:(PVZUser *)user;
+- (void) userListVCClosedButtonDown;
+- (void) userListVCAddNewUser:(NSString *)username;
+- (void) userListVCRemoveUser:(PVZUser *)user;
+
+@end
+
 @interface PVZUserListViewController : UIViewController
 
+@property (nonatomic, assign) id<PVZUserListDelegate>delegate;
 @property (nonatomic, strong) NSArray *userListArray;
 
 @end

@@ -13,13 +13,16 @@
 @interface PVZUserHelper : NSObject
 
 @property (nonatomic, strong) PVZUser *curUser;
+@property (nonatomic, strong) NSMutableArray *userListArray;
 
 + (PVZUserHelper *) sharedUserHelper;
 
 - (BOOL) autoLogin;
 
-- (NSArray *) getUserList;
+- (BOOL) addUserByUsername:(NSString *)username andLogin:(BOOL)Login;
 
-- (BOOL) addUserByUsername:(NSString *)username;
+- (BOOL) removeUser:(PVZUser *)user;
+
+- (BOOL) switchUser:(PVZUser *)user;
 
 @end

@@ -84,7 +84,7 @@ static PVZBackgroundNode *backgroundNode = nil;
  *
  *  @param zombies 僵尸数组
  */
-- (void) scrollToShowZombies:(NSArray *)zombies;
+- (void) scrollToShowZombies:(NSArray *)zombies
 {
     CGPoint startPoint = self.position;
     CGPoint endPoint = CGPointMake(startPoint.x - (self.size.width - WIDTH_SCREEN), startPoint.y);

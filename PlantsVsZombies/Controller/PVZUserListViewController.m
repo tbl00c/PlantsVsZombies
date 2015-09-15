@@ -25,6 +25,7 @@
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         [_tableView registerClass:[PVZUserItemCell class] forCellReuseIdentifier:@"UserItemCell"];
         [self.view addSubview:_tableView];
         [self.view setBackgroundColor:[UIColor whiteColor]];
@@ -61,35 +62,58 @@
     [_closeButton setFrame:CGRectMake(rect.size.width - 18, 4, 16, 16)];
     [_closeButton.layer setCornerRadius:_closeButton.frameWidth * 0.5];
     [self.tableView setFrame:CGRectMake(0, _titleLabel.frameHeight, rect.size.width, rect.size.height - _titleLabel.frameHeight)];
+    
+    [self.tableView reloadData];
 }
 
 - (void) closeButtonDown
 {
-    [self.view removeFromSuperview];
+    if (_delegate && [_delegate respondsToSelector:@selector(userListVCClosedButtonDown)]) {
+        [_delegate userListVCClosedButtonDown];
+    }
 }
 
 #pragma mark - UITableView
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _userListArray.count;
+    return section == 0 ? _userListArray.count : 1;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PVZUserItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserItemCell"];
-    PVZUser *user = [_userListArray objectAtIndex:indexPath.row];
-    [cell setUserInfo: user];
-    return cell;
+    if (indexPath.section == 0) {
+        PVZUserItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserItemCell"];
+        PVZUser *user = [_userListArray objectAtIndex:indexPath.row];
+        [cell setUserInfo: user];
+        return cell;
+    }
+    else{
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddUserCell"];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AddUserCell"];
+        }
+        [cell.textLabel setText:@"添加新账号"];
+        [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
+        return cell;
+    }
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.view removeFromSuperview];
+    if (indexPath.section == 0) {
+        if (_delegate && [_delegate respondsToSelector:@selector(userListVCDidSelectUser:)]) {
+            PVZUser *user = [_userListArray objectAtIndex:indexPath.row];
+            [_delegate userListVCDidSelectUser:user];
+        }
+    }
+    else if (indexPath.section == 1) {
+
+    }
 }
 
 @end

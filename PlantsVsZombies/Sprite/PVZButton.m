@@ -23,6 +23,7 @@
         _labelNode = [SKLabelNode labelNodeWithText:title];
         _labelNode.fontColor = [SKColor blackColor];
         _labelNode.fontSize = 18;
+        self.title = title;
         [self addChild:_labelNode];
         self.userInteractionEnabled = YES;
     }
@@ -41,6 +42,7 @@
 
 - (void) setTitle:(NSString *)title
 {
+    _title = title;
     [_labelNode setText:title];
 }
 

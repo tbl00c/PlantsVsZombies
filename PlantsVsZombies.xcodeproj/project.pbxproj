@@ -10,6 +10,7 @@
 		2D1BA6FF1BA56BCF009BB687 /* PVZSunNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BA6FE1BA56BCF009BB687 /* PVZSunNode.m */; };
 		2D1BA7021BA56DF4009BB687 /* SKSpriteNode+PVZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1BA7011BA56DF4009BB687 /* SKSpriteNode+PVZ.m */; };
 		2D2120DC1B99477D00C4F1D0 /* PVZAdventureModeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2120DB1B99477D00C4F1D0 /* PVZAdventureModeScene.m */; };
+		2D222F131BA84BE400CF6E0E /* PVZUserRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D222F121BA84BE400CF6E0E /* PVZUserRegisterViewController.m */; };
 		2D2A69241B9160A30021F8BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69231B9160A30021F8BF /* main.m */; };
 		2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A69261B9160A30021F8BF /* AppDelegate.m */; };
 		2D2A69321B9160A30021F8BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2A69301B9160A30021F8BF /* Main.storyboard */; };
@@ -157,6 +158,8 @@
 		2D1BA7011BA56DF4009BB687 /* SKSpriteNode+PVZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKSpriteNode+PVZ.m"; sourceTree = "<group>"; };
 		2D2120DA1B99477D00C4F1D0 /* PVZAdventureModeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZAdventureModeScene.h; sourceTree = "<group>"; };
 		2D2120DB1B99477D00C4F1D0 /* PVZAdventureModeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZAdventureModeScene.m; sourceTree = "<group>"; };
+		2D222F111BA84BE400CF6E0E /* PVZUserRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZUserRegisterViewController.h; sourceTree = "<group>"; };
+		2D222F121BA84BE400CF6E0E /* PVZUserRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZUserRegisterViewController.m; sourceTree = "<group>"; };
 		2D2A691E1B9160A30021F8BF /* PlantsVsZombies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantsVsZombies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2A69221B9160A30021F8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D2A69231B9160A30021F8BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -425,7 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				C203AEA81BA6C89700E23941 /* Root */,
-				C203AEA91BA6C8A500E23941 /* UserList */,
+				C203AEA91BA6C8A500E23941 /* User */,
 				C2DAE8E31BA807F2008D2759 /* CardChoose */,
 			);
 			path = Controller;
@@ -558,7 +561,7 @@
 			children = (
 				C2DAE8E71BA80C9F008D2759 /* CardChoose */,
 				C203AEB11BA6CA3000E23941 /* Game */,
-				C203AEB21BA6CA4500E23941 /* UserList */,
+				C203AEB21BA6CA4500E23941 /* User */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -798,13 +801,15 @@
 			name = Root;
 			sourceTree = "<group>";
 		};
-		C203AEA91BA6C8A500E23941 /* UserList */ = {
+		C203AEA91BA6C8A500E23941 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				C203AEAA1BA6C8CC00E23941 /* PVZUserListViewController.h */,
 				C203AEAB1BA6C8CC00E23941 /* PVZUserListViewController.m */,
+				2D222F111BA84BE400CF6E0E /* PVZUserRegisterViewController.h */,
+				2D222F121BA84BE400CF6E0E /* PVZUserRegisterViewController.m */,
 			);
-			name = UserList;
+			name = User;
 			sourceTree = "<group>";
 		};
 		C203AEAD1BA6C9F000E23941 /* Oth */ = {
@@ -825,13 +830,13 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
-		C203AEB21BA6CA4500E23941 /* UserList */ = {
+		C203AEB21BA6CA4500E23941 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				C203AEB31BA6CA6E00E23941 /* PVZUserItemCell.h */,
 				C203AEB41BA6CA6E00E23941 /* PVZUserItemCell.m */,
 			);
-			name = UserList;
+			name = User;
 			sourceTree = "<group>";
 		};
 		C2D97E0A1BA694E8009FB9F4 /* Plants */ = {
@@ -1074,6 +1079,7 @@
 				2D62D6851B988B2A00CF3059 /* PVZProgressView.m in Sources */,
 				C2DAE8EA1BA80CCE008D2759 /* PVZCardCell.m in Sources */,
 				2D68E6281BA304EB005145D5 /* PVZCardMenuNode.m in Sources */,
+				2D222F131BA84BE400CF6E0E /* PVZUserRegisterViewController.m in Sources */,
 				C2D97E101BA69528009FB9F4 /* PVZPlant.m in Sources */,
 				C2D97E261BA6B315009FB9F4 /* PVZUser.m in Sources */,
 				C2D97E291BA6B38A009FB9F4 /* PVZUserHelper.m in Sources */,

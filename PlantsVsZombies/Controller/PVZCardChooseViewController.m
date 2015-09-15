@@ -128,7 +128,7 @@
 #pragma mark - UIAlertViewDelegate
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 1) {
+    if (buttonIndex == 0) {
         if (_delegate && [_delegate respondsToSelector:@selector(cardChooseVCCloseButtonDown)]) {
             [_delegate cardChooseVCCloseButtonDown];
         }

@@ -14,6 +14,8 @@
 
 @property (nonatomic, assign) int userID;
 
+@property (nonatomic, assign) int scene;
+
 @property (nonatomic, assign) int tollgate;
 
 

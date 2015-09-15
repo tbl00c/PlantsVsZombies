@@ -26,7 +26,6 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-        [_tableView registerClass:[PVZUserItemCell class] forCellReuseIdentifier:@"UserItemCell"];
         [self.view addSubview:_tableView];
         [self.view setBackgroundColor:[UIColor whiteColor]];
     }
@@ -68,8 +67,13 @@
 
 - (void) closeButtonDown
 {
-    if (_delegate && [_delegate respondsToSelector:@selector(userListVCClosedButtonDown)]) {
-        [_delegate userListVCClosedButtonDown];
+    if (_userListArray.count == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"必须选中一个账号～" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alertView show];
+        return;
+    }
+    if (_delegate && [_delegate respondsToSelector:@selector(userListVCDidSelectUser:)]) {
+        [_delegate userListVCDidSelectUser:[_userListArray objectAtIndex:0]];
     }
 }
 
@@ -88,8 +92,17 @@
 {
     if (indexPath.section == 0) {
         PVZUserItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserItemCell"];
+        if (cell == nil) {
+            cell = [[PVZUserItemCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"UserItemCell"];
+        }
         PVZUser *user = [_userListArray objectAtIndex:indexPath.row];
         [cell setUserInfo: user];
+        if (indexPath.row == 0) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        }
+        else {
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+        }
         return cell;
     }
     else{
@@ -112,7 +125,34 @@
         }
     }
     else if (indexPath.section == 1) {
+        if (_delegate && [_delegate respondsToSelector:@selector(userListVCAddNewUserButtonDown)]) {
+            [_delegate userListVCAddNewUserButtonDown];
+        }
+    }
+}
 
+- (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return YES;
+    }
+    return NO;
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除账户";
+}
+
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PVZUser *user = [_userListArray objectAtIndex:indexPath.row];
+        [_userListArray removeObject: user];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        if (_delegate && [_delegate respondsToSelector:@selector(userListVCRemoveUser:)]) {
+            [_delegate userListVCRemoveUser:user];
+        }
     }
 }
 

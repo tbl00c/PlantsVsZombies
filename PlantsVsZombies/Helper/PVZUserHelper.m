@@ -36,7 +36,8 @@ static PVZUserHelper *userHelper = nil;
         for (int i = 0; i < 5; i ++) {
             PVZUser *user = [[PVZUser alloc] init];
             user.username = [NSString stringWithFormat:@"text %d", i];
-            user.tollgate = 10;
+            user.scene = 1;
+            user.tollgate = 7;
             [_userListArray addObject:user];
         }
     }
@@ -46,8 +47,15 @@ static PVZUserHelper *userHelper = nil;
 
 - (BOOL) addUserByUsername:(NSString *)username andLogin:(BOOL)login
 {
+    for (PVZUser *item in _userListArray) {
+        if ([item.username isEqualToString:username]) {
+            return NO;
+        }
+    }
     PVZUser *user = [[PVZUser alloc] init];
     user.username = username;
+    user.scene = 1;
+    user.tollgate = 1;
     if (login) {
         _curUser = user;
         [self.userListArray insertObject:user atIndex:0];

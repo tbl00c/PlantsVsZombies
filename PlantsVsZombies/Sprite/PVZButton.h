@@ -10,6 +10,8 @@
 
 @interface PVZButton : SKNode
 
+@property (nonatomic, strong) NSString *title;
+
 @property (nonatomic, weak) id skTarget;
 @property (nonatomic, assign) SEL skAction;
 @property (nonatomic, assign) NSUInteger tag;

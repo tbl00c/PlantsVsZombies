@@ -13,10 +13,11 @@
 
 #import "PVZUserListViewController.h"
 #import "PVZAdventureModeScene.h"
+#import "PVZUserRegisterViewController.h"
 
 static PVZRootScene *rootScene = nil;
 
-@interface PVZRootScene () <PVZUserListDelegate>
+@interface PVZRootScene () <PVZUserListDelegate, PVZUserRegisterVCDelegate>
 {
     SKSpriteNode *backgroundNode;
     int hasSubView;
@@ -25,9 +26,13 @@ static PVZRootScene *rootScene = nil;
     PVZButton *userNameButton;
     PVZButton *changeUserButton;
     SKSpriteNode *warningLabelNode;
+    
+    SKLabelNode *sceneLabelNode;
+    SKLabelNode *toolgateLabelNode;
 }
 
 @property (nonatomic, strong) PVZUserListViewController *userListVC;
+@property (nonatomic, strong) PVZUserRegisterViewController *registerVC;
 
 @end
 
@@ -58,10 +63,14 @@ static PVZRootScene *rootScene = nil;
     [self showSubViews];
     
     if (! [[PVZUserHelper sharedUserHelper] autoLogin]) {
-        //TODO: 无用户数据
+        [self showUserRegisterView];
     }
     else {
-        [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+        PVZUser *user = [PVZUserHelper sharedUserHelper].curUser;
+        [userNameButton setTitle:user.username];
+        [sceneLabelNode setText:[NSString stringWithFormat:@"%d", user.scene]];
+        [toolgateLabelNode setText:[NSString stringWithFormat:@"%d", user.tollgate]];
+
     }
 }
 
@@ -121,13 +130,14 @@ static PVZRootScene *rootScene = nil;
     }
     switch (sender.tag) {
         case 301:       // 用户信息
-            
+           
             break;
         case 302:       // 更改用户
             hasSubView ++;
             if (_userListVC == nil) {
                 _userListVC = [[PVZUserListViewController alloc] init];
-                [_userListVC.view setFrame:CGRectMake(WIDTH_SCREEN * 0.3, HEIGHT_SCREEN * 0.1, WIDTH_SCREEN * 0.4, HEIGHT_SCREEN * 0.7)];
+                CGRect rect = [UIScreen mainScreen].bounds;
+                [_userListVC.view setFrame:CGRectMake(rect.size.width * 0.3, rect.size.height * 0.1, rect.size.width * 0.4, rect.size.height * 0.7)];
                 [_userListVC setDelegate:self];
             }
             _userListVC.userListArray = [PVZUserHelper sharedUserHelper].userListArray;
@@ -138,6 +148,38 @@ static PVZRootScene *rootScene = nil;
     }
 }
 
+- (void) showUserRegisterView
+{
+    hasSubView ++;
+    if (_registerVC == nil) {
+        _registerVC = [[PVZUserRegisterViewController alloc] init];
+        [_registerVC setDelegate:self];
+        CGRect rect = [UIScreen mainScreen].bounds;
+        [_registerVC.view setFrame:CGRectMake(rect.size.width * 0.35, rect.size.height * 0.28, rect.size.width * 0.3, rect.size.height * 0.32)];
+    }
+    [self.view addSubview:_registerVC.view];
+}
+
+#pragma mark - PVZUserRegisterVCDelegate
+- (void) userRegisterVCCloseButtonDown
+{
+    hasSubView --;
+    [_registerVC.view removeFromSuperview];
+}
+
+- (BOOL) userRegisterVCTryAddUserByUsername:(NSString *)username
+{
+    if([[PVZUserHelper sharedUserHelper] addUserByUsername:username andLogin:YES]){
+        hasSubView --;
+        [_registerVC.view removeFromSuperview];
+        [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+        [sceneLabelNode setText:@"1"];
+        [toolgateLabelNode setText:@"1"];
+        return YES;
+    }
+    return NO;
+}
+
 #pragma mark - PVZUserListDelegate
 - (void) userListVCDidSelectUser:(PVZUser *)user
 {
@@ -145,24 +187,24 @@ static PVZRootScene *rootScene = nil;
     hasSubView --;
     [_userListVC.view removeFromSuperview];
     [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+    [sceneLabelNode setText:[NSString stringWithFormat:@"%d", user.scene]];
+    [toolgateLabelNode setText:[NSString stringWithFormat:@"%d", user.tollgate]];
 }
 
-- (void) userListVCClosedButtonDown
+- (void) userListVCAddNewUserButtonDown
 {
     hasSubView --;
     [_userListVC.view removeFromSuperview];
-}
-
-- (void) userListVCAddNewUser:(NSString *)username
-{
-    [[PVZUserHelper sharedUserHelper] addUserByUsername:username andLogin:YES];
-    hasSubView --;
-    [_userListVC.view removeFromSuperview];
-    [userNameButton setTitle:[PVZUserHelper sharedUserHelper].curUser.username];
+    [self showUserRegisterView];
 }
 
 - (void) userListVCRemoveUser:(PVZUser *)user
 {
+    if ([user.username isEqualToString:userNameButton.title]) {
+        [userNameButton setTitle:@""];
+        [sceneLabelNode setText:@""];
+        [toolgateLabelNode setText:@""];
+    }
     [[PVZUserHelper sharedUserHelper] removeUser:user];
 }
 
@@ -254,6 +296,19 @@ static PVZRootScene *rootScene = nil;
     warningLabelNode.position = CGPointMake(-210, 250);
     warningLabelNode.speed = 0.5;
     [backgroundNode addChild:warningLabelNode];
+    
+    // 关卡
+    sceneLabelNode = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Light"];
+    [sceneLabelNode setFontSize:10.0f];
+    [sceneLabelNode setPosition:CGPointMake(138, 123)];
+    [sceneLabelNode setZRotation:-M_PI/36];
+    [backgroundNode addChild:sceneLabelNode];
+    
+    toolgateLabelNode = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Light"];
+    [toolgateLabelNode setFontSize:10.0f];
+    [toolgateLabelNode setPosition:CGPointMake(163, 122)];
+    [toolgateLabelNode setZRotation:-M_PI/36];
+    [backgroundNode addChild:toolgateLabelNode];
 }
 
 - (void) showSubViews

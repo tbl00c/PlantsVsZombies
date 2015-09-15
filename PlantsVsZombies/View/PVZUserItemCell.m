@@ -13,6 +13,8 @@
 - (void) setUserInfo:(PVZUser *)userInfo
 {
     [self.textLabel setText:userInfo.username];
+    [self.detailTextLabel setFont:[UIFont systemFontOfSize:14]];
+    [self.detailTextLabel setText:[NSString stringWithFormat:@"关卡: %d-%d", userInfo.scene, userInfo.tollgate]];
 }
 
 @end

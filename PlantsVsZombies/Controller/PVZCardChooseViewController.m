@@ -43,6 +43,7 @@
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     [flowLayout setItemSize:CGSizeMake(WIDTH_CARDMENU, HEIGHT_CARDITEM)];
+    [flowLayout setSectionInset:UIEdgeInsetsMake(5, 5, 5, 5)];
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     [_collectionView setDelegate:self];
@@ -55,7 +56,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     CGRect rect = self.view.frame;
     [_titleLabel setFrame:CGRectMake(0, 0, rect.size.width, 24)];
     [_closeButton setFrame:CGRectMake(rect.size.width - 18, 4, 16, 16)];
@@ -69,6 +70,13 @@
 {
     _data = [[NSMutableArray alloc] initWithArray:array];
     [self setChooseCount:count];
+}
+
+- (void) reAddCard:(PVZCard *)card
+{
+    [self setChooseCount:_chooseCount + 1];
+    [_data insertObject:card atIndex:0];
+    [_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]];
 }
 
 - (void) setChooseCount:(int)chooseCount

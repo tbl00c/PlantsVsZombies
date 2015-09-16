@@ -8,7 +8,25 @@
 
 #import "PVZUserItemCell.h"
 
+@interface PVZUserItemCell ()
+
+@property (nonatomic, strong) UIView *line;
+
+@end
+
 @implementation PVZUserItemCell
+
+- (void) layoutSubviews
+{
+    [super layoutSubviews];
+    if (_line == nil) {
+        _line = [[UIView alloc] init];
+        [_line setBackgroundColor:[UIColor grayColor]];
+        [_line setAlpha:0.6];
+        [self addSubview:_line];
+    }
+    [_line setFrame:CGRectMake(15, self.frameHeight - 0.5, self.frameWidth - 15, 0.5)];
+}
 
 - (void) setUserInfo:(PVZUser *)userInfo
 {

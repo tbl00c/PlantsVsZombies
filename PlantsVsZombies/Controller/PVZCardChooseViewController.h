@@ -22,5 +22,6 @@
 @property (nonatomic, assign) id<PVZCardChooseDelegate>delegate;
 
 - (void) setCardsArray:(NSArray *)array andChooseCount:(int)count;
+- (void) reAddCard:(PVZCard *)card;
 
 @end

@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, PVZBackgroundType) {
 @property (nonatomic, assign) id<PVZBackgroundDelegate>delegate;
 
 + (PVZBackgroundNode *) createBackgroundNode;
-- (void) scrollToShowZombies:(NSArray *)zombies;
+- (void) scrollToShowZombies:(NSArray *)zombies complete:(void (^)())block;
 - (BOOL) putPlantAtPoint:(CGPoint)point plant:(id)plant;
 
 @end

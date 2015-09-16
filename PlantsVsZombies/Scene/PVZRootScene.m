@@ -51,7 +51,7 @@ static PVZRootScene *rootScene = nil;
 {
     if (self = [super initWithSize:size]) {
         [self startInitSubViews];
-        hasSubView = 0;
+        hasSubView = 1;
     }
     return self;
 }
@@ -59,18 +59,20 @@ static PVZRootScene *rootScene = nil;
 -(void)didMoveToView:(SKView *)view
 {
     [super didMoveToView:view];
+    //FIXME: 进入前会灰屏
 
     [self showSubViews];
     
     if (! [[PVZUserHelper sharedUserHelper] autoLogin]) {
         [self showUserRegisterView];
+        hasSubView --;
     }
     else {
         PVZUser *user = [PVZUserHelper sharedUserHelper].curUser;
         [userNameButton setTitle:user.username];
         [sceneLabelNode setText:[NSString stringWithFormat:@"%d", user.scene]];
         [toolgateLabelNode setText:[NSString stringWithFormat:@"%d", user.tollgate]];
-
+        hasSubView --;
     }
 }
 
@@ -157,12 +159,19 @@ static PVZRootScene *rootScene = nil;
         CGRect rect = [UIScreen mainScreen].bounds;
         [_registerVC.view setFrame:CGRectMake(rect.size.width * 0.35, rect.size.height * 0.28, rect.size.width * 0.3, rect.size.height * 0.32)];
     }
-    [self.view addSubview:_registerVC.view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view addSubview:_registerVC.view];
+    });
 }
 
 #pragma mark - PVZUserRegisterVCDelegate
 - (void) userRegisterVCCloseButtonDown
 {
+    if ([PVZUserHelper sharedUserHelper].curUser == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"必须新建一个账号才能开始游戏哦～" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
     hasSubView --;
     [_registerVC.view removeFromSuperview];
 }
@@ -177,7 +186,11 @@ static PVZRootScene *rootScene = nil;
         [toolgateLabelNode setText:@"1"];
         return YES;
     }
-    return NO;
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"添加失败，已存在同名账号。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+        return NO;
+    }
 }
 
 #pragma mark - PVZUserListDelegate
@@ -300,14 +313,16 @@ static PVZRootScene *rootScene = nil;
     // 关卡
     sceneLabelNode = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Light"];
     [sceneLabelNode setFontSize:10.0f];
+    [sceneLabelNode setAlpha:0.4];
     [sceneLabelNode setPosition:CGPointMake(138, 123)];
-    [sceneLabelNode setZRotation:-M_PI/36];
+    [sceneLabelNode setZRotation:-M_PI/80];
     [backgroundNode addChild:sceneLabelNode];
     
     toolgateLabelNode = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Light"];
     [toolgateLabelNode setFontSize:10.0f];
+    [toolgateLabelNode setAlpha:0.4];
     [toolgateLabelNode setPosition:CGPointMake(163, 122)];
-    [toolgateLabelNode setZRotation:-M_PI/36];
+    [toolgateLabelNode setZRotation:-M_PI/80];
     [backgroundNode addChild:toolgateLabelNode];
 }
 

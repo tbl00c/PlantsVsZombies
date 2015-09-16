@@ -38,6 +38,7 @@
     _registerButton = [[UIButton alloc] init];
     [_registerButton setBackgroundColor:[UIColor greenColor]];
     [_registerButton setTitle:@"确定" forState:UIControlStateNormal];
+    [_registerButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
     [_registerButton.layer setMasksToBounds:YES];
     [_registerButton.layer setCornerRadius:3];
     [_registerButton addTarget:self action:@selector(registerButtonDown) forControlEvents:UIControlEventTouchDown];
@@ -46,6 +47,7 @@
     _cancelButton = [[UIButton alloc] init];
     [_cancelButton setBackgroundColor:[UIColor grayColor]];
     [_cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+    [_cancelButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
     [_cancelButton.layer setMasksToBounds:YES];
     [_cancelButton.layer setCornerRadius:3];
     [_cancelButton addTarget:self action:@selector(closeButtonDown) forControlEvents:UIControlEventTouchDown];
@@ -58,6 +60,7 @@
     
     CGRect rect = self.view.frame;
     [_titleLabel setFrame:CGRectMake(0, 0, rect.size.width, 24)];
+    [_usernameTF setText:@""];
     [_usernameTF setFrame:CGRectMake(10, _titleLabel.frame.size.height + 10, rect.size.width - 20, 35)];
     [_registerButton setFrame:CGRectMake(rect.size.width * 0.05, rect.size.height - 40, rect.size.width * 0.4, 35)];
     [_cancelButton setFrame:CGRectMake(rect.size.width * 0.55, _registerButton.originY, _registerButton.frameWidth, _registerButton.frameHeight)];

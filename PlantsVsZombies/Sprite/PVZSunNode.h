@@ -9,28 +9,21 @@
 #import <SpriteKit/SpriteKit.h>
 
 typedef NS_ENUM(NSInteger, PVZSunNodeType) {
-    PVZSunNodeTypeNormal,
+    PVZSunNodeTypeNormal = 0,
     PVZSunNodeTypeMini,
 };
 
 @class PVZSunNode;
-
 @protocol PVZSunNodeDelegate <NSObject>
-
 - (void) didSelectedSunNode:(PVZSunNode *)sunNode;
-
 @end
-
 
 @interface PVZSunNode : SKSpriteNode
 
-@property (nonatomic, assign) int sunValue;
 @property (nonatomic, assign) id<PVZSunNodeDelegate>delegate;
+@property (nonatomic, assign) int sunValue;
 
-+ (id) createSunAtPosition:(CGPoint)position andType:(PVZSunNodeType)type;
-+ (id) createAutoFollowSunAtRect:(CGRect)rect;
-
-- (SKAction *) dismissAction;
-- (void) moveToPositionAndDismiss:(CGPoint)position;
+- (SKAction *) dismissActionWithComplete:(void (^)())block;
+- (void) moveToPositionAndDismiss:(CGPoint)position complete:(void (^)())block;
 
 @end

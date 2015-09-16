@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PlantName</key>
+	<string>SunFlower</string>
+	<key>PlantChineseName</key>
+	<string>向日葵</string>
+	<key>PlantType</key>
+	<string>0</string>
+	<key>HP</key>
+	<string>5</string>
+	<key>Textures</key>
+	<dict>
+		<key>ImageName</key>
+		<string>SunFlower</string>
+		<key>Count</key>
+		<string>18</string>
+	</dict>
+	<key>SkillTextures</key>
+	<dict>
+		<key>FirstInterval</key>
+		<string>5</string>
+		<key>Interval</key>
+		<string>20</string>
+		<key>SunType</key>
+		<string>0</string>
+	</dict>
+</dict>
+</plist>

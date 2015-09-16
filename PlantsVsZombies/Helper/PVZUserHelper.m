@@ -33,7 +33,7 @@ static PVZUserHelper *userHelper = nil;
 {
     if(_userListArray == nil) {
         _userListArray = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 5; i ++) {
+        for (int i = 0; i < 3; i ++) {
             PVZUser *user = [[PVZUser alloc] init];
             user.username = [NSString stringWithFormat:@"text %d", i];
             user.scene = 1;

@@ -25,11 +25,15 @@ typedef NS_ENUM(NSInteger, PVZPlantType) {
 
 @property (nonatomic, strong) NSString *plantName;
 
+@property (nonatomic, strong) NSString *plantChineseName;
+
 @property (nonatomic, assign) float hp;
 
 @property (nonatomic, assign) float cd;
 
 @property (nonatomic, strong) NSDictionary *texturesDic;
+
+@property (nonatomic, strong) NSDictionary *skillTexturesDic;
 
 @property (nonatomic, strong) NSMutableArray *hpTexturesArray;
 

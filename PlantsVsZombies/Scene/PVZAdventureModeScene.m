@@ -8,6 +8,8 @@
 
 #import "PVZAdventureModeScene.h"
 #import "PVZGameHelper.h"
+#import "PVZPlantFactory.h"
+#import "PVZSunFactory.h"
 
 #import "PVZCardChooseViewController.h"
 
@@ -59,14 +61,23 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 {
     [super didMoveToView:view];
     startGame = NO;
-    
     [self showSubViews];
+    
+#ifdef DEBUG_DONOT_SHOWZOMBIES
     [self choosedCard];
+#else
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_backgroundNode scrollToShowZombies: nil complete:^{  // 展示僵尸
+            [self choosedCard];
+        }];
+    });
+#endif
 }
 
 #pragma mark - 游戏控制
 - (void) choosedCard
 {
+    [_cardMenuNode setStatus:PVZCardMenuStatusEdit];
 #ifdef DEBUG_DEFAULT_CARDS
     [self testCardMenu];
     [self startGame];
@@ -84,8 +95,7 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 - (void) startGame
 {
     startGame = YES;
-    [_backgroundNode scrollToShowZombies: nil];     // 展示僵尸
-    [_cardMenuNode startAllCardItemCooling];        // 卡片开始刷新
+    [_cardMenuNode setStatus:PVZCardMenuStatusStart];        // 卡片开始刷新
 }
 
 #pragma mark - PVZCardChooseDelegate
@@ -105,14 +115,18 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 #pragma mark - PVZSunMenuDelegate
 - (void) sunMenuNodeDidUpdateSunValue:(float)sunValue
 {
-    NSLog(@"sun value changed");
 }
 
 #pragma mark - PVZCardMenuDelegate
-- (BOOL) cardMenuDidSelectedCardItem:(PVZCard *)cardInfo
+- (BOOL) cardMenuDidSelectedCardItem:(PVZCard *)cardInfo edit:(BOOL)edit
 {
-    if ([_sunMenuNode canSubSunValue:cardInfo.cost withAnimation:YES]) {
-        _choosedPlant = [SKSpriteNode spriteNodeWithImageNamed:@"SunFlower_2"];
+    if (edit &&_cardChooseVC) {
+        [_cardChooseVC reAddCard:cardInfo];
+        return YES;
+    }
+    else if ([_sunMenuNode canSubSunValue:cardInfo.cost withAnimation:YES]) {
+        PVZPlant *plantInfo = [[PVZGameHelper sharedGameHelper] getPlantInfoByCardInfo:cardInfo];
+        _choosedPlant = [PVZPlantFactory createPlantNodeByPlantInfo:plantInfo];
         [_choosedPlant setSize:CGSizeMake(46, 52)];
         [_choosedPlant setZPosition:1];
         return YES;
@@ -124,11 +138,14 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 - (void) backgroundNodeClickedAtPoint:(CGPoint)point canPutPlant:(BOOL)canPutPlant
 {
     if (canPutPlant && _cardMenuNode.choosedNode) {
-        PVZCard *cardInfo = _cardMenuNode.choosedNode.cardInfo;
-        [_backgroundNode putPlantAtPoint:point plant:_choosedPlant];        // 放置植物
-        [_sunMenuNode subSunValue:cardInfo.cost];                           // 扣除阳光值
+        if (_choosedPlant == nil) {
+            PVZLogWarning([self class], @"backgroundNodeClickedAtPoint:canPutPlant:", @"创建植物失败");
+            return;
+        }
+        [_backgroundNode putPlantAtPoint:point plant:_choosedPlant];            // 放置植物
+        [_sunMenuNode subSunValue:_cardMenuNode.choosedNode.cardInfo.cost];     // 扣除阳光值
+        [_cardMenuNode cancelChooseMenuItemAndPutPlant:canPutPlant];
     }
-    [_cardMenuNode cancelChooseMenuItemAndPutPlant:canPutPlant];
 }
 
 #pragma mark - PVZSunNodeDelegate
@@ -136,7 +153,9 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 {
     if (sunNode) {
         [_sunMenuNode addSunValue:sunNode.sunValue];
-        [sunNode moveToPositionAndDismiss:CGPointMake(sunNode.size.width * 0.33, self.size.height - sunNode.size.height * 0.37)];
+        [sunNode moveToPositionAndDismiss:CGPointMake(sunNode.size.width * 0.33, self.size.height - sunNode.size.height * 0.37) complete:^{
+            [PVZSunFactory reusedSunNode:sunNode];
+        }];
     }
 }
 
@@ -149,6 +168,7 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     [_backgroundNode setPosition:CGPointMake(_backgroundNode.size.width * 0.5, CGRectGetMidY(self.frame))];
     [_backgroundNode setZPosition:0];
     [_backgroundNode setDelegate:self];
+    [self addChild:_backgroundNode];
 
     x = WIDTH_SUNMENU / 2 + 3;
     y = HEIGHT_SCREEN - HEIGHT_SUNMENU / 2 - 3;
@@ -156,6 +176,7 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     [_sunMenuNode setDelegate:self];
     [_sunMenuNode setPosition:CGPointMake(x, y)];
     [_sunMenuNode setZPosition:1];
+    [self addChild:_sunMenuNode];
     
     x = WIDTH_CARDMENU / 2 + 4;
     y = y - HEIGHT_SUNMENU / 2 - 3 - HEIGHT_CARDMENU / 2;
@@ -163,14 +184,12 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     [_cardMenuNode setDelegate:self];
     [_cardMenuNode setPosition:CGPointMake(x, y)];
     [_cardMenuNode setZPosition:1];
+    [self addChild:_cardMenuNode];
 }
 
 - (void) showSubViews
 {
     [_backgroundNode setType:PVZBackgroundLawn];
-    [self addChild:_backgroundNode];
-    [self addChild:_sunMenuNode];
-    [self addChild:_cardMenuNode];
 }
 
 - (void) testCardMenu
@@ -189,11 +208,11 @@ static PVZAdventureModeScene *adventureModeScene = nil;
         return;
     }
     if (lastProductSunTime == 0) {
-        lastProductSunTime = currentTime - 5;;
+        lastProductSunTime = currentTime - 15;
     }
-    if (currentTime - lastProductSunTime >= 10) {
+    if (currentTime - lastProductSunTime >= 20) {
         lastProductSunTime = currentTime;
-        PVZSunNode *sunNode = [PVZSunNode createAutoFollowSunAtRect:CGRectMake(self.size.width * 0.2, 0, self.size.width, self.size.height)];
+        PVZSunNode *sunNode = [PVZSunFactory createAutoFollowSunAtRect:CGRectMake(self.size.width * 0.2, 0, self.size.width, self.size.height)];
         [sunNode setDelegate:self];
         [sunNode setZPosition:10];
         [self addChild:sunNode];

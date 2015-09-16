@@ -10,6 +10,6 @@
 
 @interface SKSpriteNode (PVZ)
 
-- (void) addTexturesByPhototsCommonName:(NSString *)name andCount:(int)count;
+- (SKAction *) texturesActionByPhototsCommonName:(NSString *)name andCount:(int)count;
 
 @end

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PlantName</key>
+	<string>Peashooter</string>
+	<key>PlantChineseName</key>
+	<string>豌豆射手</string>
+	<key>PlantType</key>
+	<string>1</string>
+	<key>HP</key>
+	<string>5</string>
+	<key>Textures</key>
+	<dict>
+		<key>ImageName</key>
+		<string>Peashooter</string>
+		<key>Count</key>
+		<string>13</string>
+	</dict>
+	<key>SkillTextures</key>
+	<dict>
+		<key>Interval</key>
+		<string>1.0</string>
+		<key>BulletType</key>
+		<string>0</string>
+	</dict>
+</dict>
+</plist>

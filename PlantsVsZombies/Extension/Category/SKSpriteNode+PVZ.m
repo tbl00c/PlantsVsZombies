@@ -10,7 +10,7 @@
 
 @implementation SKSpriteNode (PVZ)
 
-- (void) addTexturesByPhototsCommonName:(NSString *)name andCount:(int)count
+- (SKAction *) texturesActionByPhototsCommonName:(NSString *)name andCount:(int)count
 {
     NSMutableArray *texturesArray = [[NSMutableArray alloc] initWithCapacity:count];
     for (int i = 0; i < count; i ++) {
@@ -20,7 +20,7 @@
     }
     [self removeAllActions];
     SKAction *action = [SKAction animateWithTextures:texturesArray timePerFrame:0.1];
-    [self runAction:[SKAction repeatActionForever:action]];
+    return action;
 }
 
 @end

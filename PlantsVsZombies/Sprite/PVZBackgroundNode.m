@@ -83,8 +83,9 @@ static PVZBackgroundNode *backgroundNode = nil;
  *  展示本局的僵尸
  *
  *  @param zombies 僵尸数组
+ *  @param block   展示完成后执行
  */
-- (void) scrollToShowZombies:(NSArray *)zombies
+- (void) scrollToShowZombies:(NSArray *)zombies complete:(void (^)())block
 {
     CGPoint startPoint = self.position;
     CGPoint endPoint = CGPointMake(startPoint.x - (self.size.width - WIDTH_SCREEN), startPoint.y);
@@ -92,7 +93,7 @@ static PVZBackgroundNode *backgroundNode = nil;
     SKAction *wait = [SKAction waitForDuration:1];
     SKAction *moveBack = [SKAction moveTo:startPoint duration:1];
     SKAction *action = [SKAction sequence:@[moveToRight, wait, moveBack]];
-    [self runAction:action];
+    [self runAction:action completion:block];
 }
 
 /**

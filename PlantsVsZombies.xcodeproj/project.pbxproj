@@ -131,6 +131,11 @@
 		C203AEAC1BA6C8CC00E23941 /* PVZUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C203AEAB1BA6C8CC00E23941 /* PVZUserListViewController.m */; };
 		C203AEB01BA6CA2B00E23941 /* PVZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C203AEAF1BA6CA2B00E23941 /* PVZButton.m */; };
 		C203AEB51BA6CA6E00E23941 /* PVZUserItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C203AEB41BA6CA6E00E23941 /* PVZUserItemCell.m */; };
+		C24767F41BA93F26007DC0ED /* Plant_1001.plist in Resources */ = {isa = PBXBuildFile; fileRef = C24767F31BA93F26007DC0ED /* Plant_1001.plist */; };
+		C24767F61BA94493007DC0ED /* Plant.plist in Resources */ = {isa = PBXBuildFile; fileRef = C24767F51BA94493007DC0ED /* Plant.plist */; };
+		C24767FD1BA94823007DC0ED /* Plant_1002.plist in Resources */ = {isa = PBXBuildFile; fileRef = C24767F71BA94823007DC0ED /* Plant_1002.plist */; };
+		C247680F1BA9526F007DC0ED /* PVZPlantFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C247680C1BA9526F007DC0ED /* PVZPlantFactory.m */; };
+		C24768101BA9526F007DC0ED /* PVZSunFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C247680E1BA9526F007DC0ED /* PVZSunFactory.m */; };
 		C2D97E101BA69528009FB9F4 /* PVZPlant.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D97E0F1BA69528009FB9F4 /* PVZPlant.m */; };
 		C2D97E131BA69569009FB9F4 /* PVZPlantNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D97E121BA69569009FB9F4 /* PVZPlantNode.m */; };
 		C2D97E161BA69929009FB9F4 /* PVZDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D97E151BA69929009FB9F4 /* PVZDataHelper.m */; };
@@ -304,6 +309,13 @@
 		C203AEAF1BA6CA2B00E23941 /* PVZButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZButton.m; sourceTree = "<group>"; };
 		C203AEB31BA6CA6E00E23941 /* PVZUserItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZUserItemCell.h; sourceTree = "<group>"; };
 		C203AEB41BA6CA6E00E23941 /* PVZUserItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZUserItemCell.m; sourceTree = "<group>"; };
+		C24767F31BA93F26007DC0ED /* Plant_1001.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1001.plist; sourceTree = "<group>"; };
+		C24767F51BA94493007DC0ED /* Plant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant.plist; sourceTree = "<group>"; };
+		C24767F71BA94823007DC0ED /* Plant_1002.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1002.plist; sourceTree = "<group>"; };
+		C247680B1BA9526F007DC0ED /* PVZPlantFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZPlantFactory.h; sourceTree = "<group>"; };
+		C247680C1BA9526F007DC0ED /* PVZPlantFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZPlantFactory.m; sourceTree = "<group>"; };
+		C247680D1BA9526F007DC0ED /* PVZSunFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZSunFactory.h; sourceTree = "<group>"; };
+		C247680E1BA9526F007DC0ED /* PVZSunFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZSunFactory.m; sourceTree = "<group>"; };
 		C2D97E0E1BA69528009FB9F4 /* PVZPlant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZPlant.h; sourceTree = "<group>"; };
 		C2D97E0F1BA69528009FB9F4 /* PVZPlant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZPlant.m; sourceTree = "<group>"; };
 		C2D97E111BA69569009FB9F4 /* PVZPlantNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZPlantNode.h; sourceTree = "<group>"; };
@@ -427,6 +439,7 @@
 		2D2A694C1B9168490021F8BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C247680A1BA9526F007DC0ED /* Factory */,
 				C203AEA81BA6C89700E23941 /* Root */,
 				C203AEA91BA6C8A500E23941 /* User */,
 				C2DAE8E31BA807F2008D2759 /* CardChoose */,
@@ -524,36 +537,12 @@
 		2D5D41A71BA1D1BA00FFF763 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				2D5D41A91BA1D1F100FFF763 /* CardItem */,
-				2D5D41A81BA1D1EA00FFF763 /* CardMenu */,
-				2D5D41AA1BA1D21000FFF763 /* CardChooseMenu */,
-			);
-			name = Card;
-			sourceTree = "<group>";
-		};
-		2D5D41A81BA1D1EA00FFF763 /* CardMenu */ = {
-			isa = PBXGroup;
-			children = (
+				2D5D41AB1BA1D2AD00FFF763 /* PVZCardItemNode.h */,
+				2D5D41AC1BA1D2AD00FFF763 /* PVZCardItemNode.m */,
 				2D68E6261BA304EB005145D5 /* PVZCardMenuNode.h */,
 				2D68E6271BA304EB005145D5 /* PVZCardMenuNode.m */,
 			);
-			name = CardMenu;
-			sourceTree = "<group>";
-		};
-		2D5D41A91BA1D1F100FFF763 /* CardItem */ = {
-			isa = PBXGroup;
-			children = (
-				2D5D41AB1BA1D2AD00FFF763 /* PVZCardItemNode.h */,
-				2D5D41AC1BA1D2AD00FFF763 /* PVZCardItemNode.m */,
-			);
-			name = CardItem;
-			sourceTree = "<group>";
-		};
-		2D5D41AA1BA1D21000FFF763 /* CardChooseMenu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CardChooseMenu;
+			name = Card;
 			sourceTree = "<group>";
 		};
 		2D62D67F1B98808B00CF3059 /* View */ = {
@@ -780,6 +769,7 @@
 			isa = PBXGroup;
 			children = (
 				C203AEA51BA6BBE300E23941 /* Cards */,
+				C24767F21BA93F06007DC0ED /* Plants */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -839,11 +829,40 @@
 			name = User;
 			sourceTree = "<group>";
 		};
-		C2D97E0A1BA694E8009FB9F4 /* Plants */ = {
+		C24767F11BA9373D007DC0ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				C2D97E111BA69569009FB9F4 /* PVZPlantNode.h */,
 				C2D97E121BA69569009FB9F4 /* PVZPlantNode.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		C24767F21BA93F06007DC0ED /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				C24767F51BA94493007DC0ED /* Plant.plist */,
+				C24767F31BA93F26007DC0ED /* Plant_1001.plist */,
+				C24767F71BA94823007DC0ED /* Plant_1002.plist */,
+			);
+			name = Plants;
+			sourceTree = "<group>";
+		};
+		C247680A1BA9526F007DC0ED /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				C247680B1BA9526F007DC0ED /* PVZPlantFactory.h */,
+				C247680C1BA9526F007DC0ED /* PVZPlantFactory.m */,
+				C247680D1BA9526F007DC0ED /* PVZSunFactory.h */,
+				C247680E1BA9526F007DC0ED /* PVZSunFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		C2D97E0A1BA694E8009FB9F4 /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				C24767F11BA9373D007DC0ED /* Common */,
 			);
 			name = Plants;
 			sourceTree = "<group>";
@@ -950,6 +969,7 @@
 				2D653A791B92CA0E00420E18 /* PVZBackground_2.jpg in Resources */,
 				2D653ACF1B92CA0E00420E18 /* ZombieDie.atlas in Resources */,
 				2D653A8E1B92CA0E00420E18 /* Card_Hypno-Shroom.png in Resources */,
+				C24767F61BA94493007DC0ED /* Plant.plist in Resources */,
 				2D653AC51B92CA0E00420E18 /* PoleVaultingZombieJump.atlas in Resources */,
 				2D653AA11B92CA0E00420E18 /* Card_Squash.png in Resources */,
 				2D653AA71B92CA0E00420E18 /* Card_Torchwood.png in Resources */,
@@ -993,10 +1013,12 @@
 				2D653AA21B92CA0E00420E18 /* Card_Starfruit.png in Resources */,
 				2D653A8B1B92CA0E00420E18 /* Card_GatlingPea.png in Resources */,
 				2D653A9A1B92CA0E00420E18 /* Card_Repeater.png in Resources */,
+				C24767FD1BA94823007DC0ED /* Plant_1002.plist in Resources */,
 				2DC8D6E41B93056B00EE2484 /* fp_floor.png in Resources */,
 				2D653AAF1B92CA0E00420E18 /* sod3row.png in Resources */,
 				2D653AB41B92CA0E00420E18 /* SunFlower.atlas in Resources */,
 				2D2A69371B9160A30021F8BF /* LaunchScreen.xib in Resources */,
+				C24767F41BA93F26007DC0ED /* Plant_1001.plist in Resources */,
 				2D653A9B1B92CA0E00420E18 /* Card_Scaredy-Shroom.png in Resources */,
 				2D653AD11B92CA0E00420E18 /* ZombieLostHead.atlas in Resources */,
 				2D653A821B92CA0E00420E18 /* Card_Blover.png in Resources */,
@@ -1066,11 +1088,13 @@
 				2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */,
 				2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */,
 				C2D97E131BA69569009FB9F4 /* PVZPlantNode.m in Sources */,
+				C247680F1BA9526F007DC0ED /* PVZPlantFactory.m in Sources */,
 				2D1BA6FF1BA56BCF009BB687 /* PVZSunNode.m in Sources */,
 				2D5D419C1BA1BFB500FFF763 /* PVZBackgroundNode.m in Sources */,
 				2D653ADC1B92D25300420E18 /* PVZConfigration.m in Sources */,
 				2D653ADF1B92D28B00420E18 /* PVZAudioPlayer.m in Sources */,
 				2D5D41A61BA1C72400FFF763 /* PVZTollgate.m in Sources */,
+				C24768101BA9526F007DC0ED /* PVZSunFactory.m in Sources */,
 				2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */,
 				2D68E6301BA31029005145D5 /* PVZSunMenuNode.m in Sources */,
 				C203AEB51BA6CA6E00E23941 /* PVZUserItemCell.m in Sources */,

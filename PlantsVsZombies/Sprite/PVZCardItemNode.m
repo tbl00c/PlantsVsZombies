@@ -37,6 +37,7 @@
     _cardInfo = cardInfo;
     if (_costLabel == nil) {
         _costLabel = [SKLabelNode labelNodeWithFontNamed:@""];
+        [_costLabel setZPosition:1.0];
         [_costLabel setFontSize:11.0f];
         [_costLabel setFontColor:[UIColor blackColor]];
         [_costLabel setPosition:CGPointMake(WIDTH_CARDMENU * (cardInfo.cost >= 100 ? 0.283 : 0.32), - HEIGHT_CARDITEM * 0.43)];
@@ -59,7 +60,7 @@
     _progressNode = [SKSpriteNode spriteNodeWithColor:[UIColor grayColor] size:CGSizeMake(self.size.width, self.size.height * 0.88)];
     [_progressNode setPosition:CGPointMake(0, - self.size.height * 0.03)];
     [_progressNode setAlpha:0.4];
-    [_progressNode setZPosition:1];
+    [_progressNode setZPosition:2];
     [self addChild:_progressNode];
     SKAction *changeSize = [SKAction resizeToHeight:0 duration:_cardInfo.cd];
     SKAction *changePosition = [SKAction moveTo:CGPointMake(0, self.size.height * 0.42) duration:_cardInfo.cd];

@@ -376,6 +376,7 @@
 		2D1BA6FC1BA56B80009BB687 /* Sun */ = {
 			isa = PBXGroup;
 			children = (
+				2D68E62A1BA30FFD005145D5 /* SunMenu */,
 				2D1BA6FD1BA56BCF009BB687 /* PVZSunNode.h */,
 				2D1BA6FE1BA56BCF009BB687 /* PVZSunNode.m */,
 			);
@@ -481,9 +482,9 @@
 			isa = PBXGroup;
 			children = (
 				C203AEAD1BA6C9F000E23941 /* Oth */,
+				2D5D41A71BA1D1BA00FFF763 /* Card */,
 				C2D97E0A1BA694E8009FB9F4 /* Plants */,
 				2D1BA6FC1BA56B80009BB687 /* Sun */,
-				2D68E6291BA30FED005145D5 /* SceneElement */,
 				2D5D41991BA1BE7000FFF763 /* GameBackground */,
 			);
 			path = Sprite;
@@ -755,15 +756,6 @@
 				2D2A69531B9168510021F8BF /* PVZRootScene.m */,
 			);
 			name = RootScene;
-			sourceTree = "<group>";
-		};
-		2D68E6291BA30FED005145D5 /* SceneElement */ = {
-			isa = PBXGroup;
-			children = (
-				2D68E62A1BA30FFD005145D5 /* SunMenu */,
-				2D5D41A71BA1D1BA00FFF763 /* Card */,
-			);
-			name = SceneElement;
 			sourceTree = "<group>";
 		};
 		2D68E62A1BA30FFD005145D5 /* SunMenu */ = {

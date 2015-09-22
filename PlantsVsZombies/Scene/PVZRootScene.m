@@ -235,18 +235,21 @@ static PVZRootScene *rootScene = nil;
     PVZButton *optionsButton = [[PVZButton alloc] initWithTitle:@"选项"];
     optionsButton.tag = 201;
     optionsButton.position = CGPointMake(170, -135);
+    optionsButton.zPosition = 2.0;
     [optionsButton addTarget:self action:@selector(vaseButtonDown:)];
     [backgroundNode addChild:optionsButton];
     
     PVZButton *helpButton = [[PVZButton alloc] initWithTitle:@"帮助"];
     helpButton.tag = 202;
     helpButton.position = CGPointMake(228, -152);
+    helpButton.zPosition = 2.0;
     [helpButton addTarget:self action:@selector(vaseButtonDown:)];
     [backgroundNode addChild:helpButton];
     
     PVZButton *exitButton = [[PVZButton alloc] initWithTitle:@"退出"];
     exitButton.tag = 203;
     exitButton.position = CGPointMake(285, -148);
+    exitButton.zPosition = 2.0;
     [exitButton addTarget:self action:@selector(vaseButtonDown:)];
     [backgroundNode addChild:exitButton];
     
@@ -255,6 +258,7 @@ static PVZRootScene *rootScene = nil;
     adventrueModeButton.size = CGSizeMake(275, 80);
     adventrueModeButton.position = CGPointMake(145, 105);
     adventrueModeButton.tag = 101;
+    adventrueModeButton.zPosition = 1.0;
     [adventrueModeButton addTarget:self action:@selector(modeButtonDown:)];
     [backgroundNode addChild:adventrueModeButton];
     
@@ -262,6 +266,7 @@ static PVZRootScene *rootScene = nil;
     miniModeButton.size = CGSizeMake(261, 75);
     miniModeButton.position = CGPointMake(137, 46);
     miniModeButton.tag = 102;
+    miniModeButton.zPosition = 1.0;
     [miniModeButton addTarget:self action:@selector(modeButtonDown:)];
     [backgroundNode addChild:miniModeButton];
     
@@ -269,6 +274,7 @@ static PVZRootScene *rootScene = nil;
     puzzleModeButton.size = CGSizeMake(242, 78);
     puzzleModeButton.position = CGPointMake(132, -5);
     puzzleModeButton.tag = 103;
+    puzzleModeButton.zPosition = 1.0;
     [puzzleModeButton addTarget:self action:@selector(modeButtonDown:)];
     [backgroundNode addChild:puzzleModeButton];
     
@@ -276,6 +282,7 @@ static PVZRootScene *rootScene = nil;
     survivalModeButton.size = CGSizeMake(225, 80);
     survivalModeButton.position = CGPointMake(125, -52);
     survivalModeButton.tag = 104;
+    survivalModeButton.zPosition = 1.0;
     [survivalModeButton addTarget:self action:@selector(modeButtonDown:)];
     [backgroundNode addChild:survivalModeButton];
     
@@ -284,6 +291,7 @@ static PVZRootScene *rootScene = nil;
     userNameNode.size = CGSizeMake(200, 100);
     userNameNode.speed = 0.5;
     userNameNode.position = CGPointMake(-205, 250);
+    userNameNode.zPosition = 1.0;
     [backgroundNode addChild:userNameNode];
     
     userNameButton = [[PVZButton alloc] initWithTitle:@""];
@@ -294,6 +302,7 @@ static PVZRootScene *rootScene = nil;
     [userNameButton addTarget:self action:@selector(userButtonDown:)];
     userNameButton.position = CGPointMake(-205, 119);
     userNameButton.hidden = YES;
+    userNameButton.zPosition = 2.0;
     [backgroundNode addChild:userNameButton];
     
     changeUserButton = [[PVZButton alloc] initWithImageName:@"changePlayer1"];
@@ -301,6 +310,7 @@ static PVZRootScene *rootScene = nil;
     changeUserButton.position = CGPointMake(-205, 250);
     changeUserButton.speed = 0.5;
     changeUserButton.tag = 302;
+    changeUserButton.zPosition = 1.0;
     [changeUserButton addTarget:self action:@selector(userButtonDown:)];
     [backgroundNode addChild:changeUserButton];
     
@@ -308,21 +318,24 @@ static PVZRootScene *rootScene = nil;
     warningLabelNode.size = CGSizeMake(200, 40);
     warningLabelNode.position = CGPointMake(-210, 250);
     warningLabelNode.speed = 0.5;
+    warningLabelNode.zPosition = 1.0;
     [backgroundNode addChild:warningLabelNode];
     
     // 关卡
     sceneLabelNode = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Light"];
     [sceneLabelNode setFontSize:10.0f];
-    [sceneLabelNode setAlpha:0.4];
+    [sceneLabelNode setAlpha:0.6];
     [sceneLabelNode setPosition:CGPointMake(138, 123)];
     [sceneLabelNode setZRotation:-M_PI/80];
+    [sceneLabelNode setZPosition:2.0];
     [backgroundNode addChild:sceneLabelNode];
     
     toolgateLabelNode = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Light"];
     [toolgateLabelNode setFontSize:10.0f];
-    [toolgateLabelNode setAlpha:0.4];
+    [toolgateLabelNode setAlpha:0.6];
     [toolgateLabelNode setPosition:CGPointMake(163, 122)];
     [toolgateLabelNode setZRotation:-M_PI/80];
+    [toolgateLabelNode setZPosition:2.0];
     [backgroundNode addChild:toolgateLabelNode];
 }
 

@@ -43,7 +43,7 @@
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     [flowLayout setItemSize:CGSizeMake(WIDTH_CARDMENU, HEIGHT_CARDITEM)];
-    [flowLayout setSectionInset:UIEdgeInsetsMake(5, 5, 5, 5)];
+    [flowLayout setSectionInset:UIEdgeInsetsMake(2, 2, 2, 2)];
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     [_collectionView setDelegate:self];

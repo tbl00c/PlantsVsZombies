@@ -11,11 +11,11 @@
 
 #pragma mark - 测试用
 
-//#define DEBUG_ADVENTURE_MODE
-//#define DEBUG_SUN_INFINATE
-//#define DEBUG_COOLING_CLOSED
-//#define DEBUG_DEFAULT_CARDS
-//#define DEBUG_DONOT_SHOWZOMBIES
+#define DEBUG_ADVENTURE_MODE
+#define DEBUG_SUN_INFINATE
+#define DEBUG_COOLING_CLOSED
+#define DEBUG_DEFAULT_CARDS
+#define DEBUG_DONOT_SHOWZOMBIES
 
 #pragma mark - 控件大小
 
@@ -29,7 +29,8 @@
 #define HEIGHT_CARDMENU     300
 #define HEIGHT_CARDITEM     43
 
-
+#define HEIGHT_PLANT        74
+#define WIDTH_PLANT         73
 
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \

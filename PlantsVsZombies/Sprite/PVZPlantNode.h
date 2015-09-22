@@ -15,5 +15,7 @@
 
 @property (nonatomic, strong) PVZPlant *plantInfo;
 
++ (id) createPlant;
+
 
 @end

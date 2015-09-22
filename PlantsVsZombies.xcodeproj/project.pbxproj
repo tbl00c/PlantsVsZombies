@@ -144,6 +144,14 @@
 		C2D97E291BA6B38A009FB9F4 /* PVZUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D97E281BA6B38A009FB9F4 /* PVZUserHelper.m */; };
 		C2DAE8E61BA80820008D2759 /* PVZCardChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAE8E51BA80820008D2759 /* PVZCardChooseViewController.m */; };
 		C2DAE8EA1BA80CCE008D2759 /* PVZCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAE8E91BA80CCE008D2759 /* PVZCardCell.m */; };
+		C2E3D6ED1BB11BC5000DBEB4 /* PVZSunFlowerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E3D6EC1BB11BC5000DBEB4 /* PVZSunFlowerNode.m */; };
+		C2E3D6F11BB123AF000DBEB4 /* PVZPeashooterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E3D6F01BB123AF000DBEB4 /* PVZPeashooterNode.m */; };
+		C2E3D6F51BB123E4000DBEB4 /* PVZCherryBombNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E3D6F41BB123E4000DBEB4 /* PVZCherryBombNode.m */; };
+		C2E3D6FC1BB12436000DBEB4 /* PVZWallNutNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E3D6FB1BB12436000DBEB4 /* PVZWallNutNode.m */; };
+		C2E3D7041BB1247A000DBEB4 /* PVZSnowPeaNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E3D7031BB1247A000DBEB4 /* PVZSnowPeaNode.m */; };
+		C2E3D7091BB1389F000DBEB4 /* Plant_1003.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E3D7051BB1389F000DBEB4 /* Plant_1003.plist */; };
+		C2E3D70A1BB1389F000DBEB4 /* Plant_1004.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E3D7061BB1389F000DBEB4 /* Plant_1004.plist */; };
+		C2E3D70C1BB1389F000DBEB4 /* Plant_1006.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E3D7081BB1389F000DBEB4 /* Plant_1006.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,6 +340,19 @@
 		C2DAE8E51BA80820008D2759 /* PVZCardChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZCardChooseViewController.m; sourceTree = "<group>"; };
 		C2DAE8E81BA80CCE008D2759 /* PVZCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZCardCell.h; sourceTree = "<group>"; };
 		C2DAE8E91BA80CCE008D2759 /* PVZCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZCardCell.m; sourceTree = "<group>"; };
+		C2E3D6EB1BB11BC5000DBEB4 /* PVZSunFlowerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZSunFlowerNode.h; sourceTree = "<group>"; };
+		C2E3D6EC1BB11BC5000DBEB4 /* PVZSunFlowerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZSunFlowerNode.m; sourceTree = "<group>"; };
+		C2E3D6EF1BB123AF000DBEB4 /* PVZPeashooterNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZPeashooterNode.h; sourceTree = "<group>"; };
+		C2E3D6F01BB123AF000DBEB4 /* PVZPeashooterNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZPeashooterNode.m; sourceTree = "<group>"; };
+		C2E3D6F31BB123E4000DBEB4 /* PVZCherryBombNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZCherryBombNode.h; sourceTree = "<group>"; };
+		C2E3D6F41BB123E4000DBEB4 /* PVZCherryBombNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZCherryBombNode.m; sourceTree = "<group>"; };
+		C2E3D6FA1BB12436000DBEB4 /* PVZWallNutNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZWallNutNode.h; sourceTree = "<group>"; };
+		C2E3D6FB1BB12436000DBEB4 /* PVZWallNutNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZWallNutNode.m; sourceTree = "<group>"; };
+		C2E3D7021BB1247A000DBEB4 /* PVZSnowPeaNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZSnowPeaNode.h; sourceTree = "<group>"; };
+		C2E3D7031BB1247A000DBEB4 /* PVZSnowPeaNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZSnowPeaNode.m; sourceTree = "<group>"; };
+		C2E3D7051BB1389F000DBEB4 /* Plant_1003.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1003.plist; sourceTree = "<group>"; };
+		C2E3D7061BB1389F000DBEB4 /* Plant_1004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1004.plist; sourceTree = "<group>"; };
+		C2E3D7081BB1389F000DBEB4 /* Plant_1006.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1006.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -844,6 +865,9 @@
 				C24767F51BA94493007DC0ED /* Plant.plist */,
 				C24767F31BA93F26007DC0ED /* Plant_1001.plist */,
 				C24767F71BA94823007DC0ED /* Plant_1002.plist */,
+				C2E3D7051BB1389F000DBEB4 /* Plant_1003.plist */,
+				C2E3D7061BB1389F000DBEB4 /* Plant_1004.plist */,
+				C2E3D7081BB1389F000DBEB4 /* Plant_1006.plist */,
 			);
 			name = Plants;
 			sourceTree = "<group>";
@@ -863,6 +887,11 @@
 			isa = PBXGroup;
 			children = (
 				C24767F11BA9373D007DC0ED /* Common */,
+				C2E3D6EA1BB11B8C000DBEB4 /* SunFlower */,
+				C2E3D6EE1BB1238C000DBEB4 /* Peashooter */,
+				C2E3D6F21BB123BA000DBEB4 /* CherryBomb */,
+				C2E3D6F61BB123F3000DBEB4 /* Wall-Nut */,
+				C2E3D7011BB12467000DBEB4 /* SnowPea */,
 			);
 			name = Plants;
 			sourceTree = "<group>";
@@ -883,6 +912,51 @@
 				C2DAE8E91BA80CCE008D2759 /* PVZCardCell.m */,
 			);
 			name = CardChoose;
+			sourceTree = "<group>";
+		};
+		C2E3D6EA1BB11B8C000DBEB4 /* SunFlower */ = {
+			isa = PBXGroup;
+			children = (
+				C2E3D6EB1BB11BC5000DBEB4 /* PVZSunFlowerNode.h */,
+				C2E3D6EC1BB11BC5000DBEB4 /* PVZSunFlowerNode.m */,
+			);
+			name = SunFlower;
+			sourceTree = "<group>";
+		};
+		C2E3D6EE1BB1238C000DBEB4 /* Peashooter */ = {
+			isa = PBXGroup;
+			children = (
+				C2E3D6EF1BB123AF000DBEB4 /* PVZPeashooterNode.h */,
+				C2E3D6F01BB123AF000DBEB4 /* PVZPeashooterNode.m */,
+			);
+			name = Peashooter;
+			sourceTree = "<group>";
+		};
+		C2E3D6F21BB123BA000DBEB4 /* CherryBomb */ = {
+			isa = PBXGroup;
+			children = (
+				C2E3D6F31BB123E4000DBEB4 /* PVZCherryBombNode.h */,
+				C2E3D6F41BB123E4000DBEB4 /* PVZCherryBombNode.m */,
+			);
+			name = CherryBomb;
+			sourceTree = "<group>";
+		};
+		C2E3D6F61BB123F3000DBEB4 /* Wall-Nut */ = {
+			isa = PBXGroup;
+			children = (
+				C2E3D6FA1BB12436000DBEB4 /* PVZWallNutNode.h */,
+				C2E3D6FB1BB12436000DBEB4 /* PVZWallNutNode.m */,
+			);
+			name = "Wall-Nut";
+			sourceTree = "<group>";
+		};
+		C2E3D7011BB12467000DBEB4 /* SnowPea */ = {
+			isa = PBXGroup;
+			children = (
+				C2E3D7021BB1247A000DBEB4 /* PVZSnowPeaNode.h */,
+				C2E3D7031BB1247A000DBEB4 /* PVZSnowPeaNode.m */,
+			);
+			name = SnowPea;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -966,6 +1040,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D653AB11B92CA0E00420E18 /* CherryBomb.atlas in Resources */,
+				C2E3D70A1BB1389F000DBEB4 /* Plant_1004.plist in Resources */,
 				2D653A791B92CA0E00420E18 /* PVZBackground_2.jpg in Resources */,
 				2D653ACF1B92CA0E00420E18 /* ZombieDie.atlas in Resources */,
 				2D653A8E1B92CA0E00420E18 /* Card_Hypno-Shroom.png in Resources */,
@@ -981,6 +1056,7 @@
 				2D653A7C1B92CA0E00420E18 /* PVZBackground_7.jpg in Resources */,
 				2D653A871B92CA0E00420E18 /* Card_Doom-Shroom.png in Resources */,
 				2D653AA01B92CA0E00420E18 /* Card_SplitPea.png in Resources */,
+				C2E3D70C1BB1389F000DBEB4 /* Plant_1006.plist in Resources */,
 				2D653ABD1B92CA0E00420E18 /* FlagZombie.atlas in Resources */,
 				2D653AC31B92CA0E00420E18 /* PoleVaultingZombieDie.atlas in Resources */,
 				2D653AA41B92CA0E00420E18 /* Card_Sun-Shroom.png in Resources */,
@@ -1025,6 +1101,7 @@
 				2D2A69341B9160A30021F8BF /* Images.xcassets in Resources */,
 				2D653A891B92CA0E00420E18 /* Card_Fume-Shroom.png in Resources */,
 				2D653ABC1B92CA0E00420E18 /* ConeheadZombieAttack.atlas in Resources */,
+				C2E3D7091BB1389F000DBEB4 /* Plant_1003.plist in Resources */,
 				2D653A7E1B92CA0E00420E18 /* PVZBackground_5.jpg in Resources */,
 				2DC8D6E51B93056B00EE2484 /* fp_grass.png in Resources */,
 				2D653AD31B92CA0E00420E18 /* game1.mp3 in Resources */,
@@ -1086,15 +1163,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2A69271B9160A30021F8BF /* AppDelegate.m in Sources */,
+				C2E3D6F51BB123E4000DBEB4 /* PVZCherryBombNode.m in Sources */,
 				2D2A694F1B9168490021F8BF /* GameViewController.m in Sources */,
 				C2D97E131BA69569009FB9F4 /* PVZPlantNode.m in Sources */,
 				C247680F1BA9526F007DC0ED /* PVZPlantFactory.m in Sources */,
+				C2E3D6ED1BB11BC5000DBEB4 /* PVZSunFlowerNode.m in Sources */,
 				2D1BA6FF1BA56BCF009BB687 /* PVZSunNode.m in Sources */,
 				2D5D419C1BA1BFB500FFF763 /* PVZBackgroundNode.m in Sources */,
+				C2E3D7041BB1247A000DBEB4 /* PVZSnowPeaNode.m in Sources */,
 				2D653ADC1B92D25300420E18 /* PVZConfigration.m in Sources */,
 				2D653ADF1B92D28B00420E18 /* PVZAudioPlayer.m in Sources */,
 				2D5D41A61BA1C72400FFF763 /* PVZTollgate.m in Sources */,
 				C24768101BA9526F007DC0ED /* PVZSunFactory.m in Sources */,
+				C2E3D6FC1BB12436000DBEB4 /* PVZWallNutNode.m in Sources */,
 				2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */,
 				2D68E6301BA31029005145D5 /* PVZSunMenuNode.m in Sources */,
 				C203AEB51BA6CA6E00E23941 /* PVZUserItemCell.m in Sources */,
@@ -1113,6 +1194,7 @@
 				2D2A69241B9160A30021F8BF /* main.m in Sources */,
 				C2DAE8E61BA80820008D2759 /* PVZCardChooseViewController.m in Sources */,
 				2D2120DC1B99477D00C4F1D0 /* PVZAdventureModeScene.m in Sources */,
+				C2E3D6F11BB123AF000DBEB4 /* PVZPeashooterNode.m in Sources */,
 				C203AEAC1BA6C8CC00E23941 /* PVZUserListViewController.m in Sources */,
 				C2D97E191BA6995C009FB9F4 /* PVZGameHelper.m in Sources */,
 				C2D97E161BA69929009FB9F4 /* PVZDataHelper.m in Sources */,

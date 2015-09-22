@@ -139,12 +139,13 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 {
     if (canPutPlant && _cardMenuNode.choosedNode) {
         if (_choosedPlant == nil) {
-            PVZLogWarning([self class], @"backgroundNodeClickedAtPoint:canPutPlant:", @"创建植物失败");
+            PVZLogWarning([self class], @"backgroundNodeClickedAtPoint:canPutPlant:", @"创建植物失败：%@", _cardMenuNode.choosedNode.cardInfo.cardName);
             return;
         }
         [_backgroundNode putPlantAtPoint:point plant:_choosedPlant];            // 放置植物
         [_sunMenuNode subSunValue:_cardMenuNode.choosedNode.cardInfo.cost];     // 扣除阳光值
         [_cardMenuNode cancelChooseMenuItemAndPutPlant:canPutPlant];
+        _choosedPlant = nil;
     }
 }
 

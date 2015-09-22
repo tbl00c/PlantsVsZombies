@@ -29,9 +29,8 @@ static NSMutableArray *sunReuseArray = nil;
         [sunNode setAlpha:0.95];
         [sunNode setUserInteractionEnabled:YES];
     }
-    SKAction *textures = [sunNode texturesActionByPhototsCommonName:@"Sun_" andCount:20];
-    SKAction *repeat = [SKAction repeatActionForever:textures];
-    [sunNode runAction:repeat];
+    SKAction *textures = [sunNode texturesActionByPhototsCommonName:@"Sun" andCount:20];
+    [sunNode runAction:textures];
     [sunNode setPosition:position];
     [sunNode setSize:CGSizeMake(0, 0)];
     SKAction *changeSize;
@@ -47,7 +46,7 @@ static NSMutableArray *sunReuseArray = nil;
         default:
             break;
     }
-    SKAction *wait = [SKAction waitForDuration:12.0];
+    SKAction *wait = [SKAction waitForDuration:16.0];
     SKAction *dismiss = [sunNode dismissActionWithComplete:^{
         [PVZSunFactory reusedSunNode:sunNode];
     }];
@@ -62,7 +61,7 @@ static NSMutableArray *sunReuseArray = nil;
     float x = rect.origin.x + w * 0.6 + arc4random() % ((int)(rect.size.width - rect.origin.x - w));
     float y = rect.origin.y + rect.size.height + w * 1.5;
     PVZSunNode *sunNode = [PVZSunFactory createSunAtPosition:CGPointMake(x, y) andType:PVZSunNodeTypeNormal];
-    SKAction *moveFloor = [SKAction moveToY:rect.origin.y + w * 0.7 duration:6.0];
+    SKAction *moveFloor = [SKAction moveToY:rect.origin.y + w * 0.7 duration:10.0];
     [sunNode runAction:moveFloor];
     return sunNode;
 }

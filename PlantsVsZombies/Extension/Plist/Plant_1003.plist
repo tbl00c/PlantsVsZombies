@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PlantName</key>
+	<string>CherryBomb</string>
+	<key>PlantChineseName</key>
+	<string>樱桃炸弹</string>
+	<key>PlantType</key>
+	<string>1</string>
+	<key>HP</key>
+	<string>5</string>
+	<key>Textures</key>
+	<dict>
+		<key>ImageName</key>
+		<string>CherryBomb</string>
+		<key>Count</key>
+		<string>7</string>
+	</dict>
+	<key>SkillTextures</key>
+	<dict>
+		<key>FirstInterval</key>
+		<string></string>
+		<key>Interval</key>
+		<string></string>
+	</dict>
+	<key>TimeTextures</key>
+	<array>
+		<dict>
+			<key>Interval</key>
+			<string></string>
+			<key>ImageName</key>
+			<string></string>
+			<key>Count</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>HPTextures</key>
+	<array>
+		<dict>
+			<key>HP</key>
+			<string></string>
+			<key>ImageName</key>
+			<string></string>
+			<key>Count</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>

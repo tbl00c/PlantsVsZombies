@@ -10,6 +10,13 @@
 
 @implementation PVZPlantNode
 
++ (id) createPlant
+{
+    PVZPlantNode *node = [PVZPlantNode spriteNodeWithColor:[UIColor clearColor] size:CGSizeMake(WIDTH_PLANT, HEIGHT_PLANT)];
+    
+    return node;
+}
+
 - (void) setPlantInfo:(PVZPlant *)plantInfo
 {
     _plantInfo = plantInfo;

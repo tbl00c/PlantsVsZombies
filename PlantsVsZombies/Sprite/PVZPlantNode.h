@@ -17,5 +17,6 @@
 
 + (id) createPlant;
 
+- (void) plantBeenEliminated;
 
 @end

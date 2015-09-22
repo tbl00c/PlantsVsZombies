@@ -17,10 +17,12 @@
 #import "PVZSunMenuNode.h"
 #import "PVZCardMenuNode.h"
 #import "PVZSunNode.h"
+#import "PVZShovelNode.h"
+#import "PVZPlantNode.h"
 
 static PVZAdventureModeScene *adventureModeScene = nil;
 
-@interface PVZAdventureModeScene () <PVZCardChooseDelegate, PVZSunMenuDelegate, PVZCardMenuDelegate, PVZBackgroundDelegate, PVZSunNodeDelegate>
+@interface PVZAdventureModeScene () <PVZCardChooseDelegate, PVZSunMenuDelegate, PVZShovelNodeDelegate, PVZCardMenuDelegate, PVZBackgroundDelegate, PVZSunNodeDelegate>
 {
     NSTimeInterval lastProductSunTime;
     
@@ -32,6 +34,7 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 @property (nonatomic, strong) PVZBackgroundNode *backgroundNode;
 @property (nonatomic, strong) PVZSunMenuNode *sunMenuNode;
 @property (nonatomic, strong) PVZCardMenuNode *cardMenuNode;
+@property (nonatomic, strong) PVZShovelNode *shavelNode;
 
 @property (nonatomic, strong) id choosedPlant;
 
@@ -75,6 +78,9 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 }
 
 #pragma mark - 游戏控制
+/**
+ *  选取本局要使用的卡片
+ */
 - (void) choosedCard
 {
     [_cardMenuNode setStatus:PVZCardMenuStatusEdit];
@@ -99,6 +105,11 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 }
 
 #pragma mark - PVZCardChooseDelegate
+/**
+ *  选中了某卡片
+ *
+ *  @param card 选中的卡片信息
+ */
 - (void) cardChooseVCDidSelectCard:(PVZCard *)card
 {
     NSLog(@"\ncard:%@\nchineseName:%@\niamge:%@\ncost:%d\ncd:%f\n", card.cardName, card.cardChineseName, card.imageName, card.cost, card.cd);
@@ -106,20 +117,47 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     [_cardMenuNode addCardItem:node withAnimation:YES];
 }
 
+/**
+ *  选择卡片完成
+ */
 - (void) cardChooseVCCloseButtonDown
 {
     [_cardChooseVC.view removeFromSuperview];
     [self startGame];
 }
 
+#pragma mark - PVZShovelNodeDelegate
+/**
+ *  铲子点击回调
+ */
+- (void) didSelectShovelNode
+{
+    [_cardMenuNode cancelChooseMenuItemAndStartCooling:NO];
+    _choosedPlant = nil;
+}
+
 #pragma mark - PVZSunMenuDelegate
+/**
+ *  阳光值变化回调
+ *
+ *  @param sunValue 当前阳光值
+ */
 - (void) sunMenuNodeDidUpdateSunValue:(float)sunValue
 {
 }
 
 #pragma mark - PVZCardMenuDelegate
+/**
+ *  选中卡片后回调
+ *
+ *  @param cardInfo 选中卡片的信息
+ *  @param edit     是否在编辑状态
+ *
+ *  @return 操作是否成功
+ */
 - (BOOL) cardMenuDidSelectedCardItem:(PVZCard *)cardInfo edit:(BOOL)edit
 {
+    [_shavelNode cancelChoosedShovelNode];
     if (edit &&_cardChooseVC) {
         [_cardChooseVC reAddCard:cardInfo];
         return YES;
@@ -135,21 +173,40 @@ static PVZAdventureModeScene *adventureModeScene = nil;
 }
 
 #pragma mark - PVZBackgroundDelegate
-- (void) backgroundNodeClickedAtPoint:(CGPoint)point canPutPlant:(BOOL)canPutPlant
+/**
+ *  主场景的点击事件
+ *
+ *  @param point       点击点
+ *  @param canPutPlant 能否放置植物
+ */
+- (void) backgroundNodeClickedAtPoint:(CGPoint)point canPutPlantType:(PVZCanPutPlantType)type plant:(id)plant
 {
-    if (canPutPlant && _cardMenuNode.choosedNode) {
+    if (type == PVZCanPutPlantAll && _cardMenuNode.choosedNode) {
         if (_choosedPlant == nil) {
             PVZLogWarning([self class], @"backgroundNodeClickedAtPoint:canPutPlant:", @"创建植物失败：%@", _cardMenuNode.choosedNode.cardInfo.cardName);
             return;
         }
         [_backgroundNode putPlantAtPoint:point plant:_choosedPlant];            // 放置植物
         [_sunMenuNode subSunValue:_cardMenuNode.choosedNode.cardInfo.cost];     // 扣除阳光值
-        [_cardMenuNode cancelChooseMenuItemAndPutPlant:canPutPlant];
+        [_cardMenuNode cancelChooseMenuItemAndStartCooling:YES];
         _choosedPlant = nil;
+    }
+    else if (plant != nil && _shavelNode.isChoosed) {
+        CGPoint position = [_backgroundNode getPlantItemPostionByMapPoint:point];
+        position = [self convertPoint:position fromNode:_backgroundNode];
+        [_shavelNode moveToPoint:position andEradicatePlants:^{
+            [plant plantBeenEliminated];
+            [_backgroundNode removePlantAtPoint:point];
+        }];
     }
 }
 
 #pragma mark - PVZSunNodeDelegate
+/**
+ *  阳光点击时间
+ *
+ *  @param sunNode 阳光Node
+ */
 - (void) didSelectedSunNode:(PVZSunNode *)sunNode
 {
     if (sunNode) {
@@ -186,6 +243,13 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     [_cardMenuNode setPosition:CGPointMake(x, y)];
     [_cardMenuNode setZPosition:1];
     [self addChild:_cardMenuNode];
+    
+    x = WIDTH_SCREEN - 50;
+    y = HEIGHT_SCREEN - HEIGHT_SUNMENU / 2 - 3;
+    _shavelNode = [PVZShovelNode createShovelNodeAtPoint:CGPointMake(x, y)];
+    [_shavelNode setDelegate:self];
+    [_shavelNode setZPosition:1];
+    [self addChild:_shavelNode];
 }
 
 - (void) showSubViews

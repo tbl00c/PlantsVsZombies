@@ -32,6 +32,6 @@ typedef NS_ENUM(NSInteger, PVZCardMenuStatus) {
 + (PVZCardMenuNode *) createCardMenuNode;
 
 - (void) addCardItem:(PVZCardItemNode *)cardItem withAnimation:(BOOL)animation;
-- (void) cancelChooseMenuItemAndPutPlant:(BOOL)putPlant;
+- (void) cancelChooseMenuItemAndStartCooling:(BOOL)startCooling;
 
 @end

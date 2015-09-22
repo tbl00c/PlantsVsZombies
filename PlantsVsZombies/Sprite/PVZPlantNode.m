@@ -27,4 +27,15 @@
     [self runAction:action];
 }
 
+- (void) plantBeenEliminated
+{
+    SKAction *move = [SKAction moveByX:0 y:12 duration:0.3];
+    SKAction *miss = [SKAction fadeAlphaTo:0.8 duration:0.3];
+    SKAction *allAction = [SKAction group:@[move, miss]];
+    
+    [self runAction:allAction completion:^{
+        [super removeFromParent];
+    }];
+}
+
 @end

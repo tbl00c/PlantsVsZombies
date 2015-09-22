@@ -20,9 +20,14 @@ typedef NS_ENUM(NSInteger, PVZBackgroundType) {
     PVZBackgroundPoolDark,
 };
 
+typedef NS_ENUM(NSInteger, PVZCanPutPlantType) {
+    PVZCanPutPlantAll,
+    PVZCanPutPlantNone,
+};
+
 @protocol PVZBackgroundDelegate <NSObject>
 
-- (void) backgroundNodeClickedAtPoint:(CGPoint)point canPutPlant:(BOOL)canPutPlant;
+- (void) backgroundNodeClickedAtPoint:(CGPoint)point canPutPlantType:(PVZCanPutPlantType)type plant:(id)plant;
 
 @end
 
@@ -34,5 +39,8 @@ typedef NS_ENUM(NSInteger, PVZBackgroundType) {
 + (PVZBackgroundNode *) createBackgroundNode;
 - (void) scrollToShowZombies:(NSArray *)zombies complete:(void (^)())block;
 - (BOOL) putPlantAtPoint:(CGPoint)point plant:(id)plant;
+- (void) removePlantAtPoint:(CGPoint)point;
+
+- (CGPoint) getPlantItemPostionByMapPoint:(CGPoint)point;
 
 @end

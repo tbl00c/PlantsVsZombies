@@ -119,19 +119,45 @@ static PVZBackgroundNode *backgroundNode = nil;
     return YES;
 }
 
+- (void) removePlantAtPoint:(CGPoint)point
+{
+    int x = point.x;
+    int y = point.y;
+    map[y][x] = nil;
+}
+
 #pragma mark - 点击事件及处理
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint point = [[touches anyObject] locationInNode:self];
     CGPoint plantPoint = [self getPlantItemMapPositionByTouchPoint:point];
-    BOOL canPutPlant = YES;
-    if (plantPoint.x == -1 && plantPoint.y == -1) {
-        canPutPlant = NO;
+    PVZCanPutPlantType type = PVZCanPutPlantNone;
+    id plant = nil;
+    if (plantPoint.x >= 0 && plantPoint.y >= 0) {
+        type = [self getCanPutPlantTypeAtPoint:plantPoint];
+        plant = [self getPlantAtPoint:plantPoint];
     }
-    if (_delegate && [_delegate respondsToSelector:@selector(backgroundNodeClickedAtPoint:canPutPlant:)]) {
-        [_delegate backgroundNodeClickedAtPoint:plantPoint canPutPlant:canPutPlant];
+    if (_delegate && [_delegate respondsToSelector:@selector(backgroundNodeClickedAtPoint:canPutPlantType:plant:)]) {
+        [_delegate backgroundNodeClickedAtPoint:plantPoint canPutPlantType:type plant:plant];
     }
+}
+
+- (id) getPlantAtPoint:(CGPoint)point
+{
+    int x = point.x;
+    int y = point.y;
+    return map[y][x];
+}
+
+- (PVZCanPutPlantType) getCanPutPlantTypeAtPoint:(CGPoint)point
+{
+    int x = point.x;
+    int y = point.y;
+    if (map[y][x] == nil) {
+        return PVZCanPutPlantAll;
+    }
+    return PVZCanPutPlantNone;
 }
 
 - (CGPoint) getPlantItemMapPositionByTouchPoint:(CGPoint)point
@@ -139,7 +165,7 @@ static PVZBackgroundNode *backgroundNode = nil;
     if (point.x >= _plantsRect.origin.x && point.x < _plantsRect.origin.x + _plantsRect.size.width && point.y >= _plantsRect.origin.y && point.y < _plantsRect.origin.y + _plantsRect.size.height) {
         int x = (point.x - _plantsRect.origin.x) / _plantItemSize.width;
         int y = (point.y - _plantsRect.origin.y) / _plantItemSize.height;
-        return map[y][x] == nil ? CGPointMake(x, y) : CGPointMake(-1, -1);
+        return CGPointMake(x, y);
     }
     return CGPointMake(-1, -1);
 }

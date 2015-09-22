@@ -152,6 +152,7 @@
 		C2E3D7091BB1389F000DBEB4 /* Plant_1003.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E3D7051BB1389F000DBEB4 /* Plant_1003.plist */; };
 		C2E3D70A1BB1389F000DBEB4 /* Plant_1004.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E3D7061BB1389F000DBEB4 /* Plant_1004.plist */; };
 		C2E3D70C1BB1389F000DBEB4 /* Plant_1006.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E3D7081BB1389F000DBEB4 /* Plant_1006.plist */; };
+		C2E3D7111BB152FE000DBEB4 /* PVZShovelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E3D7101BB152FE000DBEB4 /* PVZShovelNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -353,6 +354,8 @@
 		C2E3D7051BB1389F000DBEB4 /* Plant_1003.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1003.plist; sourceTree = "<group>"; };
 		C2E3D7061BB1389F000DBEB4 /* Plant_1004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1004.plist; sourceTree = "<group>"; };
 		C2E3D7081BB1389F000DBEB4 /* Plant_1006.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1006.plist; sourceTree = "<group>"; };
+		C2E3D70F1BB152FE000DBEB4 /* PVZShovelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZShovelNode.h; sourceTree = "<group>"; };
+		C2E3D7101BB152FE000DBEB4 /* PVZShovelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZShovelNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +488,7 @@
 				2D5D41A71BA1D1BA00FFF763 /* Card */,
 				C2D97E0A1BA694E8009FB9F4 /* Plants */,
 				2D1BA6FC1BA56B80009BB687 /* Sun */,
+				C2E3D70E1BB152DE000DBEB4 /* Shovel */,
 				2D5D41991BA1BE7000FFF763 /* GameBackground */,
 			);
 			path = Sprite;
@@ -951,6 +955,15 @@
 			name = SnowPea;
 			sourceTree = "<group>";
 		};
+		C2E3D70E1BB152DE000DBEB4 /* Shovel */ = {
+			isa = PBXGroup;
+			children = (
+				C2E3D70F1BB152FE000DBEB4 /* PVZShovelNode.h */,
+				C2E3D7101BB152FE000DBEB4 /* PVZShovelNode.m */,
+			);
+			name = Shovel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1191,6 +1204,7 @@
 				C2D97E191BA6995C009FB9F4 /* PVZGameHelper.m in Sources */,
 				C2D97E161BA69929009FB9F4 /* PVZDataHelper.m in Sources */,
 				2D5D41B01BA1D32A00FFF763 /* PVZCard.m in Sources */,
+				C2E3D7111BB152FE000DBEB4 /* PVZShovelNode.m in Sources */,
 				2D653AE61B92DBD200420E18 /* common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -63,11 +63,11 @@
 /**
  *  取消选中状态
  *
- *  @param putPlant 是否成功种植植物
+ *  @param startCooling 是否成功种植植物
  */
-- (void) cancelChooseMenuItemAndPutPlant:(BOOL)putPlant
+- (void) cancelChooseMenuItemAndStartCooling:(BOOL)startCooling
 {
-    if (putPlant && _choosedNode) {
+    if (startCooling && _choosedNode) {
         [_choosedNode startCooling];
     }
     [_choosedMarkNode removeFromParent];
@@ -107,7 +107,7 @@
         if ([cardItem isReady] && [_delegate cardMenuDidSelectedCardItem:cardItem.cardInfo edit:NO]) {
             if (_choosedMarkNode == nil) {
                 _choosedMarkNode = [SKSpriteNode spriteNodeWithImageNamed:@"chooseMenu"];
-                [_choosedMarkNode setZPosition:1];
+                [_choosedMarkNode setZPosition:3];
                 [_choosedMarkNode setSize:cardItem.size];
             }
             if (_choosedMarkNode.parent == nil) {
@@ -117,7 +117,7 @@
             [_choosedMarkNode setPosition:cardItem.position];
         }
         else {
-            [self cancelChooseMenuItemAndPutPlant:NO];
+            [self cancelChooseMenuItemAndStartCooling:NO];
         }
     }
     else if (_status == PVZCardMenuStatusEdit && _delegate && [_delegate respondsToSelector:@selector(cardMenuDidSelectedCardItem:edit:)]) {

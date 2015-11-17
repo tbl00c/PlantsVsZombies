@@ -21,6 +21,7 @@
 #import "SKScene+PVZ.h"
 #import "UIView+PVZ.h"
 #import "SKSpriteNode+PVZ.h"
+#import "UIAlertView+Blocks.h"
 
 
 #endif

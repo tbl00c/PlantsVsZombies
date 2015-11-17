@@ -131,6 +131,7 @@
 		C203AEAC1BA6C8CC00E23941 /* PVZUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C203AEAB1BA6C8CC00E23941 /* PVZUserListViewController.m */; };
 		C203AEB01BA6CA2B00E23941 /* PVZButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C203AEAF1BA6CA2B00E23941 /* PVZButton.m */; };
 		C203AEB51BA6CA6E00E23941 /* PVZUserItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C203AEB41BA6CA6E00E23941 /* PVZUserItemCell.m */; };
+		C228D2621C006AFD003A5A72 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C228D2611C006AFD003A5A72 /* UIAlertView+Blocks.m */; settings = {ASSET_TAGS = (); }; };
 		C24767F41BA93F26007DC0ED /* Plant_1001.plist in Resources */ = {isa = PBXBuildFile; fileRef = C24767F31BA93F26007DC0ED /* Plant_1001.plist */; };
 		C24767F61BA94493007DC0ED /* Plant.plist in Resources */ = {isa = PBXBuildFile; fileRef = C24767F51BA94493007DC0ED /* Plant.plist */; };
 		C24767FD1BA94823007DC0ED /* Plant_1002.plist in Resources */ = {isa = PBXBuildFile; fileRef = C24767F71BA94823007DC0ED /* Plant_1002.plist */; };
@@ -318,6 +319,8 @@
 		C203AEAF1BA6CA2B00E23941 /* PVZButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZButton.m; sourceTree = "<group>"; };
 		C203AEB31BA6CA6E00E23941 /* PVZUserItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVZUserItemCell.h; sourceTree = "<group>"; };
 		C203AEB41BA6CA6E00E23941 /* PVZUserItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVZUserItemCell.m; sourceTree = "<group>"; };
+		C228D2601C006AFD003A5A72 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		C228D2611C006AFD003A5A72 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		C24767F31BA93F26007DC0ED /* Plant_1001.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1001.plist; sourceTree = "<group>"; };
 		C24767F51BA94493007DC0ED /* Plant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant.plist; sourceTree = "<group>"; };
 		C24767F71BA94823007DC0ED /* Plant_1002.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plant_1002.plist; sourceTree = "<group>"; };
@@ -526,6 +529,8 @@
 		2D2A69621B916E930021F8BF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C228D2601C006AFD003A5A72 /* UIAlertView+Blocks.h */,
+				C228D2611C006AFD003A5A72 /* UIAlertView+Blocks.m */,
 				2D2A69631B916EA30021F8BF /* SKScene+PVZ.h */,
 				2D2A69641B916EA30021F8BF /* SKScene+PVZ.m */,
 				2D2A69691B9170620021F8BF /* UIView+PVZ.h */,
@@ -1184,6 +1189,7 @@
 				2D2A696B1B9170620021F8BF /* UIView+PVZ.m in Sources */,
 				2D68E6301BA31029005145D5 /* PVZSunMenuNode.m in Sources */,
 				C203AEB51BA6CA6E00E23941 /* PVZUserItemCell.m in Sources */,
+				C228D2621C006AFD003A5A72 /* UIAlertView+Blocks.m in Sources */,
 				2D5D41AD1BA1D2AD00FFF763 /* PVZCardItemNode.m in Sources */,
 				2D2A69561B9168510021F8BF /* PVZRootScene.m in Sources */,
 				2D62D6851B988B2A00CF3059 /* PVZProgressView.m in Sources */,

@@ -184,6 +184,7 @@ static PVZAdventureModeScene *adventureModeScene = nil;
     if (type == PVZCanPutPlantAll && _cardMenuNode.choosedNode) {
         if (_choosedPlant == nil) {
             PVZLogWarning([self class], @"backgroundNodeClickedAtPoint:canPutPlant:", @"创建植物失败：%@", _cardMenuNode.choosedNode.cardInfo.cardName);
+            [UIAlertView showAlertViewWithTitle:@"提示" message:[NSString stringWithFormat:@"创建植物失败:%@",_cardMenuNode.choosedNode.cardInfo.cardName]];
             return;
         }
         [_backgroundNode putPlantAtPoint:point plant:_choosedPlant];            // 放置植物
